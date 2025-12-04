@@ -1,0 +1,6 @@
+../Core/Src/control.c:9:6:forward	8	static
+../Core/Src/control.c:22:6:stop_motors	8	static
+../Core/Src/control.c:35:6:turn_left_inplace	8	static
+../Core/Src/control.c:52:6:turn_right_inplace	8	static
+../Core/Src/control.c:69:6:init_motors	8	static
+../Core/Src/control.c:78:10:pwm_map	16	static
