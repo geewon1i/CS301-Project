@@ -34,23 +34,17 @@ void mode2_loop(void){
         }
         // --- 2️⃣ 左有u右无 → 原地右转 ---
         else if(!left_detect && right_detect){
-            turn_right_inplace();
+            turn_right_half();
         }
         // --- 3️⃣ 右有左无 → 原地左转 ---
         else if(left_detect && !right_detect){
-            turn_left_inplace();
+            turn_left_half();
         }
         // --- 4️⃣ 左右都检测到 → 前进 / 平滑跟随 ---
         else if(!left_detect && !right_detect){
-//            // 可以做简单比例 PWM 调整，实现平滑跟随
-//            float left_speed  = BASE_SPEED;
-//            float right_speed = BASE_SPEED;
-//
-//            // 如果想加入微调，可根据偏差设置 Kp，这里简单使用全速
-//            __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, pwm_map(left_speed));
-//            __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, pwm_map(right_speed));
 
-            forward();
+
+            forward_half();
         }
 
         HAL_Delay(10); // 控制周期 10ms

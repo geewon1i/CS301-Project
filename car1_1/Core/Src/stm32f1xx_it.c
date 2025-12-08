@@ -213,5 +213,17 @@ void TIM3_IRQHandler(void)
 }
 
 /* USER CODE BEGIN 1 */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+    if (htim->Instance == TIM3)
+    {
+        sw_pwm_on ^= 1;   // 每次中断翻转
 
+        HAL_GPIO_WritePin(GPIOC, GPIO_PIN_10,
+                          sw_pwm_on ? GPIO_PIN_SET : GPIO_PIN_RESET);
+
+        HAL_GPIO_WritePin(GPIOC, GPIO_PIN_2,
+                          sw_pwm_on ? GPIO_PIN_SET : GPIO_PIN_RESET);
+    }
+}
 /* USER CODE END 1 */
