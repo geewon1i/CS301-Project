@@ -32,7 +32,7 @@ void mode2_loop(void){
         if(left_detect && right_detect){
             stop_motors();
         }
-        // --- 2️⃣ 左有右无 → 原地右转 ---
+        // --- 2️⃣ 左有u右无 → 原地右转 ---
         else if(!left_detect && right_detect){
             turn_right_inplace();
         }

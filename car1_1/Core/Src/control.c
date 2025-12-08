@@ -67,10 +67,10 @@ void turn_right_inplace() {
 
 // ---------- 初始化 PWM ----------
 void init_motors() {
-//    HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
-//    HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
-//    __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, FULL_SPEED / 2);
-//    __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, FULL_SPEED / 2);
+    HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_4);
+
+    __HAL_TIM_SET_COMPARE(&htim8, TIM_CHANNEL_4, FULL_SPEED / 2);
+    __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, FULL_SPEED / 2);
 	stop_motors();
 }
 
