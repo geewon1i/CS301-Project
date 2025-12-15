@@ -31,8 +31,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-extern uint8_t sw_pwm_left;
-extern uint8_t sw_pwm_right;
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/

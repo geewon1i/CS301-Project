@@ -5,14 +5,8 @@
 /* 外部句柄 */
 extern TIM_HandleTypeDef htim3;   // 软件 PWM 定时器
 
-/* 固定半速 */
-#define HALF_PWM 500     // ARR = 999 → 半速
 
-/* 软件 PWM 状态 */
-//volatile uint8_t sw_pwm_on = 0;
-/* 软件 PWM 状态 */
-volatile uint8_t sw_pwm_left = 0;
-volatile uint8_t sw_pwm_right = 0;
+
 /* ================= 初始化 ================= */
 
 void init_motors(void)
@@ -56,9 +50,6 @@ void forward_half(void)
 	HAL_GPIO_WritePin(IN4_R_GPIO_Port, IN4_R_Pin, GPIO_PIN_RESET);
 
 
-	sw_pwm_left = HALF_PWM;
-	sw_pwm_right = HALF_PWM;
-
 
 
 }
@@ -76,8 +67,7 @@ void turn_left_half(void)
 	HAL_GPIO_WritePin(IN3_R_GPIO_Port, IN3_R_Pin, GPIO_PIN_SET);
 	HAL_GPIO_WritePin(IN4_R_GPIO_Port, IN4_R_Pin, GPIO_PIN_RESET);
 
-	sw_pwm_left = HALF_PWM;
-	sw_pwm_right = HALF_PWM;
+
 
 }
 
@@ -94,8 +84,6 @@ void turn_right_half(void)
 	HAL_GPIO_WritePin(IN3_R_GPIO_Port, IN3_R_Pin, GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(IN4_R_GPIO_Port, IN4_R_Pin, GPIO_PIN_SET);
 
-	sw_pwm_left = HALF_PWM;
-	sw_pwm_right = HALF_PWM;
 }
 
 void stop_motors(void)
@@ -112,8 +100,6 @@ void stop_motors(void)
 	HAL_GPIO_WritePin(IN3_R_GPIO_Port, IN3_R_Pin, GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(IN4_R_GPIO_Port, IN4_R_Pin, GPIO_PIN_RESET);
 
-	sw_pwm_left = 0;
-	sw_pwm_right = 0;
 }
 
 void turn_in_place(float angle) {
