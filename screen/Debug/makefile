@@ -66,8 +66,8 @@ all: main-build
 main-build: screen.elf secondary-outputs
 
 # Tool invocations
-screen.elf screen.map: $(OBJS) $(USER_OBJS) C:\Users\xueye\STM32CubeIDE\workspace_1.19.0\screen\STM32F103RCTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "screen.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\xueye\STM32CubeIDE\workspace_1.19.0\screen\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="screen.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+screen.elf screen.map: $(OBJS) $(USER_OBJS) C:\Users\xueye\STM32CubeIDE\workspace_1.19.0\CS301-Project\screen\STM32F103RCTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "screen.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\xueye\STM32CubeIDE\workspace_1.19.0\CS301-Project\screen\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="screen.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

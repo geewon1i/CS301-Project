@@ -53,58 +53,7 @@ const unsigned char gImage_betty2[38408] = {};
 
 u8 STATE[30];
 UART_HandleTypeDef huart1;
-/* USER CODE END PD */
-
-/* Private macro -------------------------------------------------------------*/
-/* USER CODE BEGIN PM */
-////////////////////////////////////////////////////////////////////////////////
-//电容触摸屏专有部�?
-//画水平线
-//x0,y0:坐标
-//len:线长�?
-//color:颜色
-////////////////////////////////////////////////////////////////////////////////
-//5个触控点的颜�?(电容触摸屏用)
 const u16 POINT_COLOR_TBL[5]={RED,GREEN,BLUE,BROWN,GRED};
-//电阻触摸屏测试函�?
-
-//电容触摸屏测试函�?
-void ctp_test(void)
-{
-	u8 t=0;
-	u8 i=0;
-	u16 lastpos[5][2];		//�?后一次的数据
-	while(1)
-	{
-		tp_dev.scan(0);
-		for(t=0;t<5;t++)
-		{
-			if((tp_dev.sta)&(1<<t))
-			{
-				//printf("X坐标:%d,Y坐标:%d\r\n",tp_dev.x[0],tp_dev.y[0]);
-				if(tp_dev.x[t]<lcddev.width&&tp_dev.y[t]<lcddev.height)
-				{
-					if(lastpos[t][0]==0XFFFF)
-					{
-						lastpos[t][0] = tp_dev.x[t];
-						lastpos[t][1] = tp_dev.y[t];
-					}
-
-					//					lcd_draw_bline(lastpos[t][0],lastpos[t][1],tp_dev.x[t],tp_dev.y[t],2,POINT_COLOR_TBL[t]);//画线
-					lastpos[t][0]=tp_dev.x[t];
-					lastpos[t][1]=tp_dev.y[t];
-					if(tp_dev.x[t]>(lcddev.width-24)&&tp_dev.y[t]<20)
-					{
-						//						Load_Drow_Dialog();//清除
-					}
-				}
-			}else lastpos[t][0]=0XFFFF;
-		}
-
-		delay_ms(5);i++;
-		if(i%20==0)LED0=!LED0;
-	}
-}
 
 /* USER CODE END PM */
 
@@ -173,9 +122,7 @@ int main(void)
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
 	POINT_COLOR=RED;
-
-	if(tp_dev.touchtype&0X80)ctp_test();//电容屏
-	else game(); 					//电阻屏
+	game();
   /* USER CODE END 2 */
 
   /* Infinite loop */
