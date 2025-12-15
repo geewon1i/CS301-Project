@@ -12,7 +12,7 @@ struct Point{
 }current_point,next_point;
 void mode1_loop(void) {
     // 留给路线规划组
-    float current_angle = 90.0; // (0,1)
+    float current_angle = 90.0; // init(0,1), -180~180
     x0 = 0;
     y0 = 0;
     current
@@ -27,11 +27,17 @@ void mode1_loop(void) {
         if(x0 == 0){
             if(y < 0){
                 turn_in_place(180.0);
+                current_angle = -90.0;
             }
         }else{
             float rad = atan2f(diff_y, diff_x);
             float ang = rad * 180.0 / PI;
             float rot_angle = current_angle - ang;
+            if(rot_angle > 180){
+                rot_angle -= 360.0;
+            }else if(rot_angle < -180){
+                rot_angle += 360.0;
+            }
             turn_in_place(rot_angle);
             current_angle = ang;
         }
