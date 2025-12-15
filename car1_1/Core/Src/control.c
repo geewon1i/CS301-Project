@@ -90,3 +90,27 @@ void stop_motors(void)
     HAL_GPIO_WritePin(IN1_R_GPIO_Port, IN1_R_Pin, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(IN2_R_GPIO_Port, IN2_R_Pin, GPIO_PIN_RESET);
 }
+
+void turn_in_place(float angle) {
+    const uint16_t turn_time_per_degree = 10; //tbd
+    uint32_t turn_time = fabs(angle) * turn_time_per_degree;
+    
+    if(angle < 0) {  // turn left(ccw)
+        turn_left_half();
+        HAL_Delay(turn_time);
+    } else {  // turn right(cw)
+        turn_right_half();
+        HAL_Delay(turn_time);
+    }
+    
+    stop_motors();
+}
+void forward_with_length(float length) {
+    //2m * 2m, 200 units * 200 units 
+    const uint16_t forward_time_per_centi_meter = 10; //tbd
+    uint32_t forward_time = fabs(length) * forward_time_per_centi_meter;
+    forward_half();
+    HAL_Delay(turn_time);
+    
+    stop_motors();
+}
