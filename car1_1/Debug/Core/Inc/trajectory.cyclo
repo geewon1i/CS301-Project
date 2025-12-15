@@ -1,0 +1,3 @@
+../Core/Inc/trajectory.c:9:6:traj_init	1
+../Core/Inc/trajectory.c:16:6:traj_update	1
+../Core/Inc/trajectory.c:26:8:traj_get_pose	1
