@@ -24,8 +24,8 @@ void mode2_loop(void){
 
         // --- 1️⃣ 无物体 → 停止 ---
         if(left_detect && right_detect){
-        	forward_half();
-            //stop_motors();
+        	//forward_half();
+            stop_motors();
             //traj_update(0, 0);
 
         }

@@ -18,8 +18,8 @@ void mode1_loop(void) {
     //bt_transmit
     uint8_t order = 1; // 1: getting points 0: over
     while(order == 1){
-        x = 20;
-        y = 30;
+    	uint16_t x = 20;
+    	uint16_t y = 30;
         //x = bt...
         int diff_y = y - y0;
         int diff_x = x - x0;

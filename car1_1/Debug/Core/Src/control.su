@@ -1,5 +1,7 @@
-../Core/Src/control.c:17:6:init_motors	8	static
-../Core/Src/control.c:43:6:forward_half	8	static
-../Core/Src/control.c:64:6:turn_left_half	8	static
-../Core/Src/control.c:82:6:turn_right_half	8	static
-../Core/Src/control.c:99:6:stop_motors	8	static
+../Core/Src/control.c:18:6:init_motors	8	static
+../Core/Src/control.c:45:6:forward_half	8	static
+../Core/Src/control.c:66:6:turn_left_half	8	static
+../Core/Src/control.c:84:6:turn_right_half	8	static
+../Core/Src/control.c:101:6:stop_motors	8	static
+../Core/Src/control.c:119:6:turn_in_place	32	static
+../Core/Src/control.c:133:6:forward_with_length	32	static

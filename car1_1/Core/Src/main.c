@@ -20,6 +20,9 @@
 #include "main.h"
 #include "tim.h"
 #include "gpio.h"
+#include "mode1.h"
+#include "mode2.h"
+#include "control.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -105,7 +108,6 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_TIM3_Init();
-  MX_TIM8_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */

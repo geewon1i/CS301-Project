@@ -31,7 +31,8 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-extern uint8_t sw_pwm_on;
+extern uint8_t sw_pwm_left;
+extern uint8_t sw_pwm_right;
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -215,15 +216,36 @@ void TIM3_IRQHandler(void)
 /* USER CODE BEGIN 1 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-    if (htim->Instance == TIM3)
-    {
-        sw_pwm_on ^= 1;   // 每次中断翻转
+	static uint16_t cnt = 0;
 
-        HAL_GPIO_WritePin(GPIOC, GPIO_PIN_10,
-                          sw_pwm_on ? GPIO_PIN_SET : GPIO_PIN_RESET);
+	    if(htim->Instance == TIM3)
+	    {
+	        cnt++;
+	        if(cnt >= 10) cnt = 0;
 
-        HAL_GPIO_WritePin(GPIOC, GPIO_PIN_2,
-                          sw_pwm_on ? GPIO_PIN_SET : GPIO_PIN_RESET);
-    }
+	        // 左轮 PWM 输出
+	        if(cnt < 5)
+	        {
+	            HAL_GPIO_WritePin(GPIOC, GPIO_PIN_10, GPIO_PIN_SET);
+	            HAL_GPIO_WritePin(GPIOC, GPIO_PIN_2, GPIO_PIN_SET);
+	        }
+	        else
+	        {
+	            HAL_GPIO_WritePin(GPIOC, GPIO_PIN_10, GPIO_PIN_RESET);
+	            HAL_GPIO_WritePin(GPIOC, GPIO_PIN_2, GPIO_PIN_RESET);
+	        }
+
+	        // 右轮 PWM 输出
+	        if(cnt < 5)
+	        {
+	            HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9, GPIO_PIN_SET);
+	            HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_SET);
+	        }
+	        else
+	        {
+	            HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9, GPIO_PIN_RESET);
+	            HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_RESET);
+	        }
+	    }
 }
 /* USER CODE END 1 */
