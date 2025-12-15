@@ -13,9 +13,8 @@ struct Point{
 void mode1_loop(void) {
     // 留给路线规划组
     float current_angle = 90.0; // init(0,1), -180~180
-    x0 = 0;
-    y0 = 0;
-    current
+    uint16_t x0 = 0;
+    uint16_t y0 = 0;
     //bt_transmit
     uint8_t order = 1; // 1: getting points 0: over
     while(order == 1){
@@ -27,7 +26,10 @@ void mode1_loop(void) {
         if(x0 == 0){
             if(y < 0){
                 turn_in_place(180.0);
-                current_angle = -90.0;
+                current_angle -= 180.0;
+                if(current_angle < -180){
+                    current_angle += 360.0;
+                }
             }
         }else{
             float rad = atan2f(diff_y, diff_x);
