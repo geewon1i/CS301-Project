@@ -1,5 +1,5 @@
 ../Core/Src/control.c:17:6:init_motors	1
-../Core/Src/control.c:41:6:forward_half	1
-../Core/Src/control.c:55:6:turn_left_half	1
-../Core/Src/control.c:66:6:turn_right_half	1
-../Core/Src/control.c:77:6:stop_motors	1
+../Core/Src/control.c:43:6:forward_half	1
+../Core/Src/control.c:54:6:turn_left_half	1
+../Core/Src/control.c:65:6:turn_right_half	1
+../Core/Src/control.c:76:6:stop_motors	1

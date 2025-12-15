@@ -23,6 +23,8 @@ void init_motors(void)
     __HAL_TIM_SET_COMPARE(&htim8, TIM_CHANNEL_2, HALF_PWM);
     __HAL_TIM_SET_COMPARE(&htim8, TIM_CHANNEL_4, HALF_PWM);
 
+    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_SET);
+
     HAL_GPIO_WritePin(GPIOC, GPIO_PIN_10, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(GPIOC, GPIO_PIN_2,  GPIO_PIN_RESET);
     sw_pwm_on = 0;
@@ -40,16 +42,13 @@ void init_motors(void)
 
 void forward_half(void)
 {
-	 // 左轮
-	HAL_GPIO_WritePin(IN1_L_GPIO_Port, IN1_L_Pin, GPIO_PIN_RESET);
-	HAL_GPIO_WritePin(IN2_L_GPIO_Port, IN2_L_Pin, GPIO_PIN_SET);
-	HAL_GPIO_WritePin(IN3_L_GPIO_Port, IN3_L_Pin, GPIO_PIN_RESET);
-	HAL_GPIO_WritePin(IN4_L_GPIO_Port, IN4_L_Pin, GPIO_PIN_SET);
-	// 右轮
-	HAL_GPIO_WritePin(IN1_R_GPIO_Port, IN1_R_Pin, GPIO_PIN_RESET);
-	HAL_GPIO_WritePin(IN2_R_GPIO_Port, IN2_R_Pin, GPIO_PIN_SET);
-	HAL_GPIO_WritePin(IN3_R_GPIO_Port, IN3_R_Pin, GPIO_PIN_RESET);
-	HAL_GPIO_WritePin(IN4_R_GPIO_Port, IN4_R_Pin, GPIO_PIN_SET);
+    /* 左轮正转 */
+    HAL_GPIO_WritePin(IN1_L_GPIO_Port, IN1_L_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(IN2_L_GPIO_Port, IN2_L_Pin, GPIO_PIN_SET);
+
+    /* 右轮正转 */
+    HAL_GPIO_WritePin(IN1_R_GPIO_Port, IN1_R_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(IN2_R_GPIO_Port, IN2_R_Pin, GPIO_PIN_SET);
 }
 
 void turn_left_half(void)
