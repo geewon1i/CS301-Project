@@ -16,7 +16,6 @@
 #include "24cxx.h"
 #include "24l01.h" //通信驱动 基于spi进行通信
 #include "ui.h"
-#include "image.h"
 
 bool menu = true;
 bool start_playing;
@@ -89,190 +88,9 @@ void drawtrail(int direction){
 	drawplayer();
 }
 
-bool judge(int direction){
-	int type = maze[piy][pix];
-	//	char pos[100];
-	//	sprintf(pos, "%d", type);
-	//	lcd_show_string(30, 210, 200, 24, 16, pos, RED);
-	switch(type){
-	case 1:
-		return true;
-	case 2:
-		if(direction != 3)
-			return true;
-		else
-			return false;
-	case 3:
-		if(direction != 1)
-			return true;
-		else
-			return false;
-	case 4:
-		if(direction != 4)
-			return true;
-		else
-			return false;
-	case 5:
-		if(direction != 2)
-			return true;
-		else
-			return false;
-	case 6:
-		if(direction == 2 || direction == 4)
-			return true;
-		else
-			return false;
-	case 7:
-		if(direction == 2 || direction == 3)
-			return true;
-		else
-			return false;
-	case 8:
-		if(direction == 1 || direction == 3)
-			return true;
-		else
-			return false;
-	case 9:
-		if(direction == 1 || direction == 4)
-			return true;
-		else
-			return false;
-	case 10:
-		if(direction == 1 || direction == 2)
-			return true;
-		else
-			return false;
-	case 11:
-		if(direction == 3 || direction == 4)
-			return true;
-		else
-			return false;
-	case 12:
-		if(direction == 2)
-			return true;
-		else
-			return false;
-	case 13:
-		if(direction == 3)
-			return true;
-		else
-			return false;
-	case 14:
-		if(direction == 1)
-			return true;
-		else
-			return false;
-	case 15:
-		if(direction == 4)
-			return true;
-		else
-			return false;
-	case 16:
-		return false;
-	}
-	return false;
-}
-
-void drawtile(int id, int x, int y){ //绘制未被玩家探索的格子，格子长度
-	lcd_fill(x+2, y+2, x+22, y+22, WHITE);
-	switch(id){
-	case 1:
-		break;
-	case 2:
-		lcd_fill(x, y, x+2, y+24, BLACK);
-		break;
-	case 3:
-		lcd_fill(x, y, x+24, y+2, BLACK);
-		break;
-	case 4:
-		lcd_fill(x+22, y, x+24, y+24, BLACK);
-		break;
-	case 5:
-		lcd_fill(x, y+22, x+24, y+24, BLACK);
-		break;
-	case 6:
-		lcd_fill(x, y, x+2, y+24, BLACK);
-		lcd_fill(x, y, x+24, y+2,  BLACK);
-		break;
-	case 7:
-		lcd_fill(x, y, x+24, y+2,  BLACK);
-		lcd_fill(x+22, y, x+24, y+24, BLACK);
-		break;
-	case 8:
-		lcd_fill(x+22, y, x+24, y+24, BLACK);
-		lcd_fill(x, y+22, x+24, y+24, BLACK);
-		break;
-	case 9:
-		lcd_fill(x, y, x+2, y+24, BLACK);
-		lcd_fill(x, y+22, x+24, y+24, BLACK);
-		break;
-	case 10:
-		lcd_fill(x, y, x+2, y+24, BLACK);
-		lcd_fill(x+22, y, x+24, y+24, BLACK);
-		break;
-	case 11:
-		lcd_fill(x, y, x+24, y+2, BLACK);
-		lcd_fill(x, y+22, x+24, y+24, BLACK);
-		break;
-	case 12:
-		lcd_fill(x, y, x+2, y+24, BLACK);
-		lcd_fill(x+22, y, x+24, y+24, BLACK);
-		lcd_fill(x, y, x+24, y+2, BLACK);
-		break;
-	case 13:
-		lcd_fill(x, y, x+24, y+2, BLACK);
-		lcd_fill(x, y+22, x+24, y+24, BLACK);
-		lcd_fill(x+22, y, x+24, y+24, BLACK);
-		break;
-	case 14:
-		lcd_fill(x, y+22, x+24, y+24, BLACK);
-		lcd_fill(x, y, x+2, y+24, BLACK);
-		lcd_fill(x+22, y, x+24, y+24, BLACK);
-		break;
-	case 15:
-		lcd_fill(x, y, x+24, y+2, BLACK);
-		lcd_fill(x, y+22, x+24, y+24, BLACK);
-		lcd_fill(x, y, x+2, y+24, BLACK);
-		break;
-	case 16:
-		lcd_fill(x, y, x+24, y+2, BLACK);
-		lcd_fill(x, y+22, x+24, y+24, BLACK);
-		lcd_fill(x, y, x+2, y+24, BLACK);
-		lcd_fill(x+22, y, x+24, y+24, BLACK);
-		break;
-	}
-}
-
 void drawmaze(){ //绘制整个迷宫
 	HAL_Init();
 
-	/* USER CODE BEGIN Init */
-	Stm32_Clock_Init(RCC_PLL_MUL9);   	//设置时钟,72M
-	delay_init(72);               		//初始化延时函�?
-	//	uart_init(115200);					//初始化串�?
-	//	usmart_dev.init(84); 		  	  	//初始化USMART
-	LED_Init();							//初始化LED
-	KEY_Init();							//初始化按�?
-	LCD_Init();							//初始化LCD
-	tp_dev.init();				   		//触摸屏初始化
-
-	delay_ms(100);
-	lcd_fill(0, 0, 255, 300, WHITE);
-	int x, y;
-	for(int i=0;i<10;i++){
-		for(int j=0;j<10;j++){
-			x = 22 * i + 42;
-			y = 22 * j + 10;
-			drawtile(maze[i][j], y, x);
-		}
-	}
-	px = 22;
-	py = 142;
-	pix = 0;
-	piy = 4;
-	drawplayer();
-	lcd_show_string(50, 270, 200, 24, 24, "BACK", RED);
-	play();
 }
 
 void play(){ // 开始游戏
@@ -281,10 +99,21 @@ void play(){ // 开始游戏
 }
 
 void move(int direction){ // 玩家移动
-	if(judge(direction) == false){
-		return;
+	switch(direction){
+	case 1:
+		//上
+		break;
+	case 2:
+		//下
+		break;
+	case 3:
+		//左
+		break;
+	case 4:
+		//右
+		break;
+	default:break;
 	}
-	drawtrail(direction);
 }
 
 void rtp(int mode)
@@ -293,30 +122,25 @@ void rtp(int mode)
 	u8 i=0;
 	while(1)
 	{
-		if(pix == 9 && piy == 4){
-			gameover = true;
-			pix = 0;
-			piy = 0;
-			break;
-		}
-		if(menu == false && mode == 0){
-			break;
-		}
 		key=KEY_Scan(0);
 		tp_dev.scan(0);
 		if(tp_dev.sta&TP_PRES_DOWN)			//触摸屏被按下
 		{
-			if(mode == 0){
+			if(mode == 0){//在菜单界面
 				if(tp_dev.x[0]<lcddev.width&&tp_dev.y[0]<lcddev.height)
 				{
-					if(tp_dev.x[0]>30&&tp_dev.y[0]>70&&tp_dev.x[0]<270&&tp_dev.y[0]<100){
-						drawmaze();
-						start_game_timer();
+					if(tp_dev.x[0]>30&&tp_dev.y[0]>70&&tp_dev.x[0]<336&&tp_dev.y[0]<110){
+						//						drawmaze();
+						lcd_show_string(30, 70, 200, 24, 24, "ROUTE PLANNING", RED);
 					}
-//					else if(tp_dev.x[0]>30&&tp_dev.y[0]>110&&tp_dev.x[0]<270&&tp_dev.y[0]<140){
-////						display_ranking();
-//						while(!(tp_dev.sta&TP_PRES_DOWN));
-//					}
+					else if(tp_dev.x[0]>30&&tp_dev.y[0]>110&&tp_dev.x[0]<216&&tp_dev.y[0]<150){
+						//						drawmaze();
+						lcd_show_string(30, 110, 200, 24, 24, "FOLLOWING", RED);
+					}
+					else if(tp_dev.x[0]>30&&tp_dev.y[0]>150&&tp_dev.x[0]<360&&tp_dev.y[0]<190){
+						//						drawmaze();
+						lcd_show_string(30, 150, 200, 24, 24, "SD CARD STORING", RED);
+					}
 				}
 			}
 			if(mode == 1){
@@ -335,7 +159,7 @@ void rtp(int mode)
 						move(4);
 					}
 					else if(tp_dev.x[0]>50 && tp_dev.y[0]>270 && tp_dev.y[0]<300 && tp_dev.x[0]<170){
-						goto reset___;
+						//						goto reset___;
 					}
 				}
 				else{ // 在菜单界面
@@ -348,7 +172,7 @@ void rtp(int mode)
 				if(tp_dev.x[0]<lcddev.width&&tp_dev.y[0]<lcddev.height && start_playing) // 在屏幕范围内
 				{
 					if(tp_dev.x[0]>30 && tp_dev.x[0]<198 && tp_dev.y[0]>230 && tp_dev.y[0]<260){ // 往右
-						reset_ = true;
+						//						reset_ = true;
 						break;
 					}
 				}
@@ -362,19 +186,6 @@ void rtp(int mode)
 		}
 		i++;
 		if(i%20==0)LED0=!LED0;
-		if(menu == false)
-			display_game_time(10, 270);
-	}
-	if(menu == false && gameover == false && mode != 2){
-		rtp(1);
-	}
-	if(gameover == true || mode != 2){
-		total_secs = seconds;
-		summarize(true);
-	}
-	if(mode == 2 || (mode == 1 && reset_ == true)){
-		reset___:
-		reset();
 	}
 }
 
