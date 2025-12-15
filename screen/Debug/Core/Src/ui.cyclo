@@ -1,0 +1,4 @@
+../Core/Src/ui.c:18:6:game	3
+../Core/Src/ui.c:50:6:summarize	4
+../Core/Src/ui.c:71:6:detect_keys	6
+../Core/Src/ui.c:96:6:reset	2
