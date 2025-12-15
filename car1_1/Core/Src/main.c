@@ -92,7 +92,7 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-  stop_motors();
+
   /* USER CODE END Init */
 
   /* Configure the system clock */

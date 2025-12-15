@@ -54,12 +54,14 @@ void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOC, EN2_L_Pin|EN1_L_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, L1_Pin|IN3_L_Pin|IN1_L_Pin|IN2_R_Pin
-                          |IN4_R_Pin|IN4_L_Pin|IN2_L_Pin|IN1_R_Pin
-                          |IN3_R_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(L1_GPIO_Port, L1_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(L2_GPIO_Port, L2_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, IN3_L_Pin|IN1_L_Pin|IN2_R_Pin|IN4_R_Pin
+                          |IN4_L_Pin|IN2_L_Pin|IN1_R_Pin|IN3_R_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(L2_GPIO_Port, L2_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pins : EN2_L_Pin EN1_L_Pin */
   GPIO_InitStruct.Pin = EN2_L_Pin|EN1_L_Pin;

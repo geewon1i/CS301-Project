@@ -23,7 +23,8 @@ Core/Src/mode2.o: ../Core/Src/mode2.c ../Core/Inc/mode2.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
- ../Core/Inc/control.h ../Core/Inc/tim.h ../Core/Inc/gpio.h
+ ../Core/Inc/control.h ../Core/Inc/tim.h ../Core/Inc/gpio.h \
+ ../Core/Inc/trajectory.h
 ../Core/Inc/mode2.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
@@ -53,3 +54,4 @@ Core/Src/mode2.o: ../Core/Src/mode2.c ../Core/Inc/mode2.h \
 ../Core/Inc/control.h:
 ../Core/Inc/tim.h:
 ../Core/Inc/gpio.h:
+../Core/Inc/trajectory.h:
