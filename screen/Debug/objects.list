@@ -4,7 +4,6 @@
 "./Core/Src/delay.o"
 "./Core/Src/ft5206.o"
 "./Core/Src/gt9147.o"
-"./Core/Src/image.o"
 "./Core/Src/key.o"
 "./Core/Src/lcd.o"
 "./Core/Src/lcd_v4.o"
