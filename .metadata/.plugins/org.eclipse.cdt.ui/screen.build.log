@@ -1,4 +1,4 @@
-16:58:12 **** Incremental Build of configuration Debug for project screen ****
+17:33:26 **** Incremental Build of configuration Debug for project screen ****
 make -j32 all 
 arm-none-eabi-size  screen.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  screen.elf
 Finished building: default.size.stdout
  
 
-16:58:13 Build Finished. 0 errors, 0 warnings. (took 482ms)
+17:33:30 Build Finished. 0 errors, 0 warnings. (took 4s.182ms)
 

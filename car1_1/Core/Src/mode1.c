@@ -16,7 +16,7 @@ void mode1_loop(void) {
     uint16_t x0 = 0;
     uint16_t y0 = 0;
     //bt_transmit
-    uint8_t order = 1; // 1: getting points 0: over
+    uint8_t order = 2; // 1: getting points 0: over
     while(order == 1){
     	uint16_t x = 20;
     	uint16_t y = 30;
@@ -48,5 +48,18 @@ void mode1_loop(void) {
         forward_with_length(length);
         x0 = x;
         y0 = y;
+    }
+    while(order == 2){
+    	turn_in_place(90);
+    	forward_with_length(100);
+    	turn_in_place(-90);
+    	forward_with_length(50);
+    	turn_in_place(-90);
+    	forward_with_length(100);
+    	turn_in_place(90);
+    	forward_with_length(50);
+    	turn_in_place(90);
+    	forward_with_length(100);
+    	break;
     }
 }

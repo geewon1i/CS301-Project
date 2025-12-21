@@ -132,8 +132,8 @@ int main(void)
 		else {
 			stop_motors();
 		}
-		HAL_UART_Transmit(&huart1, (uint8_t *)"01234", 5, 0xffff);
-		HAL_Delay(1000);
+//		HAL_UART_Transmit(&huart1, (uint8_t *)"01234", 5, 0xffff);
+//		HAL_Delay(1000);
 	}
 	/* USER CODE END 3 */
 }
