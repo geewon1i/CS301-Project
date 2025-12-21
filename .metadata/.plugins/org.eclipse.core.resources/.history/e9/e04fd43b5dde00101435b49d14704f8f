@@ -51,7 +51,7 @@ void mode1_loop(void) {
     }
     while(order == 2){
     	int turn_time = 630;
-    	int move_time = 2500;
+    	int move_time = 2000;
     	init_motors();
     	turn_in_place(90);
     	HAL_Delay(turn_time);stop_motors();
