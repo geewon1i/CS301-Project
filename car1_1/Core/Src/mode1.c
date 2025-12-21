@@ -50,16 +50,48 @@ void mode1_loop(void) {
         y0 = y;
     }
     while(order == 2){
+    	int turn_time = 630;
+    	int move_time = 2000;
+    	init_motors();
     	turn_in_place(90);
+    	HAL_Delay(turn_time);stop_motors();
+        traj_update(0, 0);
+
     	forward_with_length(100);
+    	HAL_Delay(move_time);stop_motors();
+        traj_update(0, 0);
+
     	turn_in_place(-90);
+    	HAL_Delay(turn_time*0.9);stop_motors();
+        traj_update(0, 0);
+
     	forward_with_length(50);
+    	HAL_Delay(move_time / 2);stop_motors();
+        traj_update(0, 0);
+
     	turn_in_place(-90);
+    	HAL_Delay(turn_time*0.9);stop_motors();
+        traj_update(0, 0);
+
     	forward_with_length(100);
+    	HAL_Delay(move_time);stop_motors();
+        traj_update(0, 0);
+
     	turn_in_place(90);
+    	HAL_Delay(turn_time);stop_motors();
+        traj_update(0, 0);
+
     	forward_with_length(50);
+    	HAL_Delay(move_time / 2);stop_motors();
+        traj_update(0, 0);
+
     	turn_in_place(90);
+    	HAL_Delay(turn_time);stop_motors();
+        traj_update(0, 0);
+
     	forward_with_length(100);
+    	HAL_Delay(move_time);stop_motors();
+        traj_update(0, 0);
     	break;
     }
 }

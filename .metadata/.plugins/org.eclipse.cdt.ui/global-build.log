@@ -1,1188 +1,55 @@
-15:46:59 **** Clean-only build of configuration Debug for project car1_1 ****
-make -j32 clean 
-rm -rf ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.su
-rm -rf ./Core/Startup/startup_stm32f103rctx.d ./Core/Startup/startup_stm32f103rctx.o
-rm -rf ./Core/Src/control.cyclo ./Core/Src/control.d ./Core/Src/control.o ./Core/Src/control.su ./Core/Src/gpio.cyclo ./Core/Src/gpio.d ./Core/Src/gpio.o ./Core/Src/gpio.su ./Core/Src/main.cyclo ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/mode1.cyclo ./Core/Src/mode1.d ./Core/Src/mode1.o ./Core/Src/mode1.su ./Core/Src/mode2.cyclo ./Core/Src/mode2.d ./Core/Src/mode2.o ./Core/Src/mode2.su ./Core/Src/stm32f1xx_hal_msp.cyclo ./Core/Src/stm32f1xx_hal_msp.d ./Core/Src/stm32f1xx_hal_msp.o ./Core/Src/stm32f1xx_hal_msp.su ./Core/Src/stm32f1xx_it.cyclo ./Core/Src/stm32f1xx_it.d ./Core/Src/stm32f1xx_it.o ./Core/Src/stm32f1xx_it.su ./Core/Src/syscalls.cyclo ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.cyclo ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32f1xx.cyclo ./Core/Src/system_stm32f1xx.d ./Core/Src/system_stm32f1xx.o ./Core/Src/system_stm32f1xx.su ./Core/Src/tim.cyclo ./Core/Src/tim.d ./Core/Src/tim.o ./Core/Src/tim.su ./Core/Src/trajectory.cyclo ./Core/Src/trajectory.d ./Core/Src/trajectory.o ./Core/Src/trajectory.su
-rm -rf car1_1.bin car1_1.elf car1_1.hex car1_1.list car1_1.map default.size.stdout
- 
-15:47:01 **** Build of configuration Debug for project car1_1 ****
+18:46:57 **** Incremental Build of configuration Debug for project car1_1 ****
 make -j32 all 
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o"
-arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f103rctx.d" -MT"Core/Startup/startup_stm32f103rctx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Startup/startup_stm32f103rctx.o" "../Core/Startup/startup_stm32f103rctx.s"
+arm-none-eabi-size  car1_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22492	     92	   2060	  24644	   6044	car1_1.elf
+Finished building: default.size.stdout
+ 
+18:48:46 **** Incremental Build of configuration Debug for project car1_1 ****
+make -j32 all 
 arm-none-eabi-gcc "../Core/Src/control.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/control.d" -MT"Core/Src/control.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/control.o"
-arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/gpio.o"
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc "../Core/Src/mode1.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode1.d" -MT"Core/Src/mode1.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode1.o"
-arm-none-eabi-gcc "../Core/Src/mode2.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode2.d" -MT"Core/Src/mode2.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode2.o"
-arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
-arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
-arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/syscalls.o"
-arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sysmem.o"
-arm-none-eabi-gcc "../Core/Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f1xx.d" -MT"Core/Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/system_stm32f1xx.o"
-arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/tim.o"
+../Core/Src/mode1.c: In function 'mode1_loop':
+../Core/Src/mode1.c:28:17: warning: implicit declaration of function 'turn_in_place' [-Wimplicit-function-declaration]
+   28 |                 turn_in_place(180.0);
+      |                 ^~~~~~~~~~~~~
 ../Core/Src/control.c: In function 'turn_in_place':
-../Core/Src/control.c:107:26: warning: implicit declaration of function 'fabs' [-Wimplicit-function-declaration]
-  107 |     uint32_t turn_time = fabs(angle) * turn_time_per_degree;
-      |                          ^~~~
-../Core/Src/control.c:4:1: note: include '<math.h>' or provide a declaration of 'fabs'
-    3 | #include "gpio.h"
-  +++ |+#include <math.h>
-    4 | 
-../Core/Src/control.c:107:26: warning: incompatible implicit declaration of built-in function 'fabs' [-Wbuiltin-declaration-mismatch]
-  107 |     uint32_t turn_time = fabs(angle) * turn_time_per_degree;
-      |                          ^~~~
-../Core/Src/control.c:107:26: note: include '<math.h>' or provide a declaration of 'fabs'
+../Core/Src/control.c:112:17: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
+  112 |                 traj_update(-V_HALF, V_HALF);
+      |                 ^~~~~~~~~~~
+../Core/Src/control.c:109:18: warning: unused variable 'turn_time' [-Wunused-variable]
+  109 |         uint32_t turn_time = fabs(angle) * turn_time_per_degree;
+      |                  ^~~~~~~~~
 ../Core/Src/control.c: In function 'forward_with_length':
-../Core/Src/control.c:122:29: warning: incompatible implicit declaration of built-in function 'fabs' [-Wbuiltin-declaration-mismatch]
-  122 |     uint32_t forward_time = fabs(length) * forward_time_per_centi_meter;
-arm-none-eabi-gcc "../Core/Src/trajectory.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/trajectory.d" -MT"Core/Src/trajectory.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/trajectory.o"
-      |                             ^~~~
-../Core/Src/control.c:122:29: note: include '<math.h>' or provide a declaration of 'fabs'
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:122:20: error: 'rxBuffer' undeclared (first use in this function); did you mean 'ITM_RxBuffer'?
-  122 |                 if(rxBuffer[0] = '0'){{
-      |                    ^~~~~~~~
-      |                    ITM_RxBuffer
-../Core/Src/main.c:122:20: note: each undeclared identifier is reported only once for each function it appears in
-../Core/Src/main.c:126:25: warning: implicit declaration of function 'mode1_loop' [-Wimplicit-function-declaration]
-  126 |                         mode1_loop(); // 路径规划模式
-      |                         ^~~~~~~~~~
-../Core/Src/main.c:129:25: warning: implicit declaration of function 'mode2_loop' [-Wimplicit-function-declaration]
-  129 |                         mode2_loop(); // 红外跟踪模式
-      |                         ^~~~~~~~~~
-arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/usart.o"
-../Core/Src/main.c:132:25: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
-  132 |                         stop_motors();
-      |                         ^~~~~~~~~~~
-../Core/Src/main.c:194:1: error: expected declaration or statement at end of input
-  194 | }
-      | ^
-../Core/Src/main.c: At top level:
-../Core/Src/main.c:185:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
-  185 | void Error_Handler(void)
-      |      ^~~~~~~~~~~~~
-../Core/Src/main.c:142:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
-  142 | void SystemClock_Config(void)
-      |      ^~~~~~~~~~~~~~~~~~
-../Core/Src/mode2.c:53:16: error: expected declaration specifiers or '...' before numeric constant
-   53 | uint16_t pre_x(0), pre_y(lcddev.height);//boundary
-      |                ^
-../Core/Src/mode2.c: In function 'path_show':
-../Core/Src/mode2.c:58:5: warning: implicit declaration of function 'TP_Draw_Big_Point' [-Wimplicit-function-declaration]
-   58 |     TP_Draw_Big_Point(x,y,BLUE);
-      |     ^~~~~~~~~~~~~~~~~
-../Core/Src/mode2.c:58:27: error: 'BLUE' undeclared (first use in this function)
-   58 |     TP_Draw_Big_Point(x,y,BLUE);
-      |                           ^~~~
-../Core/Src/mode2.c:58:27: note: each undeclared identifier is reported only once for each function it appears in
-../Core/Src/mode2.c:62:9: error: unknown type name 'u16'
-   62 |         u16 temp = POINT_COLOR;
-      |         ^~~
-../Core/Src/mode2.c:62:20: error: 'POINT_COLOR' undeclared (first use in this function)
-   62 |         u16 temp = POINT_COLOR;
-      |                    ^~~~~~~~~~~
-../Core/Src/mode2.c:64:9: warning: implicit declaration of function 'LCD_DrawLine' [-Wimplicit-function-declaration]
-   64 |         LCD_DrawLine(pre_x, pre_y, x, y);
-      |         ^~~~~~~~~~~~
-../Core/Src/mode2.c:64:22: error: 'pre_x' undeclared (first use in this function)
-   64 |         LCD_DrawLine(pre_x, pre_y, x, y);
-      |                      ^~~~~
-../Core/Src/mode2.c:64:29: error: 'pre_y' undeclared (first use in this function)
-   64 |         LCD_DrawLine(pre_x, pre_y, x, y);
-      |                             ^~~~~
-make: *** [Core/Src/subdir.mk:55: Core/Src/main.o] Error 1
-make: *** Waiting for unfinished jobs....
-../Core/Src/stm32f1xx_it.c: In function 'USART1_IRQHandler':
-../Core/Src/stm32f1xx_it.c:226:3: error: too few arguments to function 'HAL_UART_Receive'
-  226 |   HAL_UART_Receive(&huart1, (uint8_t *)rxBuffer, 1)
-      |   ^~~~~~~~~~~~~~~~
-In file included from ../Core/Inc/stm32f1xx_hal_conf.h:338,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/stm32f1xx_it.c:21:
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:750:19: note: declared here
-  750 | HAL_StatusTypeDef HAL_UART_Receive(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
-      |                   ^~~~~~~~~~~~~~~~
-../Core/Src/stm32f1xx_it.c:226:52: error: expected ';' before '}' token
-  226 |   HAL_UART_Receive(&huart1, (uint8_t *)rxBuffer, 1)
-      |                                                    ^
-      |                                                    ;
-  227 |   /* USER CODE END USART1_IRQn 1 */
-  228 | }
-      | ~                                                   
-make: *** [Core/Src/subdir.mk:55: Core/Src/mode2.o] Error 1
-make: *** [Core/Src/subdir.mk:55: Core/Src/stm32f1xx_it.o] Error 1
-../Core/Src/mode1.c: In function 'mode1_loop':
-../Core/Src/mode1.c:28:17: warning: implicit declaration of function 'turn_in_place' [-Wimplicit-function-declaration]
-   28 |                 turn_in_place(180.0);
-      |                 ^~~~~~~~~~~~~
+../Core/Src/control.c:122:24: warning: unused variable 'forward_time_per_centi_meter' [-Wunused-variable]
+  122 |         const uint16_t forward_time_per_centi_meter = 10; //tbd
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ../Core/Src/mode1.c:48:9: warning: implicit declaration of function 'forward_with_length' [-Wimplicit-function-declaration]
    48 |         forward_with_length(length);
       |         ^~~~~~~~~~~~~~~~~~~
-"make -j32 all" terminated with exit code 2. Build might be incomplete.
-15:47:49 **** Incremental Build of configuration Debug for project car1_1 ****
-make -j32 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/mode2.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode2.d" -MT"Core/Src/mode2.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode2.o"
-arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:122:20: error: 'rxBuffer' undeclared (first use in this function); did you mean 'ITM_RxBuffer'?
-  122 |                 if(rxBuffer[0] = '0'){{
-      |                    ^~~~~~~~
-      |                    ITM_RxBuffer
-../Core/Src/main.c:122:20: note: each undeclared identifier is reported only once for each function it appears in
-../Core/Src/main.c:126:25: warning: implicit declaration of function 'mode1_loop' [-Wimplicit-function-declaration]
-  126 |                         mode1_loop(); // 路径规划模式
-      |                         ^~~~~~~~~~
-../Core/Src/main.c:129:25: warning: implicit declaration of function 'mode2_loop' [-Wimplicit-function-declaration]
-  129 |                         mode2_loop(); // 红外跟踪模式
-      |                         ^~~~~~~~~~
-../Core/Src/mode2.c:53:16: error: expected declaration specifiers or '...' before numeric constant
-   53 | uint16_t pre_x(0), pre_y(lcddev.height);//boundary
-      |                ^
-../Core/Src/main.c:132:25: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
-  132 |                         stop_motors();
-      |                         ^~~~~~~~~~~
-../Core/Src/main.c:194:1: error: expected declaration or statement at end of input
-  194 | }
-      | ^
-../Core/Src/main.c: At top level:
-../Core/Src/main.c:185:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
-  185 | void Error_Handler(void)
-      |      ^~~~~~~~~~~~~
-../Core/Src/main.c:142:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
-  142 | void SystemClock_Config(void)
-      |      ^~~~~~~~~~~~~~~~~~
-../Core/Src/mode2.c: In function 'path_show':
-../Core/Src/mode2.c:58:5: warning: implicit declaration of function 'TP_Draw_Big_Point' [-Wimplicit-function-declaration]
-   58 |     TP_Draw_Big_Point(x,y,BLUE);
-      |     ^~~~~~~~~~~~~~~~~
-../Core/Src/mode2.c:58:27: error: 'BLUE' undeclared (first use in this function)
-   58 |     TP_Draw_Big_Point(x,y,BLUE);
-      |                           ^~~~
-../Core/Src/mode2.c:58:27: note: each undeclared identifier is reported only once for each function it appears in
-../Core/Src/mode2.c:62:9: error: unknown type name 'u16'
-   62 |         u16 temp = POINT_COLOR;
-      |         ^~~
-make: *** [Core/Src/subdir.mk:55: Core/Src/main.o] Error 1
-make: *** Waiting for unfinished jobs....
-../Core/Src/mode2.c:62:20: error: 'POINT_COLOR' undeclared (first use in this function)
-   62 |         u16 temp = POINT_COLOR;
-      |                    ^~~~~~~~~~~
-../Core/Src/stm32f1xx_it.c: In function 'USART1_IRQHandler':
-../Core/Src/stm32f1xx_it.c:226:3: error: too few arguments to function 'HAL_UART_Receive'
-  226 |   HAL_UART_Receive(&huart1, (uint8_t *)rxBuffer, 1);
-      |   ^~~~~~~~~~~~~~~~
-In file included from ../Core/Inc/stm32f1xx_hal_conf.h:338,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/stm32f1xx_it.c:21:
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:750:19: note: declared here
-  750 | HAL_StatusTypeDef HAL_UART_Receive(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
-      |                   ^~~~~~~~~~~~~~~~
-../Core/Src/mode2.c:64:9: warning: implicit declaration of function 'LCD_DrawLine' [-Wimplicit-function-declaration]
-   64 |         LCD_DrawLine(pre_x, pre_y, x, y);
-      |         ^~~~~~~~~~~~
-../Core/Src/mode2.c:64:22: error: 'pre_x' undeclared (first use in this function)
-   64 |         LCD_DrawLine(pre_x, pre_y, x, y);
-      |                      ^~~~~
-../Core/Src/mode2.c:64:29: error: 'pre_y' undeclared (first use in this function)
-   64 |         LCD_DrawLine(pre_x, pre_y, x, y);
-      |                             ^~~~~
-make: *** [Core/Src/subdir.mk:55: Core/Src/stm32f1xx_it.o] Error 1
-make: *** [Core/Src/subdir.mk:55: Core/Src/mode2.o] Error 1
-"make -j32 all" terminated with exit code 2. Build might be incomplete.
-15:49:15 **** Incremental Build of configuration Debug for project car1_1 ****
-make -j32 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/mode2.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode2.d" -MT"Core/Src/mode2.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode2.o"
-arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:122:20: error: 'rxBuffer' undeclared (first use in this function); did you mean 'ITM_RxBuffer'?
-  122 |                 if(rxBuffer[0] = '0'){{
-      |                    ^~~~~~~~
-      |                    ITM_RxBuffer
-../Core/Src/main.c:122:20: note: each undeclared identifier is reported only once for each function it appears in
-../Core/Src/main.c:126:25: warning: implicit declaration of function 'mode1_loop' [-Wimplicit-function-declaration]
-  126 |                         mode1_loop(); // 路径规划模式
-      |                         ^~~~~~~~~~
-../Core/Src/main.c:129:25: warning: implicit declaration of function 'mode2_loop' [-Wimplicit-function-declaration]
-  129 |                         mode2_loop(); // 红外跟踪模式
-      |                         ^~~~~~~~~~
-../Core/Src/main.c:132:25: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
-  132 |                         stop_motors();
-      |                         ^~~~~~~~~~~
-../Core/Src/main.c:194:1: error: expected declaration or statement at end of input
-  194 | }
-      | ^
-../Core/Src/main.c: At top level:
-../Core/Src/main.c:185:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
-  185 | void Error_Handler(void)
-      |      ^~~~~~~~~~~~~
-../Core/Src/main.c:142:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
-  142 | void SystemClock_Config(void)
-      |      ^~~~~~~~~~~~~~~~~~
-../Core/Src/mode2.c:53:16: error: expected declaration specifiers or '...' before numeric constant
-   53 | uint16_t pre_x(0), pre_y(lcddev.height);//boundary
-      |                ^
-make: *** [Core/Src/subdir.mk:55: Core/Src/main.o] Error 1
-make: *** Waiting for unfinished jobs....
-../Core/Src/mode2.c: In function 'path_show':
-../Core/Src/mode2.c:58:5: warning: implicit declaration of function 'TP_Draw_Big_Point' [-Wimplicit-function-declaration]
-   58 |     TP_Draw_Big_Point(x,y,BLUE);
-      |     ^~~~~~~~~~~~~~~~~
-../Core/Src/mode2.c:58:27: error: 'BLUE' undeclared (first use in this function)
-   58 |     TP_Draw_Big_Point(x,y,BLUE);
-      |                           ^~~~
-../Core/Src/mode2.c:58:27: note: each undeclared identifier is reported only once for each function it appears in
-../Core/Src/stm32f1xx_it.c: In function 'USART1_IRQHandler':
-../Core/Src/stm32f1xx_it.c:226:3: error: too few arguments to function 'HAL_UART_Receive'
-  226 |   HAL_UART_Receive(&huart1, (uint8_t *)rxBuffer, 1);
-      |   ^~~~~~~~~~~~~~~~
-../Core/Src/mode2.c:62:9: error: unknown type name 'u16'
-   62 |         u16 temp = POINT_COLOR;
-      |         ^~~
-In file included from ../Core/Inc/stm32f1xx_hal_conf.h:338,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/stm32f1xx_it.c:21:
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:750:19: note: declared here
-  750 | HAL_StatusTypeDef HAL_UART_Receive(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
-      |                   ^~~~~~~~~~~~~~~~
-../Core/Src/mode2.c:62:20: error: 'POINT_COLOR' undeclared (first use in this function)
-   62 |         u16 temp = POINT_COLOR;
-      |                    ^~~~~~~~~~~
-make: *** [Core/Src/subdir.mk:55: Core/Src/stm32f1xx_it.o] Error 1
-../Core/Src/mode2.c:64:9: warning: implicit declaration of function 'LCD_DrawLine' [-Wimplicit-function-declaration]
-   64 |         LCD_DrawLine(pre_x, pre_y, x, y);
-      |         ^~~~~~~~~~~~
-../Core/Src/mode2.c:64:22: error: 'pre_x' undeclared (first use in this function)
-   64 |         LCD_DrawLine(pre_x, pre_y, x, y);
-      |                      ^~~~~
-../Core/Src/mode2.c:64:29: error: 'pre_y' undeclared (first use in this function)
-   64 |         LCD_DrawLine(pre_x, pre_y, x, y);
-      |                             ^~~~~
-make: *** [Core/Src/subdir.mk:55: Core/Src/mode2.o] Error 1
-"make -j32 all" terminated with exit code 2. Build might be incomplete.
-15:50:14 **** Incremental Build of configuration Debug for project car1_1 ****
-make -j32 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/mode2.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode2.d" -MT"Core/Src/mode2.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode2.o"
-arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:123:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
-  123 |                 if(rxBuffer[0] = '0'){{
-      |                    ^~~~~~~~
-../Core/Src/main.c:127:25: warning: implicit declaration of function 'mode1_loop' [-Wimplicit-function-declaration]
-  127 |                         mode1_loop(); // 路径规划模式
-      |                         ^~~~~~~~~~
-../Core/Src/main.c:130:25: warning: implicit declaration of function 'mode2_loop' [-Wimplicit-function-declaration]
-  130 |                         mode2_loop(); // 红外跟踪模式
-      |                         ^~~~~~~~~~
-../Core/Src/mode2.c:6:10: fatal error: font: No such file or directory
-    6 | #include "font"
-      |          ^~~~~~
-compilation terminated.
-../Core/Src/main.c:133:25: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
-  133 |                         stop_motors();
-      |                         ^~~~~~~~~~~
-../Core/Src/main.c:195:1: error: expected declaration or statement at end of input
-  195 | }
-      | ^
-../Core/Src/main.c: At top level:
-../Core/Src/main.c:186:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
-  186 | void Error_Handler(void)
-      |      ^~~~~~~~~~~~~
-../Core/Src/main.c:143:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
-  143 | void SystemClock_Config(void)
-      |      ^~~~~~~~~~~~~~~~~~
-../Core/Src/stm32f1xx_it.c: In function 'USART1_IRQHandler':
-../Core/Src/stm32f1xx_it.c:226:3: error: too few arguments to function 'HAL_UART_Receive'
-  226 |   HAL_UART_Receive(&huart1, (uint8_t *)rxBuffer, 1);
-      |   ^~~~~~~~~~~~~~~~
-In file included from ../Core/Inc/stm32f1xx_hal_conf.h:338,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/stm32f1xx_it.c:21:
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:750:19: note: declared here
-  750 | HAL_StatusTypeDef HAL_UART_Receive(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
-      |                   ^~~~~~~~~~~~~~~~
-make: *** [Core/Src/subdir.mk:55: Core/Src/mode2.o] Error 1
-make: *** Waiting for unfinished jobs....
-make: *** [Core/Src/subdir.mk:55: Core/Src/main.o] Error 1
-make: *** [Core/Src/subdir.mk:55: Core/Src/stm32f1xx_it.o] Error 1
-"make -j32 all" terminated with exit code 2. Build might be incomplete.
-15:51:26 **** Incremental Build of configuration Debug for project car1_1 ****
-make -j32 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/mode2.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode2.d" -MT"Core/Src/mode2.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode2.o"
-arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:123:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
-  123 |                 if(rxBuffer[0] = '0'){{
-      |                    ^~~~~~~~
-../Core/Src/main.c:127:25: warning: implicit declaration of function 'mode1_loop' [-Wimplicit-function-declaration]
-  127 |                         mode1_loop(); // 路径规划模式
-      |                         ^~~~~~~~~~
-../Core/Src/main.c:130:25: warning: implicit declaration of function 'mode2_loop' [-Wimplicit-function-declaration]
-  130 |                         mode2_loop(); // 红外跟踪模式
-      |                         ^~~~~~~~~~
-../Core/Src/mode2.c:53:16: error: expected declaration specifiers or '...' before numeric constant
-   53 | uint16_t pre_x(0), pre_y(lcddev.height);//boundary
-      |                ^
-../Core/Src/main.c:133:25: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
-  133 |                         stop_motors();
-      |                         ^~~~~~~~~~~
-../Core/Src/main.c:195:1: error: expected declaration or statement at end of input
-  195 | }
-      | ^
-../Core/Src/main.c: At top level:
-../Core/Src/main.c:186:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
-  186 | void Error_Handler(void)
-      |      ^~~~~~~~~~~~~
-../Core/Src/main.c:143:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
-  143 | void SystemClock_Config(void)
-      |      ^~~~~~~~~~~~~~~~~~
-../Core/Src/mode2.c: In function 'path_show':
-../Core/Src/mode2.c:58:5: warning: implicit declaration of function 'TP_Draw_Big_Point' [-Wimplicit-function-declaration]
-   58 |     TP_Draw_Big_Point(x,y,BLUE);
-      |     ^~~~~~~~~~~~~~~~~
-../Core/Src/mode2.c:58:27: error: 'BLUE' undeclared (first use in this function)
-   58 |     TP_Draw_Big_Point(x,y,BLUE);
-      |                           ^~~~
-../Core/Src/mode2.c:58:27: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [Core/Src/subdir.mk:55: Core/Src/main.o] Error 1
-../Core/Src/mode2.c:62:9: error: unknown type name 'u16'
-   62 |         u16 temp = POINT_COLOR;
-      |         ^~~
-make: *** Waiting for unfinished jobs....
-../Core/Src/mode2.c:62:20: error: 'POINT_COLOR' undeclared (first use in this function)
-   62 |         u16 temp = POINT_COLOR;
-      |                    ^~~~~~~~~~~
-../Core/Src/mode2.c:64:9: warning: implicit declaration of function 'LCD_DrawLine' [-Wimplicit-function-declaration]
-   64 |         LCD_DrawLine(pre_x, pre_y, x, y);
-      |         ^~~~~~~~~~~~
-../Core/Src/mode2.c:64:22: error: 'pre_x' undeclared (first use in this function)
-   64 |         LCD_DrawLine(pre_x, pre_y, x, y);
-      |                      ^~~~~
-../Core/Src/mode2.c:64:29: error: 'pre_y' undeclared (first use in this function)
-   64 |         LCD_DrawLine(pre_x, pre_y, x, y);
-      |                             ^~~~~
-make: *** [Core/Src/subdir.mk:55: Core/Src/mode2.o] Error 1
-"make -j32 all" terminated with exit code 2. Build might be incomplete.
-16:00:02 **** Incremental Build of configuration Debug for project car1_1 ****
-make -j32 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/mode2.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode2.d" -MT"Core/Src/mode2.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode2.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:123:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
-  123 |                 if(rxBuffer[0] = '0'){{
-      |                    ^~~~~~~~
-../Core/Src/main.c:127:25: warning: implicit declaration of function 'mode1_loop' [-Wimplicit-function-declaration]
-  127 |                         mode1_loop(); // 路径规划模式
-      |                         ^~~~~~~~~~
-../Core/Src/main.c:130:25: warning: implicit declaration of function 'mode2_loop' [-Wimplicit-function-declaration]
-  130 |                         mode2_loop(); // 红外跟踪模式
-      |                         ^~~~~~~~~~
-../Core/Src/mode2.c: In function 'path_show':
-../Core/Src/mode2.c:58:5: warning: implicit declaration of function 'TP_Draw_Big_Point' [-Wimplicit-function-declaration]
-   58 |     TP_Draw_Big_Point(x,y,BLUE);
-      |     ^~~~~~~~~~~~~~~~~
-../Core/Src/mode2.c:58:27: error: 'BLUE' undeclared (first use in this function)
-   58 |     TP_Draw_Big_Point(x,y,BLUE);
-      |                           ^~~~
-../Core/Src/mode2.c:58:27: note: each undeclared identifier is reported only once for each function it appears in
-../Core/Src/mode2.c:62:9: error: unknown type name 'u16'
-   62 |         u16 temp = POINT_COLOR;
-      |         ^~~
-../Core/Src/main.c:133:25: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
-  133 |                         stop_motors();
-      |                         ^~~~~~~~~~~
-../Core/Src/main.c:195:1: error: expected declaration or statement at end of input
-  195 | }
-      | ^
-../Core/Src/main.c: At top level:
-../Core/Src/main.c:186:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
-  186 | void Error_Handler(void)
-      |      ^~~~~~~~~~~~~
-../Core/Src/main.c:143:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
-  143 | void SystemClock_Config(void)
-      |      ^~~~~~~~~~~~~~~~~~
-../Core/Src/mode2.c:62:20: error: 'POINT_COLOR' undeclared (first use in this function)
-   62 |         u16 temp = POINT_COLOR;
-      |                    ^~~~~~~~~~~
-make: *** [Core/Src/subdir.mk:55: Core/Src/main.o] Error 1
-make: *** Waiting for unfinished jobs....
-../Core/Src/mode2.c:64:9: warning: implicit declaration of function 'LCD_DrawLine' [-Wimplicit-function-declaration]
-   64 |         LCD_DrawLine(pre_x, pre_y, x, y);
-      |         ^~~~~~~~~~~~
-../Core/Src/mode2.c:64:22: error: 'pre_x' undeclared (first use in this function)
-   64 |         LCD_DrawLine(pre_x, pre_y, x, y);
-      |                      ^~~~~
-../Core/Src/mode2.c:64:29: error: 'pre_y' undeclared (first use in this function)
-   64 |         LCD_DrawLine(pre_x, pre_y, x, y);
-      |                             ^~~~~
-make: *** [Core/Src/subdir.mk:55: Core/Src/mode2.o] Error 1
-"make -j32 all" terminated with exit code 2. Build might be incomplete.
-16:00:11 **** Incremental Build of configuration Debug for project car1_1 ****
-make -j32 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/mode2.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode2.d" -MT"Core/Src/mode2.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode2.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:123:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
-  123 |                 if(rxBuffer[0] = '0'){{
-      |                    ^~~~~~~~
-../Core/Src/main.c:127:25: warning: implicit declaration of function 'mode1_loop' [-Wimplicit-function-declaration]
-  127 |                         mode1_loop(); // 路径规划模式
-      |                         ^~~~~~~~~~
-../Core/Src/main.c:130:25: warning: implicit declaration of function 'mode2_loop' [-Wimplicit-function-declaration]
-  130 |                         mode2_loop(); // 红外跟踪模式
-      |                         ^~~~~~~~~~
-../Core/Src/main.c:133:25: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
-  133 |                         stop_motors();
-      |                         ^~~~~~~~~~~
-../Core/Src/main.c:195:1: error: expected declaration or statement at end of input
-  195 | }
-      | ^
-../Core/Src/main.c: At top level:
-../Core/Src/main.c:186:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
-  186 | void Error_Handler(void)
-      |      ^~~~~~~~~~~~~
-../Core/Src/main.c:143:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
-  143 | void SystemClock_Config(void)
-      |      ^~~~~~~~~~~~~~~~~~
-make: *** [Core/Src/subdir.mk:55: Core/Src/main.o] Error 1
-make: *** Waiting for unfinished jobs....
-"make -j32 all" terminated with exit code 2. Build might be incomplete.
-16:00:22 **** Incremental Build of configuration Debug for project car1_1 ****
-make -j32 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:123:20: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
-  123 |                 if(rxBuffer[0] = '0'){
-      |                    ^~~~~~~~
-../Core/Src/main.c:127:25: warning: implicit declaration of function 'mode1_loop' [-Wimplicit-function-declaration]
-  127 |                         mode1_loop(); // 路径规划模式
-      |                         ^~~~~~~~~~
-../Core/Src/main.c:130:25: warning: implicit declaration of function 'mode2_loop' [-Wimplicit-function-declaration]
-  130 |                         mode2_loop(); // 红外跟踪模式
-      |                         ^~~~~~~~~~
-../Core/Src/main.c:133:25: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
-  133 |                         stop_motors();
-      |                         ^~~~~~~~~~~
+../Core/Src/mode1.c:55:9: warning: implicit declaration of function 'init_motors' [-Wimplicit-function-declaration]
+   55 |         init_motors();
+      |         ^~~~~~~~~~~
 arm-none-eabi-gcc -o "car1_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\car1_1\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car1_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: car1_1.elf
  
 arm-none-eabi-size  car1_1.elf 
 arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
    text	   data	    bss	    dec	    hex	filename
-  22228	     92	   2060	  24380	   5f3c	car1_1.elf
-arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
-Finished building: default.size.stdout
-arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
- 
-Finished building: car1_1.hex
-Finished building: car1_1.bin
- 
- 
-Finished building: car1_1.list
- 
-16:06:07 **** Incremental Build of configuration Debug for project car1_1 ****
-make -j32 all 
-arm-none-eabi-size  car1_1.elf 
-   text	   data	    bss	    dec	    hex	filename
-  22228	     92	   2060	  24380	   5f3c	car1_1.elf
-Finished building: default.size.stdout
- 
-16:06:07 **** Clean-only build of configuration Debug for project screen ****
-make -j32 clean 
-rm -rf ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.su
-rm -rf ./Core/Startup/startup_stm32f103rctx.d ./Core/Startup/startup_stm32f103rctx.o
-rm -rf ./Core/Src/24cxx.cyclo ./Core/Src/24cxx.d ./Core/Src/24cxx.o ./Core/Src/24cxx.su ./Core/Src/24l01.cyclo ./Core/Src/24l01.d ./Core/Src/24l01.o ./Core/Src/24l01.su ./Core/Src/ctiic.cyclo ./Core/Src/ctiic.d ./Core/Src/ctiic.o ./Core/Src/ctiic.su ./Core/Src/delay.cyclo ./Core/Src/delay.d ./Core/Src/delay.o ./Core/Src/delay.su ./Core/Src/ft5206.cyclo ./Core/Src/ft5206.d ./Core/Src/ft5206.o ./Core/Src/ft5206.su ./Core/Src/gt9147.cyclo ./Core/Src/gt9147.d ./Core/Src/gt9147.o ./Core/Src/gt9147.su ./Core/Src/key.cyclo ./Core/Src/key.d ./Core/Src/key.o ./Core/Src/key.su ./Core/Src/lcd.cyclo ./Core/Src/lcd.d ./Core/Src/lcd.o ./Core/Src/lcd.su ./Core/Src/lcd_v4.cyclo ./Core/Src/lcd_v4.d ./Core/Src/lcd_v4.o ./Core/Src/lcd_v4.su ./Core/Src/led.cyclo ./Core/Src/led.d ./Core/Src/led.o ./Core/Src/led.su ./Core/Src/main.cyclo ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/maze.cyclo ./Core/Src/maze.d ./Core/Src/maze.o ./Core/Src/maze.su ./Core/Src/myiic.cyclo ./Core/Src/myiic.d ./Core/Src/myiic.o ./Core/Src/myiic.su ./Core/Src/ott2001a.cyclo ./Core/Src/ott2001a.d ./Core/Src/ott2001a.o ./Core/Src/ott2001a.su ./Core/Src/spi.cyclo ./Core/Src/spi.d ./Core/Src/spi.o ./Core/Src/spi.su ./Core/Src/stm32f1xx_hal_msp.cyclo ./Core/Src/stm32f1xx_hal_msp.d ./Core/Src/stm32f1xx_hal_msp.o ./Core/Src/stm32f1xx_hal_msp.su ./Core/Src/stm32f1xx_it.cyclo ./Core/Src/stm32f1xx_it.d ./Core/Src/stm32f1xx_it.o ./Core/Src/stm32f1xx_it.su ./Core/Src/sys.cyclo ./Core/Src/sys.d ./Core/Src/sys.o ./Core/Src/sys.su ./Core/Src/syscalls.cyclo ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.cyclo ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32f1xx.cyclo ./Core/Src/system_stm32f1xx.d ./Core/Src/system_stm32f1xx.o ./Core/Src/system_stm32f1xx.su ./Core/Src/touch.cyclo ./Core/Src/touch.d ./Core/Src/touch.o ./Core/Src/touch.su ./Core/Src/ui.cyclo ./Core/Src/ui.d ./Core/Src/ui.o ./Core/Src/ui.su
-rm -rf default.size.stdout screen.bin screen.elf screen.hex screen.list screen.map
- 
-16:06:08 **** Build of configuration Debug for project screen ****
-make -j32 all 
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o"
-arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f103rctx.d" -MT"Core/Startup/startup_stm32f103rctx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Startup/startup_stm32f103rctx.o" "../Core/Startup/startup_stm32f103rctx.s"
-arm-none-eabi-gcc "../Core/Src/24cxx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/24cxx.d" -MT"Core/Src/24cxx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/24cxx.o"
-arm-none-eabi-gcc "../Core/Src/24l01.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/24l01.d" -MT"Core/Src/24l01.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/24l01.o"
-arm-none-eabi-gcc "../Core/Src/ctiic.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ctiic.d" -MT"Core/Src/ctiic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/ctiic.o"
-arm-none-eabi-gcc "../Core/Src/delay.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/delay.d" -MT"Core/Src/delay.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/delay.o"
-arm-none-eabi-gcc "../Core/Src/ft5206.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ft5206.d" -MT"Core/Src/ft5206.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/ft5206.o"
-arm-none-eabi-gcc "../Core/Src/gt9147.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gt9147.d" -MT"Core/Src/gt9147.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/gt9147.o"
-arm-none-eabi-gcc "../Core/Src/key.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/key.d" -MT"Core/Src/key.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/key.o"
-arm-none-eabi-gcc "../Core/Src/lcd.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lcd.d" -MT"Core/Src/lcd.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lcd.o"
-arm-none-eabi-gcc "../Core/Src/lcd_v4.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lcd_v4.d" -MT"Core/Src/lcd_v4.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lcd_v4.o"
-arm-none-eabi-gcc "../Core/Src/led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led.d" -MT"Core/Src/led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led.o"
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/maze.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/maze.d" -MT"Core/Src/maze.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/maze.o"
-arm-none-eabi-gcc "../Core/Src/myiic.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/myiic.d" -MT"Core/Src/myiic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/myiic.o"
-arm-none-eabi-gcc "../Core/Src/ott2001a.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ott2001a.d" -MT"Core/Src/ott2001a.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/ott2001a.o"
-arm-none-eabi-gcc "../Core/Src/spi.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/spi.d" -MT"Core/Src/spi.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/spi.o"
-arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
-arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
-arm-none-eabi-gcc "../Core/Src/sys.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sys.d" -MT"Core/Src/sys.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sys.o"
-arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/syscalls.o"
-arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sysmem.o"
-arm-none-eabi-gcc "../Core/Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f1xx.d" -MT"Core/Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/system_stm32f1xx.o"
-arm-none-eabi-gcc "../Core/Src/touch.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/touch.d" -MT"Core/Src/touch.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/touch.o"
-arm-none-eabi-gcc "../Core/Src/ui.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ui.d" -MT"Core/Src/ui.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/ui.o"
-../Core/Src/ft5206.c: In function 'FT5206_Init':
-../Core/Src/ft5206.c:100:17: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
-  100 |                 printf("CTP ID:%x\r\n",((u16)temp[0]<<8)+temp[1]);
-      |                 ^~~~~~
-../Core/Src/ft5206.c:7:1: note: include '<stdio.h>' or provide a declaration of 'printf'
-    6 | #include "string.h"
-  +++ |+#include <stdio.h>
-    7 | //////////////////////////////////////////////////////////////////////////////////
-../Core/Src/ft5206.c:100:17: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
-  100 |                 printf("CTP ID:%x\r\n",((u16)temp[0]<<8)+temp[1]);
-      |                 ^~~~~~
-../Core/Src/ft5206.c:100:17: note: include '<stdio.h>' or provide a declaration of 'printf'
-../Core/Src/gt9147.c: In function 'GT9147_Init':
-../Core/Src/gt9147.c:147:9: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
-  147 |         printf("CTP ID:%s\r\n",temp);           //��ӡID
-      |         ^~~~~~
-../Core/Src/gt9147.c:8:1: note: include '<stdio.h>' or provide a declaration of 'printf'
-    7 | #include "lcd.h"
-  +++ |+#include <stdio.h>
-    8 | //////////////////////////////////////////////////////////////////////////////////
-../Core/Src/gt9147.c:147:9: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
-  147 |         printf("CTP ID:%s\r\n",temp);           //��ӡID
-      |         ^~~~~~
-../Core/Src/gt9147.c:147:9: note: include '<stdio.h>' or provide a declaration of 'printf'
-../Core/Src/lcd_v4.c: In function 'lcd_show_char':
-../Core/Src/lcd_v4.c:2673:41: warning: array subscript has type 'char' [-Wchar-subscripts]
- 2673 |             pfont = (uint8_t *)asc2_1206[chr];  /* ����1206���� */
-      |                                         ^
-../Core/Src/lcd_v4.c:2677:41: warning: array subscript has type 'char' [-Wchar-subscripts]
- 2677 |             pfont = (uint8_t *)asc2_1608[chr];  /* ����1608���� */
-      |                                         ^
-../Core/Src/lcd_v4.c:2681:41: warning: array subscript has type 'char' [-Wchar-subscripts]
- 2681 |             pfont = (uint8_t *)asc2_2412[chr];  /* ����2412���� */
-      |                                         ^
-../Core/Src/lcd_v4.c:2685:41: warning: array subscript has type 'char' [-Wchar-subscripts]
- 2685 |             pfont = (uint8_t *)asc2_3216[chr];  /* ����3216���� */
-      |                                         ^
-../Core/Src/lcd_v4.c: At top level:
-../Core/Src/lcd_v4.c:149:37: warning: 'always_inline' function might not be inlinable [-Wattributes]
-  149 | __attribute__((always_inline)) void lcd_write_ram_prepare(void)
-      |                                     ^~~~~~~~~~~~~~~~~~~~~
-../Core/Src/lcd_v4.c:76:37: warning: 'always_inline' function might not be inlinable [-Wattributes]
-   76 | __attribute__((always_inline)) void lcd_wr_regno(volatile uint16_t regno)
-      |                                     ^~~~~~~~~~~~
-../Core/Src/ott2001a.c: In function 'OTT2001A_Init':
-../Core/Src/ott2001a.c:104:9: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
-  104 |         printf("CTP ID:%x\r\n",regval);
-      |         ^~~~~~
-../Core/Src/ott2001a.c:6:1: note: include '<stdio.h>' or provide a declaration of 'printf'
-    5 | #include "delay.h"
-  +++ |+#include <stdio.h>
-    6 | //////////////////////////////////////////////////////////////////////////////////
-../Core/Src/ott2001a.c:104:9: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
-  104 |         printf("CTP ID:%x\r\n",regval);
-      |         ^~~~~~
-../Core/Src/ott2001a.c:104:9: note: include '<stdio.h>' or provide a declaration of 'printf'
-../Core/Src/stm32f1xx_it.c: In function 'HAL_TIM_PeriodElapsedCallback':
-../Core/Src/stm32f1xx_it.c:222:17: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-  222 |                 sprintf(str, "%03ds", timer_/100);
-      |                 ^~~~~~~
-../Core/Src/stm32f1xx_it.c:23:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-   22 | #include "stm32f1xx_it.h"
-  +++ |+#include <stdio.h>
-   23 | /* Private includes ----------------------------------------------------------*/
-../Core/Src/stm32f1xx_it.c:222:17: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
-  222 |                 sprintf(str, "%03ds", timer_/100);
-      |                 ^~~~~~~
-../Core/Src/stm32f1xx_it.c:222:17: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:122:9: warning: implicit declaration of function 'game' [-Wimplicit-function-declaration]
-  122 |         game();
-      |         ^~~~
-../Core/Src/stm32f1xx_it.c:223:17: warning: implicit declaration of function 'lcd_show_string' [-Wimplicit-function-declaration]
-  223 |                 lcd_show_string(30, 280, 200, 24, 24, str, RED);
-      |                 ^~~~~~~~~~~~~~~
-../Core/Src/stm32f1xx_it.c:223:60: error: 'RED' undeclared (first use in this function)
-  223 |                 lcd_show_string(30, 280, 200, 24, 24, str, RED);
-      |                                                            ^~~
-../Core/Src/stm32f1xx_it.c:223:60: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [Core/Src/subdir.mk:85: Core/Src/stm32f1xx_it.o] Error 1
-make: *** Waiting for unfinished jobs....
-../Core/Src/maze.c: In function 'display_game_time':
-../Core/Src/maze.c:55:9: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-   55 |         sprintf(time_str, "%03ds", seconds);  // %03d表示至少3位，不足用0填充
-      |         ^~~~~~~
-../Core/Src/maze.c:19:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-   18 | #include "ui.h"
-  +++ |+#include <stdio.h>
-   19 | 
-../Core/Src/maze.c:55:9: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
-   55 |         sprintf(time_str, "%03ds", seconds);  // %03d表示至少3位，不足用0填充
-      |         ^~~~~~~
-../Core/Src/maze.c:55:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-../Core/Src/maze.c:55:31: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-   55 |         sprintf(time_str, "%03ds", seconds);  // %03d表示至少3位，不足用0填充
-      |                            ~~~^    ~~~~~~~
-      |                               |    |
-      |                               int  uint32_t {aka long unsigned int}
-      |                            %03ld
-../Core/Src/maze.c: In function 'rtp':
-../Core/Src/maze.c:184:41: warning: implicit declaration of function 'LCD_Clear'; did you mean 'lcd_clear'? [-Wimplicit-function-declaration]
-  184 |                                         LCD_Clear(WHITE);       //清屏
-      |                                         ^~~~~~~~~
-      |                                         lcd_clear
-../Core/Src/maze.c:190:44: error: 'huart1' undeclared (first use in this function)
-  190 |                         HAL_UART_Transmit(&huart1, "01234", 5, 0xffff);
-      |                                            ^~~~~~
-../Core/Src/maze.c:190:44: note: each undeclared identifier is reported only once for each function it appears in
-../Core/Src/maze.c:190:52: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
-  190 |                         HAL_UART_Transmit(&huart1, "01234", 5, 0xffff);
-      |                                                    ^~~~~~~
-      |                                                    |
-      |                                                    char *
-In file included from ../Core/Inc/stm32f1xx_hal_conf.h:338,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Inc/gpio.h:29,
-                 from ../Core/Src/maze.c:1:
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:749:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  749 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
-      |                                                                ~~~~~~~~~~~~~~~^~~~~
-make: *** [Core/Src/subdir.mk:85: Core/Src/maze.o] Error 1
-../Core/Src/touch.c:21:1: warning: missing braces around initializer [-Wmissing-braces]
-   21 | {
-      | ^
-......
-   25 |         0,
-      |         {
-......
-   29 |         0,
-      |          }
-   30 |         0,
-      |         {
-......
-   33 | };
-      | }
-../Core/Src/touch.c:249:29: warning: pointer targets in initialization of 'u8 * const' {aka 'unsigned char * const'} from 'char *' differ in signedness [-Wpointer-sign]
-  249 | u8* const TP_REMIND_MSG_TBL="Please use the stylus click the cross on the screen.The cross will always move until the screen adjustment is completed.";
-      |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../Core/Src/touch.c: In function 'TP_Adj_Info_Show':
-../Core/Src/touch.c:255:61: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
-  255 |         LCD_ShowString(40,160,lcddev.width,lcddev.height,16,"x1:");
-      |                                                             ^~~~~
-      |                                                             |
-      |                                                             char *
-In file included from ../Core/Src/touch.c:2:
-../Core/Inc/lcd.h:199:40: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
-  199 |                 uint8_t size, uint8_t *p); // Display a string
-      |                               ~~~~~~~~~^
-../Core/Src/touch.c:256:64: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
-  256 |         LCD_ShowString(40+80,160,lcddev.width,lcddev.height,16,"y1:");
-      |                                                                ^~~~~
-      |                                                                |
-      |                                                                char *
-../Core/Inc/lcd.h:199:40: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
-  199 |                 uint8_t size, uint8_t *p); // Display a string
-      |                               ~~~~~~~~~^
-../Core/Src/touch.c:257:61: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
-  257 |         LCD_ShowString(40,180,lcddev.width,lcddev.height,16,"x2:");
-      |                                                             ^~~~~
-      |                                                             |
-      |                                                             char *
-../Core/Inc/lcd.h:199:40: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
-  199 |                 uint8_t size, uint8_t *p); // Display a string
-      |                               ~~~~~~~~~^
-../Core/Src/touch.c:258:64: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
-  258 |         LCD_ShowString(40+80,180,lcddev.width,lcddev.height,16,"y2:");
-      |                                                                ^~~~~
-      |                                                                |
-      |                                                                char *
-../Core/Inc/lcd.h:199:40: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
-  199 |                 uint8_t size, uint8_t *p); // Display a string
-      |                               ~~~~~~~~~^
-../Core/Src/touch.c:259:61: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
-  259 |         LCD_ShowString(40,200,lcddev.width,lcddev.height,16,"x3:");
-      |                                                             ^~~~~
-      |                                                             |
-      |                                                             char *
-../Core/Inc/lcd.h:199:40: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
-  199 |                 uint8_t size, uint8_t *p); // Display a string
-      |                               ~~~~~~~~~^
-../Core/Src/touch.c:260:64: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
-  260 |         LCD_ShowString(40+80,200,lcddev.width,lcddev.height,16,"y3:");
-      |                                                                ^~~~~
-      |                                                                |
-      |                                                                char *
-../Core/Inc/lcd.h:199:40: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
-  199 |                 uint8_t size, uint8_t *p); // Display a string
-      |                               ~~~~~~~~~^
-../Core/Src/touch.c:261:61: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
-  261 |         LCD_ShowString(40,220,lcddev.width,lcddev.height,16,"x4:");
-      |                                                             ^~~~~
-      |                                                             |
-      |                                                             char *
-../Core/Inc/lcd.h:199:40: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
-  199 |                 uint8_t size, uint8_t *p); // Display a string
-      |                               ~~~~~~~~~^
-../Core/Src/touch.c:262:64: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
-  262 |         LCD_ShowString(40+80,220,lcddev.width,lcddev.height,16,"y4:");
-      |                                                                ^~~~~
-      |                                                                |
-      |                                                                char *
-../Core/Inc/lcd.h:199:40: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
-  199 |                 uint8_t size, uint8_t *p); // Display a string
-      |                               ~~~~~~~~~^
-../Core/Src/touch.c:263:61: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
-  263 |         LCD_ShowString(40,240,lcddev.width,lcddev.height,16,"fac is:");
-      |                                                             ^~~~~~~~~
-      |                                                             |
-      |                                                             char *
-../Core/Inc/lcd.h:199:40: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
-  199 |                 uint8_t size, uint8_t *p); // Display a string
-      |                               ~~~~~~~~~^
-../Core/Src/touch.c: In function 'TP_Adjust':
-../Core/Src/touch.c:397:100: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
-  397 |                                                 LCD_ShowString(40,26,lcddev.width,lcddev.height,16,"TP Need readjust!");
-      |                                                                                                    ^~~~~~~~~~~~~~~~~~~
-      |                                                                                                    |
-      |                                                                                                    char *
-../Core/Inc/lcd.h:199:40: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
-  199 |                 uint8_t size, uint8_t *p); // Display a string
-      |                               ~~~~~~~~~^
-../Core/Src/touch.c:412:93: warning: pointer targets in passing argument 6 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
-  412 |                                         LCD_ShowString(35,110,lcddev.width,lcddev.height,16,"Touch Screen Adjust OK!");//У�����
-      |                                                                                             ^~~~~~~~~~~~~~~~~~~~~~~~~
-      |                                                                                             |
-      |                                                                                             char *
-../Core/Inc/lcd.h:199:40: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
-  199 |                 uint8_t size, uint8_t *p); // Display a string
-      |                               ~~~~~~~~~^
-"make -j32 all" terminated with exit code 2. Build might be incomplete.
-16:08:43 **** Incremental Build of configuration Debug for project car1_1 ****
-make -j32 all 
-arm-none-eabi-size  car1_1.elf 
-   text	   data	    bss	    dec	    hex	filename
-  22228	     92	   2060	  24380	   5f3c	car1_1.elf
-Finished building: default.size.stdout
- 
-16:08:43 **** Incremental Build of configuration Debug for project screen ****
-make -j32 all 
-arm-none-eabi-gcc "../Core/Src/maze.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/maze.d" -MT"Core/Src/maze.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/maze.o"
-arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
-../Core/Src/stm32f1xx_it.c: In function 'HAL_TIM_PeriodElapsedCallback':
-../Core/Src/stm32f1xx_it.c:222:17: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-  222 |                 sprintf(str, "%03ds", timer_/100);
-      |                 ^~~~~~~
-../Core/Src/stm32f1xx_it.c:23:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-   22 | #include "stm32f1xx_it.h"
-  +++ |+#include <stdio.h>
-   23 | /* Private includes ----------------------------------------------------------*/
-../Core/Src/stm32f1xx_it.c:222:17: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
-  222 |                 sprintf(str, "%03ds", timer_/100);
-      |                 ^~~~~~~
-../Core/Src/stm32f1xx_it.c:222:17: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-../Core/Src/stm32f1xx_it.c:223:17: warning: implicit declaration of function 'lcd_show_string' [-Wimplicit-function-declaration]
-  223 |                 lcd_show_string(30, 280, 200, 24, 24, str, RED);
-      |                 ^~~~~~~~~~~~~~~
-../Core/Src/stm32f1xx_it.c:223:60: error: 'RED' undeclared (first use in this function)
-  223 |                 lcd_show_string(30, 280, 200, 24, 24, str, RED);
-      |                                                            ^~~
-../Core/Src/stm32f1xx_it.c:223:60: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [Core/Src/subdir.mk:85: Core/Src/stm32f1xx_it.o] Error 1
-make: *** Waiting for unfinished jobs....
-../Core/Src/maze.c: In function 'display_game_time':
-../Core/Src/maze.c:57:9: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-   57 |         sprintf(time_str, "%03ds", seconds);  // %03d表示至少3位，不足用0填充
-      |         ^~~~~~~
-../Core/Src/maze.c:19:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-   18 | #include "ui.h"
-  +++ |+#include <stdio.h>
-   19 | 
-../Core/Src/maze.c:57:9: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
-   57 |         sprintf(time_str, "%03ds", seconds);  // %03d表示至少3位，不足用0填充
-      |         ^~~~~~~
-../Core/Src/maze.c:57:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-../Core/Src/maze.c:57:31: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-   57 |         sprintf(time_str, "%03ds", seconds);  // %03d表示至少3位，不足用0填充
-      |                            ~~~^    ~~~~~~~
-      |                               |    |
-      |                               int  uint32_t {aka long unsigned int}
-      |                            %03ld
-../Core/Src/maze.c: In function 'rtp':
-../Core/Src/maze.c:186:41: warning: implicit declaration of function 'LCD_Clear'; did you mean 'lcd_clear'? [-Wimplicit-function-declaration]
-  186 |                                         LCD_Clear(WHITE);       //清屏
-      |                                         ^~~~~~~~~
-      |                                         lcd_clear
-../Core/Src/maze.c:192:52: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
-  192 |                         HAL_UART_Transmit(&huart1, "01234", 5, 0xffff);
-      |                                                    ^~~~~~~
-      |                                                    |
-      |                                                    char *
-In file included from ../Core/Inc/stm32f1xx_hal_conf.h:338,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Inc/gpio.h:29,
-                 from ../Core/Src/maze.c:1:
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:749:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  749 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
-      |                                                                ~~~~~~~~~~~~~~~^~~~~
-"make -j32 all" terminated with exit code 2. Build might be incomplete.
-16:09:00 **** Incremental Build of configuration Debug for project car1_1 ****
-make -j32 all 
-arm-none-eabi-size  car1_1.elf 
-   text	   data	    bss	    dec	    hex	filename
-  22228	     92	   2060	  24380	   5f3c	car1_1.elf
-Finished building: default.size.stdout
- 
-16:09:01 **** Incremental Build of configuration Debug for project screen ****
-make -j32 all 
-arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
-arm-none-eabi-gcc -o "screen.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\screen\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="screen.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: screen.elf
- 
-arm-none-eabi-size  screen.elf 
-arm-none-eabi-objdump -h -S screen.elf  > "screen.list"
-   text	   data	    bss	    dec	    hex	filename
-  69528	    176	   2168	  71872	  118c0	screen.elf
-arm-none-eabi-objcopy  -O ihex screen.elf  "screen.hex"
-Finished building: default.size.stdout
-arm-none-eabi-objcopy  -O binary screen.elf  "screen.bin"
- 
-Finished building: screen.hex
- 
-Finished building: screen.bin
- 
-Finished building: screen.list
- 
-16:12:53 **** Incremental Build of configuration Debug for project car1_1 ****
-make -j32 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:127:25: warning: implicit declaration of function 'mode1_loop' [-Wimplicit-function-declaration]
-  127 |                         mode1_loop(); // 路径规划模式
-      |                         ^~~~~~~~~~
-../Core/Src/main.c:130:25: warning: implicit declaration of function 'mode2_loop' [-Wimplicit-function-declaration]
-  130 |                         mode2_loop(); // 红外跟踪模式
-      |                         ^~~~~~~~~~
-../Core/Src/main.c:133:25: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
-  133 |                         stop_motors();
-      |                         ^~~~~~~~~~~
-arm-none-eabi-gcc -o "car1_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\car1_1\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car1_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: car1_1.elf
- 
-arm-none-eabi-size  car1_1.elf 
-arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
-   text	   data	    bss	    dec	    hex	filename
-  22228	     92	   2060	  24380	   5f3c	car1_1.elf
-arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
-Finished building: default.size.stdout
-arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
- 
-Finished building: car1_1.hex
-Finished building: car1_1.list
- 
-Finished building: car1_1.bin
- 
- 
-16:12:54 **** Incremental Build of configuration Debug for project screen ****
-make -j32 all 
-arm-none-eabi-size  screen.elf 
-   text	   data	    bss	    dec	    hex	filename
-  69528	    176	   2168	  71872	  118c0	screen.elf
-Finished building: default.size.stdout
- 
-16:18:23 **** Incremental Build of configuration Debug for project car1_1 ****
-make -j32 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:127:25: warning: implicit declaration of function 'mode1_loop' [-Wimplicit-function-declaration]
-  127 |                         mode1_loop(); // 路径规划模式
-      |                         ^~~~~~~~~~
-../Core/Src/main.c:130:25: warning: implicit declaration of function 'mode2_loop' [-Wimplicit-function-declaration]
-  130 |                         mode2_loop(); // 红外跟踪模式
-      |                         ^~~~~~~~~~
-../Core/Src/main.c:133:25: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
-  133 |                         stop_motors();
-      |                         ^~~~~~~~~~~
-../Core/Src/main.c:135:44: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
-  135 |                 HAL_UART_Transmit(&huart1, "01234", 5, 0xffff);
-      |                                            ^~~~~~~
-      |                                            |
-      |                                            char *
-In file included from ../Core/Inc/stm32f1xx_hal_conf.h:338,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:749:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  749 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
-      |                                                                ~~~~~~~~~~~~~~~^~~~~
-arm-none-eabi-gcc -o "car1_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\car1_1\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car1_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: car1_1.elf
- 
-arm-none-eabi-size  car1_1.elf 
-arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
-   text	   data	    bss	    dec	    hex	filename
-  22724	     92	   2060	  24876	   612c	car1_1.elf
-arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
-Finished building: default.size.stdout
-arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
- 
-Finished building: car1_1.hex
- 
-Finished building: car1_1.bin
-Finished building: car1_1.list
- 
- 
-16:18:24 **** Incremental Build of configuration Debug for project screen ****
-make -j32 all 
-arm-none-eabi-gcc "../Core/Src/maze.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/maze.d" -MT"Core/Src/maze.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/maze.o"
-../Core/Src/maze.c: In function 'display_game_time':
-../Core/Src/maze.c:57:9: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-   57 |         sprintf(time_str, "%03ds", seconds);  // %03d表示至少3位，不足用0填充
-      |         ^~~~~~~
-../Core/Src/maze.c:19:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-   18 | #include "ui.h"
-  +++ |+#include <stdio.h>
-   19 | 
-../Core/Src/maze.c:57:9: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
-   57 |         sprintf(time_str, "%03ds", seconds);  // %03d表示至少3位，不足用0填充
-      |         ^~~~~~~
-../Core/Src/maze.c:57:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-../Core/Src/maze.c:57:31: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-   57 |         sprintf(time_str, "%03ds", seconds);  // %03d表示至少3位，不足用0填充
-      |                            ~~~^    ~~~~~~~
-      |                               |    |
-      |                               int  uint32_t {aka long unsigned int}
-      |                            %03ld
-../Core/Src/maze.c: In function 'rtp':
-../Core/Src/maze.c:186:25: warning: implicit declaration of function 'LCD_Clear'; did you mean 'lcd_clear'? [-Wimplicit-function-declaration]
-  186 |                         LCD_Clear(WHITE);       //清屏
-      |                         ^~~~~~~~~
-      |                         lcd_clear
-../Core/Src/maze.c:192:52: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
-  192 |                         HAL_UART_Transmit(&huart1, "01234", 5, 0xffff);
-      |                                                    ^~~~~~~
-      |                                                    |
-      |                                                    char *
-In file included from ../Core/Inc/stm32f1xx_hal_conf.h:338,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Inc/gpio.h:29,
-                 from ../Core/Src/maze.c:1:
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:749:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  749 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
-      |                                                                ~~~~~~~~~~~~~~~^~~~~
-arm-none-eabi-gcc -o "screen.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\screen\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="screen.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: screen.elf
- 
-arm-none-eabi-size  screen.elf 
-arm-none-eabi-objdump -h -S screen.elf  > "screen.list"
-   text	   data	    bss	    dec	    hex	filename
-  69528	    176	   2168	  71872	  118c0	screen.elf
-arm-none-eabi-objcopy  -O ihex screen.elf  "screen.hex"
-arm-none-eabi-objcopy  -O binary screen.elf  "screen.bin"
-Finished building: default.size.stdout
- 
-Finished building: screen.hex
- 
-Finished building: screen.bin
- 
-Finished building: screen.list
- 
-16:56:10 **** Incremental Build of configuration Debug for project car1_1 ****
-make -j32 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:127:25: warning: implicit declaration of function 'mode1_loop' [-Wimplicit-function-declaration]
-  127 |                         mode1_loop(); // 路径规划模式
-      |                         ^~~~~~~~~~
-../Core/Src/main.c:130:25: warning: implicit declaration of function 'mode2_loop' [-Wimplicit-function-declaration]
-  130 |                         mode2_loop(); // 红外跟踪模式
-      |                         ^~~~~~~~~~
-../Core/Src/main.c:133:25: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
-  133 |                         stop_motors();
-      |                         ^~~~~~~~~~~
-arm-none-eabi-gcc -o "car1_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\car1_1\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car1_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: car1_1.elf
- 
-arm-none-eabi-size  car1_1.elf 
-arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
-   text	   data	    bss	    dec	    hex	filename
-  22724	     92	   2060	  24876	   612c	car1_1.elf
+  22444	     92	   2060	  24596	   6014	car1_1.elf
 arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
 arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
 Finished building: default.size.stdout
  
+Finished building: car1_1.list
 Finished building: car1_1.hex
- 
 Finished building: car1_1.bin
  
-Finished building: car1_1.list
  
-16:56:13 **** Incremental Build of configuration Debug for project screen ****
+ 
+18:51:20 **** Incremental Build of configuration Debug for project car1_1 ****
 make -j32 all 
-arm-none-eabi-size  screen.elf 
-   text	   data	    bss	    dec	    hex	filename
-  69528	    176	   2168	  71872	  118c0	screen.elf
-Finished building: default.size.stdout
- 
-16:58:09 **** Incremental Build of configuration Debug for project car1_1 ****
-make -j32 all 
-arm-none-eabi-size  car1_1.elf 
-   text	   data	    bss	    dec	    hex	filename
-  22724	     92	   2060	  24876	   612c	car1_1.elf
-Finished building: default.size.stdout
- 
-16:58:09 **** Clean-only build of configuration Debug for project lab7 ****
-make -j32 clean 
-rm -rf ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.su
-rm -rf ./Core/Startup/startup_stm32f103rctx.d ./Core/Startup/startup_stm32f103rctx.o
-rm -rf ./Core/Src/lcd.cyclo ./Core/Src/lcd.d ./Core/Src/lcd.o ./Core/Src/lcd.su ./Core/Src/lcd_v4.cyclo ./Core/Src/lcd_v4.d ./Core/Src/lcd_v4.o ./Core/Src/lcd_v4.su ./Core/Src/main.cyclo ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/stm32f1xx_hal_msp.cyclo ./Core/Src/stm32f1xx_hal_msp.d ./Core/Src/stm32f1xx_hal_msp.o ./Core/Src/stm32f1xx_hal_msp.su ./Core/Src/stm32f1xx_it.cyclo ./Core/Src/stm32f1xx_it.d ./Core/Src/stm32f1xx_it.o ./Core/Src/stm32f1xx_it.su ./Core/Src/syscalls.cyclo ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.cyclo ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32f1xx.cyclo ./Core/Src/system_stm32f1xx.d ./Core/Src/system_stm32f1xx.o ./Core/Src/system_stm32f1xx.su
-rm -rf default.size.stdout lab7.bin lab7.elf lab7.hex lab7.list lab7.map
- 
-16:58:10 **** Build of configuration Debug for project lab7 ****
-make -j32 all 
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o"
-arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o"
-arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f103rctx.d" -MT"Core/Startup/startup_stm32f103rctx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Startup/startup_stm32f103rctx.o" "../Core/Startup/startup_stm32f103rctx.s"
-arm-none-eabi-gcc "../Core/Src/lcd.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lcd.d" -MT"Core/Src/lcd.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lcd.o"
-arm-none-eabi-gcc "../Core/Src/lcd_v4.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lcd_v4.d" -MT"Core/Src/lcd_v4.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/lcd_v4.o"
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
-arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
-arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/syscalls.o"
-arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sysmem.o"
-arm-none-eabi-gcc "../Core/Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f1xx.d" -MT"Core/Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/system_stm32f1xx.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:96:3: warning: implicit declaration of function 'lcd_init' [-Wimplicit-function-declaration]
-   96 |   lcd_init();
-      |   ^~~~~~~~
-../Core/Src/main.c:103:46: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
-  103 |                   HAL_UART_Transmit(&huart1, "KEY1 Pressed!", 13, 0xffff);
-      |                                              ^~~~~~~~~~~~~~~
-      |                                              |
-      |                                              char *
-In file included from ../Core/Inc/stm32f1xx_hal_conf.h:338,
-                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:749:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  749 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
-      |                                                                ~~~~~~~~~~~~~~~^~~~~
-../Core/Src/main.c:107:46: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
-  107 |                   HAL_UART_Transmit(&huart1, "KEY0 Pressed!", 13, 0xffff);
-      |                                              ^~~~~~~~~~~~~~~
-      |                                              |
-      |                                              char *
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:749:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  749 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
-      |                                                                ~~~~~~~~~~~~~~~^~~~~
-../Core/Src/lcd_v4.c: In function 'lcd_show_char':
-../Core/Src/lcd_v4.c:2673:41: warning: array subscript has type 'char' [-Wchar-subscripts]
- 2673 |             pfont = (uint8_t *)asc2_1206[chr];  /* ����1206���� */
-      |                                         ^
-../Core/Src/lcd_v4.c:2677:41: warning: array subscript has type 'char' [-Wchar-subscripts]
- 2677 |             pfont = (uint8_t *)asc2_1608[chr];  /* ����1608���� */
-      |                                         ^
-../Core/Src/lcd_v4.c:2681:41: warning: array subscript has type 'char' [-Wchar-subscripts]
- 2681 |             pfont = (uint8_t *)asc2_2412[chr];  /* ����2412���� */
-      |                                         ^
-../Core/Src/lcd_v4.c:2685:41: warning: array subscript has type 'char' [-Wchar-subscripts]
- 2685 |             pfont = (uint8_t *)asc2_3216[chr];  /* ����3216���� */
-      |                                         ^
-../Core/Src/lcd_v4.c: At top level:
-../Core/Src/lcd_v4.c:149:37: warning: 'always_inline' function might not be inlinable [-Wattributes]
-  149 | __attribute__((always_inline)) void lcd_write_ram_prepare(void)
-      |                                     ^~~~~~~~~~~~~~~~~~~~~
-../Core/Src/lcd_v4.c:76:37: warning: 'always_inline' function might not be inlinable [-Wattributes]
-   76 | __attribute__((always_inline)) void lcd_wr_regno(volatile uint16_t regno)
-      |                                     ^~~~~~~~~~~~
-../Core/Src/stm32f1xx_it.c: In function 'HAL_UART_RxCpltCallback':
-../Core/Src/stm32f1xx_it.c:225:62: warning: pointer targets in passing argument 6 of 'lcd_show_string' differ in signedness [-Wpointer-sign]
-  225 |                         lcd_show_string(30, 70, 200, 16, 16, uRx_Data, RED);
-      |                                                              ^~~~~~~~
-      |                                                              |
-      |                                                              unsigned char *
-In file included from ../Core/Src/stm32f1xx_it.c:23:
-../Core/Inc/lcd_v4.h:218:99: note: expected 'char *' but argument is of type 'unsigned char *'
-  218 | void lcd_show_string(uint16_t x, uint16_t y, uint16_t width, uint16_t height, uint8_t size, char *p, uint16_t color);   /* ��ʾ�ַ��� */
-      |                                                                                             ~~~~~~^
-arm-none-eabi-gcc -o "lab7.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\STM32CubeIDE\workspace_1.19.0\lab7\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab7.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: lab7.elf
- 
-arm-none-eabi-size  lab7.elf 
-arm-none-eabi-objdump -h -S lab7.elf  > "lab7.list"
-   text	   data	    bss	    dec	    hex	filename
-  48964	     16	   2704	  51684	   c9e4	lab7.elf
-arm-none-eabi-objcopy  -O ihex lab7.elf  "lab7.hex"
-Finished building: default.size.stdout
-arm-none-eabi-objcopy  -O binary lab7.elf  "lab7.bin"
- 
-Finished building: lab7.hex
-Finished building: lab7.list
-Finished building: lab7.bin
- 
- 
- 
-16:58:12 **** Incremental Build of configuration Debug for project screen ****
-make -j32 all 
-arm-none-eabi-size  screen.elf 
-   text	   data	    bss	    dec	    hex	filename
-  69528	    176	   2168	  71872	  118c0	screen.elf
-Finished building: default.size.stdout
- 
-17:33:17 **** Incremental Build of configuration Debug for project car1_1 ****
-make -j32 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc "../Core/Src/mode1.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode1.d" -MT"Core/Src/mode1.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode1.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:127:25: warning: implicit declaration of function 'mode1_loop' [-Wimplicit-function-declaration]
-  127 |                         mode1_loop(); // 路径规划模式
-      |                         ^~~~~~~~~~
-../Core/Src/main.c:130:25: warning: implicit declaration of function 'mode2_loop' [-Wimplicit-function-declaration]
-  130 |                         mode2_loop(); // 红外跟踪模式
-      |                         ^~~~~~~~~~
-../Core/Src/main.c:133:25: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
-  133 |                         stop_motors();
-      |                         ^~~~~~~~~~~
 ../Core/Src/mode1.c: In function 'mode1_loop':
 ../Core/Src/mode1.c:28:17: warning: implicit declaration of function 'turn_in_place' [-Wimplicit-function-declaration]
    28 |                 turn_in_place(180.0);
@@ -1190,34 +57,399 @@ arm-none-eabi-gcc "../Core/Src/mode1.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -
 ../Core/Src/mode1.c:48:9: warning: implicit declaration of function 'forward_with_length' [-Wimplicit-function-declaration]
    48 |         forward_with_length(length);
       |         ^~~~~~~~~~~~~~~~~~~
+../Core/Src/mode1.c:55:9: warning: implicit declaration of function 'init_motors' [-Wimplicit-function-declaration]
+   55 |         init_motors();
+      |         ^~~~~~~~~~~
+../Core/Src/mode1.c:57:30: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
+   57 |         HAL_Delay(turn_time);stop_motors();
+      |                              ^~~~~~~~~~~
+../Core/Src/mode1.c:58:9: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
+   58 |         traj_update(0, 0);
+      |         ^~~~~~~~~~~
 arm-none-eabi-gcc -o "car1_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\car1_1\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car1_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: car1_1.elf
  
 arm-none-eabi-size  car1_1.elf 
 arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
 arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
-   text	   data	    bss	    dec	    hex	filename
-  22300	     92	   2060	  24452	   5f84	car1_1.elf
 arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  22508	     92	   2060	  24660	   6054	car1_1.elf
 Finished building: default.size.stdout
+ 
+Finished building: car1_1.list
  
 Finished building: car1_1.bin
 Finished building: car1_1.hex
  
  
+18:53:12 **** Incremental Build of configuration Debug for project car1_1 ****
+make -j32 all 
+arm-none-eabi-gcc "../Core/Src/control.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/control.d" -MT"Core/Src/control.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/control.o"
+../Core/Src/control.c: In function 'turn_in_place':
+../Core/Src/control.c:112:17: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
+  112 |                 traj_update(-V_HALF, V_HALF);
+      |                 ^~~~~~~~~~~
+../Core/Src/control.c:109:18: warning: unused variable 'turn_time' [-Wunused-variable]
+  109 |         uint32_t turn_time = fabs(angle) * turn_time_per_degree;
+      |                  ^~~~~~~~~
+../Core/Src/control.c: In function 'forward_with_length':
+../Core/Src/control.c:122:24: warning: unused variable 'forward_time_per_centi_meter' [-Wunused-variable]
+  122 |         const uint16_t forward_time_per_centi_meter = 10; //tbd
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "car1_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\car1_1\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car1_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: car1_1.elf
+ 
+arm-none-eabi-size  car1_1.elf 
+arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
+   text	   data	    bss	    dec	    hex	filename
+  22500	     92	   2060	  24652	   604c	car1_1.elf
+arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
+Finished building: default.size.stdout
+arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
+ 
+Finished building: car1_1.hex
 Finished building: car1_1.list
  
-17:33:21 **** Incremental Build of configuration Debug for project lab7 ****
+ 
+Finished building: car1_1.bin
+ 
+18:54:25 **** Incremental Build of configuration Debug for project car1_1 ****
 make -j32 all 
-arm-none-eabi-size  lab7.elf 
+arm-none-eabi-gcc "../Core/Src/mode1.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode1.d" -MT"Core/Src/mode1.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode1.o"
+../Core/Src/mode1.c: In function 'mode1_loop':
+../Core/Src/mode1.c:28:17: warning: implicit declaration of function 'turn_in_place' [-Wimplicit-function-declaration]
+   28 |                 turn_in_place(180.0);
+      |                 ^~~~~~~~~~~~~
+../Core/Src/mode1.c:48:9: warning: implicit declaration of function 'forward_with_length' [-Wimplicit-function-declaration]
+   48 |         forward_with_length(length);
+      |         ^~~~~~~~~~~~~~~~~~~
+../Core/Src/mode1.c:55:9: warning: implicit declaration of function 'init_motors' [-Wimplicit-function-declaration]
+   55 |         init_motors();
+      |         ^~~~~~~~~~~
+../Core/Src/mode1.c:57:30: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
+   57 |         HAL_Delay(turn_time);stop_motors();
+      |                              ^~~~~~~~~~~
+../Core/Src/mode1.c:58:9: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
+   58 |         traj_update(0, 0);
+      |         ^~~~~~~~~~~
+arm-none-eabi-gcc -o "car1_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\car1_1\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car1_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: car1_1.elf
+ 
+arm-none-eabi-size  car1_1.elf 
+arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
    text	   data	    bss	    dec	    hex	filename
-  48964	     16	   2704	  51684	   c9e4	lab7.elf
+  22500	     92	   2060	  24652	   604c	car1_1.elf
+arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
+Finished building: default.size.stdout
+arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
+ 
+Finished building: car1_1.hex
+Finished building: car1_1.list
+ 
+ 
+Finished building: car1_1.bin
+ 
+18:56:40 **** Incremental Build of configuration Debug for project car1_1 ****
+make -j32 all 
+arm-none-eabi-gcc "../Core/Src/control.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/control.d" -MT"Core/Src/control.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/control.o"
+arm-none-eabi-gcc "../Core/Src/mode1.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode1.d" -MT"Core/Src/mode1.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode1.o"
+../Core/Src/control.c:106:6: error: conflicting types for 'turn_in_place'; have 'void(int)'
+  106 | void turn_in_place(int angle) {
+      |      ^~~~~~~~~~~~~
+In file included from ../Core/Src/control.c:1:
+../Core/Inc/control.h:12:6: note: previous declaration of 'turn_in_place' with type 'void(float)'
+   12 | void turn_in_place(float angle);
+      |      ^~~~~~~~~~~~~
+../Core/Src/control.c: In function 'turn_in_place':
+../Core/Src/control.c:112:17: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
+  112 |                 traj_update(-V_HALF, V_HALF);
+      |                 ^~~~~~~~~~~
+../Core/Src/control.c:107:24: warning: unused variable 'turn_time_per_degree' [-Wunused-variable]
+  107 |         const uint16_t turn_time_per_degree = 10; //tbd
+      |                        ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/control.c: In function 'forward_with_length':
+../Core/Src/control.c:122:24: warning: unused variable 'forward_time_per_centi_meter' [-Wunused-variable]
+  122 |         const uint16_t forward_time_per_centi_meter = 10; //tbd
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/mode1.c: In function 'mode1_loop':
+../Core/Src/mode1.c:28:17: warning: implicit declaration of function 'turn_in_place' [-Wimplicit-function-declaration]
+   28 |                 turn_in_place(180.0);
+      |                 ^~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:55: Core/Src/control.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/mode1.c:48:9: warning: implicit declaration of function 'forward_with_length' [-Wimplicit-function-declaration]
+   48 |         forward_with_length(length);
+      |         ^~~~~~~~~~~~~~~~~~~
+../Core/Src/mode1.c:55:9: warning: implicit declaration of function 'init_motors' [-Wimplicit-function-declaration]
+   55 |         init_motors();
+      |         ^~~~~~~~~~~
+../Core/Src/mode1.c:57:30: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
+   57 |         HAL_Delay(turn_time);stop_motors();
+      |                              ^~~~~~~~~~~
+../Core/Src/mode1.c:58:9: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
+   58 |         traj_update(0, 0);
+      |         ^~~~~~~~~~~
+"make -j32 all" terminated with exit code 2. Build might be incomplete.
+18:57:03 **** Incremental Build of configuration Debug for project car1_1 ****
+make -j32 all 
+arm-none-eabi-gcc "../Core/Src/control.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/control.d" -MT"Core/Src/control.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/control.o"
+arm-none-eabi-gcc "../Core/Src/mode2.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode2.d" -MT"Core/Src/mode2.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode2.o"
+../Core/Src/control.c: In function 'turn_in_place':
+../Core/Src/control.c:112:17: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
+  112 |                 traj_update(-V_HALF, V_HALF);
+      |                 ^~~~~~~~~~~
+../Core/Src/control.c:107:24: warning: unused variable 'turn_time_per_degree' [-Wunused-variable]
+  107 |         const uint16_t turn_time_per_degree = 10; //tbd
+      |                        ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/control.c: In function 'forward_with_length':
+../Core/Src/control.c:122:24: warning: unused variable 'forward_time_per_centi_meter' [-Wunused-variable]
+  122 |         const uint16_t forward_time_per_centi_meter = 10; //tbd
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "car1_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\car1_1\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car1_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: car1_1.elf
+ 
+arm-none-eabi-size  car1_1.elf 
+arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
+   text	   data	    bss	    dec	    hex	filename
+  22380	     92	   2060	  24532	   5fd4	car1_1.elf
+arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
+Finished building: default.size.stdout
+arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
+ 
+Finished building: car1_1.hex
+Finished building: car1_1.list
+ 
+ 
+Finished building: car1_1.bin
+ 
+18:58:24 **** Incremental Build of configuration Debug for project car1_1 ****
+make -j32 all 
+arm-none-eabi-gcc "../Core/Src/mode1.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode1.d" -MT"Core/Src/mode1.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode1.o"
+../Core/Src/mode1.c: In function 'mode1_loop':
+../Core/Src/mode1.c:28:17: warning: implicit declaration of function 'turn_in_place' [-Wimplicit-function-declaration]
+   28 |                 turn_in_place(180.0);
+      |                 ^~~~~~~~~~~~~
+../Core/Src/mode1.c:48:9: warning: implicit declaration of function 'forward_with_length' [-Wimplicit-function-declaration]
+   48 |         forward_with_length(length);
+      |         ^~~~~~~~~~~~~~~~~~~
+../Core/Src/mode1.c:55:9: warning: implicit declaration of function 'init_motors' [-Wimplicit-function-declaration]
+   55 |         init_motors();
+      |         ^~~~~~~~~~~
+../Core/Src/mode1.c:57:30: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
+   57 |         HAL_Delay(turn_time);stop_motors();
+      |                              ^~~~~~~~~~~
+../Core/Src/mode1.c:58:9: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
+   58 |         traj_update(0, 0);
+      |         ^~~~~~~~~~~
+arm-none-eabi-gcc -o "car1_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\car1_1\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car1_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: car1_1.elf
+ 
+arm-none-eabi-size  car1_1.elf 
+arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
+   text	   data	    bss	    dec	    hex	filename
+  22380	     92	   2060	  24532	   5fd4	car1_1.elf
+arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
+Finished building: default.size.stdout
+arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
+ 
+Finished building: car1_1.list
+Finished building: car1_1.hex
+ 
+ 
+Finished building: car1_1.bin
+ 
+18:59:35 **** Incremental Build of configuration Debug for project car1_1 ****
+make -j32 all 
+arm-none-eabi-gcc "../Core/Src/mode1.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode1.d" -MT"Core/Src/mode1.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode1.o"
+../Core/Src/mode1.c: In function 'mode1_loop':
+../Core/Src/mode1.c:28:17: warning: implicit declaration of function 'turn_in_place' [-Wimplicit-function-declaration]
+   28 |                 turn_in_place(180.0);
+      |                 ^~~~~~~~~~~~~
+../Core/Src/mode1.c:48:9: warning: implicit declaration of function 'forward_with_length' [-Wimplicit-function-declaration]
+   48 |         forward_with_length(length);
+      |         ^~~~~~~~~~~~~~~~~~~
+../Core/Src/mode1.c:55:9: warning: implicit declaration of function 'init_motors' [-Wimplicit-function-declaration]
+   55 |         init_motors();
+      |         ^~~~~~~~~~~
+../Core/Src/mode1.c:57:30: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
+   57 |         HAL_Delay(turn_time);stop_motors();
+      |                              ^~~~~~~~~~~
+../Core/Src/mode1.c:58:9: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
+   58 |         traj_update(0, 0);
+      |         ^~~~~~~~~~~
+arm-none-eabi-gcc -o "car1_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\car1_1\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car1_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: car1_1.elf
+ 
+arm-none-eabi-size  car1_1.elf 
+arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
+   text	   data	    bss	    dec	    hex	filename
+  22380	     92	   2060	  24532	   5fd4	car1_1.elf
+arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
+Finished building: default.size.stdout
+arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
+ 
+Finished building: car1_1.hex
+Finished building: car1_1.list
+Finished building: car1_1.bin
+ 
+ 
+ 
+19:01:30 **** Incremental Build of configuration Debug for project car1_1 ****
+make -j32 all 
+arm-none-eabi-gcc "../Core/Src/mode1.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode1.d" -MT"Core/Src/mode1.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode1.o"
+../Core/Src/mode1.c: In function 'mode1_loop':
+../Core/Src/mode1.c:28:17: warning: implicit declaration of function 'turn_in_place' [-Wimplicit-function-declaration]
+   28 |                 turn_in_place(180.0);
+      |                 ^~~~~~~~~~~~~
+../Core/Src/mode1.c:48:9: warning: implicit declaration of function 'forward_with_length' [-Wimplicit-function-declaration]
+   48 |         forward_with_length(length);
+      |         ^~~~~~~~~~~~~~~~~~~
+../Core/Src/mode1.c:55:9: warning: implicit declaration of function 'init_motors' [-Wimplicit-function-declaration]
+   55 |         init_motors();
+      |         ^~~~~~~~~~~
+../Core/Src/mode1.c:57:30: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
+   57 |         HAL_Delay(turn_time);stop_motors();
+      |                              ^~~~~~~~~~~
+../Core/Src/mode1.c:58:9: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
+   58 |         traj_update(0, 0);
+      |         ^~~~~~~~~~~
+arm-none-eabi-gcc -o "car1_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\car1_1\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car1_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: car1_1.elf
+ 
+arm-none-eabi-size  car1_1.elf 
+arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
+   text	   data	    bss	    dec	    hex	filename
+  22452	     92	   2060	  24604	   601c	car1_1.elf
+arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
+Finished building: default.size.stdout
+arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
+ 
+Finished building: car1_1.hex
+Finished building: car1_1.list
+ 
+Finished building: car1_1.bin
+ 
+ 
+19:02:47 **** Incremental Build of configuration Debug for project car1_1 ****
+make -j32 all 
+arm-none-eabi-gcc "../Core/Src/mode1.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode1.d" -MT"Core/Src/mode1.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode1.o"
+../Core/Src/mode1.c: In function 'mode1_loop':
+../Core/Src/mode1.c:28:17: warning: implicit declaration of function 'turn_in_place' [-Wimplicit-function-declaration]
+   28 |                 turn_in_place(180.0);
+      |                 ^~~~~~~~~~~~~
+../Core/Src/mode1.c:48:9: warning: implicit declaration of function 'forward_with_length' [-Wimplicit-function-declaration]
+   48 |         forward_with_length(length);
+      |         ^~~~~~~~~~~~~~~~~~~
+../Core/Src/mode1.c:55:9: warning: implicit declaration of function 'init_motors' [-Wimplicit-function-declaration]
+   55 |         init_motors();
+      |         ^~~~~~~~~~~
+../Core/Src/mode1.c:57:30: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
+   57 |         HAL_Delay(turn_time);stop_motors();
+      |                              ^~~~~~~~~~~
+../Core/Src/mode1.c:58:9: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
+   58 |         traj_update(0, 0);
+      |         ^~~~~~~~~~~
+arm-none-eabi-gcc -o "car1_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\car1_1\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car1_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: car1_1.elf
+ 
+arm-none-eabi-size  car1_1.elf 
+arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
+   text	   data	    bss	    dec	    hex	filename
+  22548	     92	   2060	  24700	   607c	car1_1.elf
+arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
+Finished building: default.size.stdout
+arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
+ 
+Finished building: car1_1.hex
+Finished building: car1_1.list
+ 
+Finished building: car1_1.bin
+ 
+ 
+19:03:50 **** Incremental Build of configuration Debug for project car1_1 ****
+make -j32 all 
+arm-none-eabi-gcc "../Core/Src/mode1.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode1.d" -MT"Core/Src/mode1.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode1.o"
+../Core/Src/mode1.c: In function 'mode1_loop':
+../Core/Src/mode1.c:28:17: warning: implicit declaration of function 'turn_in_place' [-Wimplicit-function-declaration]
+   28 |                 turn_in_place(180.0);
+      |                 ^~~~~~~~~~~~~
+../Core/Src/mode1.c:48:9: warning: implicit declaration of function 'forward_with_length' [-Wimplicit-function-declaration]
+   48 |         forward_with_length(length);
+      |         ^~~~~~~~~~~~~~~~~~~
+../Core/Src/mode1.c:55:9: warning: implicit declaration of function 'init_motors' [-Wimplicit-function-declaration]
+   55 |         init_motors();
+      |         ^~~~~~~~~~~
+../Core/Src/mode1.c:57:30: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
+   57 |         HAL_Delay(turn_time);stop_motors();
+      |                              ^~~~~~~~~~~
+../Core/Src/mode1.c:58:9: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
+   58 |         traj_update(0, 0);
+      |         ^~~~~~~~~~~
+arm-none-eabi-gcc -o "car1_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\car1_1\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car1_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: car1_1.elf
+ 
+arm-none-eabi-size  car1_1.elf 
+arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
+   text	   data	    bss	    dec	    hex	filename
+  22580	     92	   2060	  24732	   609c	car1_1.elf
+arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
+Finished building: default.size.stdout
+arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
+ 
+Finished building: car1_1.hex
+Finished building: car1_1.list
+ 
+Finished building: car1_1.bin
+ 
+ 
+19:04:10 **** Incremental Build of configuration Debug for project car1_1 ****
+make -j32 all 
+arm-none-eabi-size  car1_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22580	     92	   2060	  24732	   609c	car1_1.elf
 Finished building: default.size.stdout
  
-17:33:26 **** Incremental Build of configuration Debug for project screen ****
+19:04:50 **** Incremental Build of configuration Debug for project car1_1 ****
 make -j32 all 
-arm-none-eabi-size  screen.elf 
+arm-none-eabi-gcc "../Core/Src/mode1.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode1.d" -MT"Core/Src/mode1.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode1.o"
+../Core/Src/mode1.c: In function 'mode1_loop':
+../Core/Src/mode1.c:28:17: warning: implicit declaration of function 'turn_in_place' [-Wimplicit-function-declaration]
+   28 |                 turn_in_place(180.0);
+      |                 ^~~~~~~~~~~~~
+../Core/Src/mode1.c:48:9: warning: implicit declaration of function 'forward_with_length' [-Wimplicit-function-declaration]
+   48 |         forward_with_length(length);
+      |         ^~~~~~~~~~~~~~~~~~~
+../Core/Src/mode1.c:55:9: warning: implicit declaration of function 'init_motors' [-Wimplicit-function-declaration]
+   55 |         init_motors();
+      |         ^~~~~~~~~~~
+../Core/Src/mode1.c:57:30: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
+   57 |         HAL_Delay(turn_time);stop_motors();
+      |                              ^~~~~~~~~~~
+../Core/Src/mode1.c:58:9: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
+   58 |         traj_update(0, 0);
+      |         ^~~~~~~~~~~
+arm-none-eabi-gcc -o "car1_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\car1_1\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car1_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: car1_1.elf
+ 
+arm-none-eabi-size  car1_1.elf 
+arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
    text	   data	    bss	    dec	    hex	filename
-  69528	    176	   2168	  71872	  118c0	screen.elf
+  22580	     92	   2060	  24732	   609c	car1_1.elf
+arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
+Finished building: default.size.stdout
+arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
+ 
+Finished building: car1_1.hex
+Finished building: car1_1.list
+ 
+Finished building: car1_1.bin
+ 
+ 
+19:05:01 **** Incremental Build of configuration Debug for project car1_1 ****
+make -j32 all 
+arm-none-eabi-size  car1_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22580	     92	   2060	  24732	   609c	car1_1.elf
 Finished building: default.size.stdout
  

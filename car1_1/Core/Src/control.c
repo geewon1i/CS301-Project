@@ -1,6 +1,7 @@
 #include "control.h"
 #include "tim.h"
 #include "gpio.h"
+#include "math.h"
 
 /* 外部句柄 */
 extern TIM_HandleTypeDef htim3;   // 软件 PWM 定时器
@@ -11,11 +12,11 @@ extern TIM_HandleTypeDef htim3;   // 软件 PWM 定时器
 
 void init_motors(void)
 {
-    /* 软件 PWM 定时器启动 */
-    HAL_TIM_Base_Start_IT(&htim3);
+	/* 软件 PWM 定时器启动 */
+	HAL_TIM_Base_Start_IT(&htim3);
 
 
-    // 方向初始化
+	// 方向初始化
 	HAL_GPIO_WritePin(IN1_L_GPIO_Port, IN1_L_Pin, GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(IN2_L_GPIO_Port, IN2_L_Pin, GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(IN3_L_GPIO_Port, IN3_L_Pin, GPIO_PIN_RESET);
@@ -89,8 +90,8 @@ void turn_right_half(void)
 void stop_motors(void)
 {
 
-    /* 方向清零 */
-    HAL_GPIO_WritePin(IN1_L_GPIO_Port, IN1_L_Pin, GPIO_PIN_RESET);
+	/* 方向清零 */
+	HAL_GPIO_WritePin(IN1_L_GPIO_Port, IN1_L_Pin, GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(IN2_L_GPIO_Port, IN2_L_Pin, GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(IN3_L_GPIO_Port, IN3_L_Pin, GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(IN4_L_GPIO_Port, IN4_L_Pin, GPIO_PIN_RESET);
@@ -102,26 +103,28 @@ void stop_motors(void)
 
 }
 
-void turn_in_place(float angle) {
-    const uint16_t turn_time_per_degree = 10; //tbd
-    uint32_t turn_time = fabs(angle) * turn_time_per_degree;
-    
-    if(angle < 0) {  // turn left(ccw)
-        turn_left_half();
-        HAL_Delay(turn_time);
-    } else {  // turn right(cw)
-        turn_right_half();
-        HAL_Delay(turn_time);
-    }
-    
-    stop_motors();
+void turn_in_place(int angle) {
+	const uint16_t turn_time_per_degree = 10; //tbd
+	float V_HALF = 20.0;
+//	uint32_t turn_time = fabs(angle) * turn_time_per_degree;
+	if(angle < 0) {  // turn left(ccw)
+		turn_left_half();
+		traj_update(-V_HALF, V_HALF);
+//		HAL_Delay(turn_time);
+	} else {  // turn right(cw)
+		turn_right_half();
+		traj_update(V_HALF, -V_HALF);
+//		HAL_Delay(turn_time);
+	}
 }
 void forward_with_length(float length) {
-    //2m * 2m, 200 units * 200 units 
-    const uint16_t forward_time_per_centi_meter = 10; //tbd
-    uint32_t forward_time = fabs(length) * forward_time_per_centi_meter;
-    forward_half();
-    HAL_Delay(forward_time);
-    
-    stop_motors();
+	//2m * 2m, 200 units * 200 units
+	const uint16_t forward_time_per_centi_meter = 10; //tbd
+//	uint32_t forward_time = fabs(length) * forward_time_per_centi_meter;
+	forward_half();
+	float V_HALF = 20.0;
+	traj_update(V_HALF, V_HALF);
+//	HAL_Delay(forward_time);
+
+//	stop_motors();
 }
