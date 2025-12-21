@@ -17,6 +17,8 @@
 #include "24l01.h" //通信驱动 基于spi进行通信
 #include "ui.h"
 
+extern UART_HandleTypeDef huart1;
+
 bool menu = true;
 bool start_playing;
 int maze[10][10] = // 迷宫地图，数字参考mazereference.png
@@ -122,6 +124,7 @@ void rtp(int mode)
 	u8 i=0;
 	while(1)
 	{
+
 		key=KEY_Scan(0);
 		tp_dev.scan(0);
 		if(tp_dev.sta&TP_PRES_DOWN)			//触摸屏被按下
@@ -179,11 +182,15 @@ void rtp(int mode)
 			}
 		}
 		if(key==KEY0_PRES)
-		{
-			LCD_Clear(WHITE);	//清屏
-			TP_Adjust();  		//屏幕校准
-			TP_Save_Adjdata();
-		}
+				{
+					LCD_Clear(WHITE);	//清屏
+					TP_Adjust();  		//屏幕校准
+					TP_Save_Adjdata();
+				}
+		if(key==WKUP_PRES)
+				{
+			HAL_UART_Transmit(&huart1, "01234", 5, 0xffff);
+				}
 		i++;
 		if(i%20==0)LED0=!LED0;
 	}

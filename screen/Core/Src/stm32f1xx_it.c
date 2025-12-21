@@ -20,7 +20,6 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "stm32f1xx_it.h"
-#include "lcd_v4.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 /* USER CODE END Includes */
@@ -56,7 +55,7 @@
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
-
+extern UART_HandleTypeDef huart1;
 /* USER CODE BEGIN EV */
 
 /* USER CODE END EV */
@@ -199,16 +198,30 @@ void SysTick_Handler(void)
 /* please refer to the startup file (startup_stm32f1xx.s).                    */
 /******************************************************************************/
 
+/**
+  * @brief This function handles USART1 global interrupt.
+  */
+void USART1_IRQHandler(void)
+{
+  /* USER CODE BEGIN USART1_IRQn 0 */
+
+  /* USER CODE END USART1_IRQn 0 */
+  HAL_UART_IRQHandler(&huart1);
+  /* USER CODE BEGIN USART1_IRQn 1 */
+
+  /* USER CODE END USART1_IRQn 1 */
+}
+
 /* USER CODE BEGIN 1 */
 
 int timer_ = 0;
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
-	timer_+=10;
-	char str[4];
-	if(timer_ % 1000 == 0){
-		sprintf(str, "%03ds", timer_/100);
-		lcd_show_string(30, 280, 200, 24, 24, str, RED);
-//		rtp(1);
-	}
+//	timer_+=10;
+//	char str[4];
+//	if(timer_ % 1000 == 0){
+//		sprintf(str, "%03ds", timer_/100);
+//		lcd_show_string(30, 280, 200, 24, 24, str, RED);
+////		rtp(1);
+//	}
 }
 /* USER CODE END 1 */

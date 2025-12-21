@@ -45,15 +45,11 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-unsigned char DATA_TO_SEND[800];
-int state_num = 0;
-const unsigned char gImage_betty2[38408] = {};
 
+/* USER CODE END PD */
 
-
-u8 STATE[30];
-UART_HandleTypeDef huart1;
-const u16 POINT_COLOR_TBL[5]={RED,GREEN,BLUE,BROWN,GRED};
+/* Private macro -------------------------------------------------------------*/
+/* USER CODE BEGIN PM */
 
 /* USER CODE END PM */
 
@@ -120,6 +116,7 @@ int main(void)
 	MX_GPIO_Init();
 	MX_SPI1_Init();
 	MX_USART1_UART_Init();
+	MX_TIM3_Init();
 	/* USER CODE BEGIN 2 */
 	POINT_COLOR=RED;
 	game();
