@@ -182,15 +182,15 @@ void rtp(int mode)
 			}
 		}
 		if(key==KEY0_PRES)
-				{
-					LCD_Clear(WHITE);	//清屏
-					TP_Adjust();  		//屏幕校准
-					TP_Save_Adjdata();
-				}
+		{
+			LCD_Clear(WHITE);	//清屏
+			TP_Adjust();  		//屏幕校准
+			TP_Save_Adjdata();
+		}
 		if(key==WKUP_PRES)
-				{
+		{
 			HAL_UART_Transmit(&huart1, "01234", 5, 0xffff);
-				}
+		}
 		i++;
 		if(i%20==0)LED0=!LED0;
 	}

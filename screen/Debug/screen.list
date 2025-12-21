@@ -17321,27 +17321,27 @@ void rtp(int mode)
  8008ab2:	7bbb      	ldrb	r3, [r7, #14]
  8008ab4:	2b01      	cmp	r3, #1
  8008ab6:	d107      	bne.n	8008ac8 <rtp+0x2f8>
-				{
-					LCD_Clear(WHITE);	//清屏
+		{
+			LCD_Clear(WHITE);	//清屏
  8008ab8:	f64f 70ff 	movw	r0, #65535	@ 0xffff
  8008abc:	f7fe fd26 	bl	800750c <LCD_Clear>
-					TP_Adjust();  		//屏幕校准
+			TP_Adjust();  		//屏幕校准
  8008ac0:	f001 f99a 	bl	8009df8 <TP_Adjust>
-					TP_Save_Adjdata();
+			TP_Save_Adjdata();
  8008ac4:	f001 f874 	bl	8009bb0 <TP_Save_Adjdata>
-				}
+		}
 		if(key==WKUP_PRES)
  8008ac8:	7bbb      	ldrb	r3, [r7, #14]
  8008aca:	2b03      	cmp	r3, #3
  8008acc:	d106      	bne.n	8008adc <rtp+0x30c>
-				{
+		{
 			HAL_UART_Transmit(&huart1, "01234", 5, 0xffff);
  8008ace:	f64f 73ff 	movw	r3, #65535	@ 0xffff
  8008ad2:	2205      	movs	r2, #5
  8008ad4:	4915      	ldr	r1, [pc, #84]	@ (8008b2c <rtp+0x35c>)
  8008ad6:	4816      	ldr	r0, [pc, #88]	@ (8008b30 <rtp+0x360>)
  8008ad8:	f003 fb2c 	bl	800c134 <HAL_UART_Transmit>
-				}
+		}
 		i++;
  8008adc:	7bfb      	ldrb	r3, [r7, #15]
  8008ade:	3301      	adds	r3, #1

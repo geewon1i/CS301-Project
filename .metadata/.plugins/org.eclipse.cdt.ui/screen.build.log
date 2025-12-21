@@ -1,23 +1,10 @@
-16:09:01 **** Incremental Build of configuration Debug for project screen ****
+16:58:12 **** Incremental Build of configuration Debug for project screen ****
 make -j32 all 
-arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
-arm-none-eabi-gcc -o "screen.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\screen\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="screen.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: screen.elf
- 
 arm-none-eabi-size  screen.elf 
-arm-none-eabi-objdump -h -S screen.elf  > "screen.list"
    text	   data	    bss	    dec	    hex	filename
   69528	    176	   2168	  71872	  118c0	screen.elf
-arm-none-eabi-objcopy  -O ihex screen.elf  "screen.hex"
 Finished building: default.size.stdout
-arm-none-eabi-objcopy  -O binary screen.elf  "screen.bin"
- 
-Finished building: screen.hex
- 
-Finished building: screen.bin
- 
-Finished building: screen.list
  
 
-16:09:02 Build Finished. 0 errors, 0 warnings. (took 1s.162ms)
+16:58:13 Build Finished. 0 errors, 0 warnings. (took 482ms)
 

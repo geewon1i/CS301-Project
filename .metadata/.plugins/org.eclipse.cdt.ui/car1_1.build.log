@@ -1,10 +1,10 @@
-16:09:00 **** Incremental Build of configuration Debug for project car1_1 ****
+16:58:09 **** Incremental Build of configuration Debug for project car1_1 ****
 make -j32 all 
 arm-none-eabi-size  car1_1.elf 
    text	   data	    bss	    dec	    hex	filename
-  22228	     92	   2060	  24380	   5f3c	car1_1.elf
+  22724	     92	   2060	  24876	   612c	car1_1.elf
 Finished building: default.size.stdout
  
 
-16:09:00 Build Finished. 0 errors, 0 warnings. (took 353ms)
+16:58:09 Build Finished. 0 errors, 0 warnings. (took 427ms)
 
