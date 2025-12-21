@@ -50,22 +50,22 @@ void mode2_loop(void){
     }
 }
 //this function should  move to the screen part
-uint16_t pre_x(0), pre_y(lcddev.height);//boundary
-uint16_t sampling_para = 5;
-void path_show(uint16_t x, uint16_t y){
-    static int pulse = 0;
-    
-    TP_Draw_Big_Point(x,y,BLUE);
-    pulse++;
-    if(pulse == sampling_para){
-        //lcd_draw_bline(pre_x, pre_y, x, y, 3, RED);
-        u16 temp = POINT_COLOR;
-		POINT_COLOR=BLUE;
-        LCD_DrawLine(pre_x, pre_y, x, y);
-        POINT_COLOR = temp;
-        pre_x = x;
-        pre_y = y;
-        pulse = 0;
-    }
-
-}
+//uint16_t pre_x(0), pre_y(lcddev.height);//boundary
+//uint16_t sampling_para = 5;
+//void path_show(uint16_t x, uint16_t y){
+//    static int pulse = 0;
+//
+//    TP_Draw_Big_Point(x,y,BLUE);
+//    pulse++;
+//    if(pulse == sampling_para){
+//        //lcd_draw_bline(pre_x, pre_y, x, y, 3, RED);
+//        u16 temp = POINT_COLOR;
+//		POINT_COLOR=BLUE;
+//        LCD_DrawLine(pre_x, pre_y, x, y);
+//        POINT_COLOR = temp;
+//        pre_x = x;
+//        pre_y = y;
+//        pulse = 0;
+//    }
+//
+//}

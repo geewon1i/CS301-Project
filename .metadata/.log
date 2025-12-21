@@ -317,3 +317,6 @@ java.lang.IllegalStateException: Call stack for thread main
 
 !ENTRY org.eclipse.core.net 1 0 2025-12-21 15:38:42.659
 !MESSAGE System property https.proxyPort is set to 7890 but should not be set.
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-12-21 16:01:59.137
+!MESSAGE Indexed 'screen' (38 sources, 137 headers) in 1.68 sec: 12,196 declarations; 79,446 references; 2 unresolved inclusions; 36 syntax errors; 188 unresolved names (0.2%)
