@@ -3,6 +3,7 @@
 #include "tim.h"
 #include "gpio.h"
 #include "math.h"
+#include "stm32f1xx_it.h"
 
 #define PI 3.14159265
 
@@ -15,6 +16,12 @@ void mode1_loop(void) {
     float current_angle = 90.0; // init(0,1), -180~180
     uint16_t x0 = 0;
     uint16_t y0 = 0;
+    char ch[100];
+    // 假设 rxBuffer 是以 '\0' 结尾的字符串，ch 有足够空间
+    const char *p = rxBuffer;
+    if (*p == '\n') p++;        // 跳过单个 '\n'
+    strcpy(ch, p);              // 复制剩余内容
+    sscanf(ch,"%d,%d",x0,y0);
     //bt_transmit
     uint8_t order = 1; // 1: getting points 0: over
     while(order == 1){
@@ -48,5 +55,50 @@ void mode1_loop(void) {
         forward_with_length(length);
         x0 = x;
         y0 = y;
+    }
+    while(order == 2){
+    	int turn_time = 630;
+    	int move_time = 2500;
+    	init_motors();
+    	turn_in_place(90);
+    	HAL_Delay(turn_time*100);stop_motors();
+        traj_update(0, 0);
+
+    	forward_with_length(100);
+    	HAL_Delay(move_time);stop_motors();
+        traj_update(0, 0);
+
+    	turn_in_place(-90);
+    	HAL_Delay(turn_time*0.9);stop_motors();
+        traj_update(0, 0);
+
+    	forward_with_length(50);
+    	HAL_Delay(move_time / 2);stop_motors();
+        traj_update(0, 0);
+
+    	turn_in_place(-90);
+    	HAL_Delay(turn_time*0.9);stop_motors();
+        traj_update(0, 0);
+
+    	forward_with_length(100);
+    	HAL_Delay(move_time);stop_motors();
+        traj_update(0, 0);
+
+    	turn_in_place(90);
+    	HAL_Delay(turn_time);stop_motors();
+        traj_update(0, 0);
+
+    	forward_with_length(50);
+    	HAL_Delay(move_time / 2);stop_motors();
+        traj_update(0, 0);
+
+    	turn_in_place(90);
+    	HAL_Delay(turn_time);stop_motors();
+        traj_update(0, 0);
+
+    	forward_with_length(100);
+    	HAL_Delay(move_time);stop_motors();
+        traj_update(0, 0);
+    	break;
     }
 }

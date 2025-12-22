@@ -5,7 +5,6 @@
 #include "time.h"
 #include <math.h>
 #include <stdbool.h>
-#include "image.h"
 #include "maze.h"
 #include "lcd.h"
 

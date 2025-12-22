@@ -3,6 +3,7 @@
 #include "tim.h"
 #include "gpio.h"
 #include "trajectory.h"
+#include "stm32f1xx_it.h"
 
 #define BASE_SPEED 0.5f   // 基础前进速度（0~1）
 #define Kp 0.4f           // 转向比例系数
@@ -16,7 +17,7 @@ extern uint16_t pwm_map(float duty);
 void mode2_loop(void){
     init_motors();
 
-    while(1){
+    while(rxBuffer[1]!='s'){
         // 读取左右避障传感器数字信号
     	uint8_t left_detect  = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_4); // 0 = 左边有物体
     	uint8_t right_detect = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_5); // 0 = 右边有物体
@@ -50,22 +51,22 @@ void mode2_loop(void){
     }
 }
 //this function should  move to the screen part
-uint16_t pre_x(0), pre_y(lcddev.height);//boundary
-uint16_t sampling_para = 5;
-void path_show(uint16_t x, uint16_t y){
-    static int pulse = 0;
-    
-    TP_Draw_Big_Point(x,y,BLUE);
-    pulse++;
-    if(pulse == sampling_para){
-        //lcd_draw_bline(pre_x, pre_y, x, y, 3, RED);
-        u16 temp = POINT_COLOR;
-		POINT_COLOR=BLUE;
-        LCD_DrawLine(pre_x, pre_y, x, y);
-        POINT_COLOR = temp;
-        pre_x = x;
-        pre_y = y;
-        pulse = 0;
-    }
-
-}
+//uint16_t pre_x(0), pre_y(lcddev.height);//boundary
+//uint16_t sampling_para = 5;
+//void path_show(uint16_t x, uint16_t y){
+//    static int pulse = 0;
+//
+//    TP_Draw_Big_Point(x,y,BLUE);
+//    pulse++;
+//    if(pulse == sampling_para){
+//        //lcd_draw_bline(pre_x, pre_y, x, y, 3, RED);
+//        u16 temp = POINT_COLOR;
+//		POINT_COLOR=BLUE;
+//        LCD_DrawLine(pre_x, pre_y, x, y);
+//        POINT_COLOR = temp;
+//        pre_x = x;
+//        pre_y = y;
+//        pulse = 0;
+//    }
+//
+//}
