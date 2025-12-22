@@ -1,53 +1,4 @@
-18:46:57 **** Incremental Build of configuration Debug for project car1_1 ****
-make -j32 all 
-arm-none-eabi-size  car1_1.elf 
-   text	   data	    bss	    dec	    hex	filename
-  22492	     92	   2060	  24644	   6044	car1_1.elf
-Finished building: default.size.stdout
- 
-18:48:46 **** Incremental Build of configuration Debug for project car1_1 ****
-make -j32 all 
-arm-none-eabi-gcc "../Core/Src/control.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/control.d" -MT"Core/Src/control.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/control.o"
-arm-none-eabi-gcc "../Core/Src/mode1.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode1.d" -MT"Core/Src/mode1.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode1.o"
-../Core/Src/mode1.c: In function 'mode1_loop':
-../Core/Src/mode1.c:28:17: warning: implicit declaration of function 'turn_in_place' [-Wimplicit-function-declaration]
-   28 |                 turn_in_place(180.0);
-      |                 ^~~~~~~~~~~~~
-../Core/Src/control.c: In function 'turn_in_place':
-../Core/Src/control.c:112:17: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
-  112 |                 traj_update(-V_HALF, V_HALF);
-      |                 ^~~~~~~~~~~
-../Core/Src/control.c:109:18: warning: unused variable 'turn_time' [-Wunused-variable]
-  109 |         uint32_t turn_time = fabs(angle) * turn_time_per_degree;
-      |                  ^~~~~~~~~
-../Core/Src/control.c: In function 'forward_with_length':
-../Core/Src/control.c:122:24: warning: unused variable 'forward_time_per_centi_meter' [-Wunused-variable]
-  122 |         const uint16_t forward_time_per_centi_meter = 10; //tbd
-      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../Core/Src/mode1.c:48:9: warning: implicit declaration of function 'forward_with_length' [-Wimplicit-function-declaration]
-   48 |         forward_with_length(length);
-      |         ^~~~~~~~~~~~~~~~~~~
-../Core/Src/mode1.c:55:9: warning: implicit declaration of function 'init_motors' [-Wimplicit-function-declaration]
-   55 |         init_motors();
-      |         ^~~~~~~~~~~
-arm-none-eabi-gcc -o "car1_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\car1_1\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car1_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: car1_1.elf
- 
-arm-none-eabi-size  car1_1.elf 
-arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
-   text	   data	    bss	    dec	    hex	filename
-  22444	     92	   2060	  24596	   6014	car1_1.elf
-arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
-arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
-Finished building: default.size.stdout
- 
-Finished building: car1_1.list
-Finished building: car1_1.hex
-Finished building: car1_1.bin
- 
- 
- 
-18:51:20 **** Incremental Build of configuration Debug for project car1_1 ****
+19:10:30 **** Incremental Build of configuration Debug for project car1_1 ****
 make -j32 all 
 arm-none-eabi-gcc "../Core/Src/mode1.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode1.d" -MT"Core/Src/mode1.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode1.o"
 ../Core/Src/mode1.c: In function 'mode1_loop':
@@ -60,76 +11,9 @@ arm-none-eabi-gcc "../Core/Src/mode1.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -
 ../Core/Src/mode1.c:55:9: warning: implicit declaration of function 'init_motors' [-Wimplicit-function-declaration]
    55 |         init_motors();
       |         ^~~~~~~~~~~
-../Core/Src/mode1.c:57:30: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
-   57 |         HAL_Delay(turn_time);stop_motors();
-      |                              ^~~~~~~~~~~
-../Core/Src/mode1.c:58:9: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
-   58 |         traj_update(0, 0);
-      |         ^~~~~~~~~~~
-arm-none-eabi-gcc -o "car1_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\car1_1\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car1_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: car1_1.elf
- 
-arm-none-eabi-size  car1_1.elf 
-arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
-arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
-arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
-   text	   data	    bss	    dec	    hex	filename
-  22508	     92	   2060	  24660	   6054	car1_1.elf
-Finished building: default.size.stdout
- 
-Finished building: car1_1.list
- 
-Finished building: car1_1.bin
-Finished building: car1_1.hex
- 
- 
-18:53:12 **** Incremental Build of configuration Debug for project car1_1 ****
-make -j32 all 
-arm-none-eabi-gcc "../Core/Src/control.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/control.d" -MT"Core/Src/control.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/control.o"
-../Core/Src/control.c: In function 'turn_in_place':
-../Core/Src/control.c:112:17: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
-  112 |                 traj_update(-V_HALF, V_HALF);
-      |                 ^~~~~~~~~~~
-../Core/Src/control.c:109:18: warning: unused variable 'turn_time' [-Wunused-variable]
-  109 |         uint32_t turn_time = fabs(angle) * turn_time_per_degree;
-      |                  ^~~~~~~~~
-../Core/Src/control.c: In function 'forward_with_length':
-../Core/Src/control.c:122:24: warning: unused variable 'forward_time_per_centi_meter' [-Wunused-variable]
-  122 |         const uint16_t forward_time_per_centi_meter = 10; //tbd
-      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "car1_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\car1_1\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car1_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: car1_1.elf
- 
-arm-none-eabi-size  car1_1.elf 
-arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
-   text	   data	    bss	    dec	    hex	filename
-  22500	     92	   2060	  24652	   604c	car1_1.elf
-arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
-Finished building: default.size.stdout
-arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
- 
-Finished building: car1_1.hex
-Finished building: car1_1.list
- 
- 
-Finished building: car1_1.bin
- 
-18:54:25 **** Incremental Build of configuration Debug for project car1_1 ****
-make -j32 all 
-arm-none-eabi-gcc "../Core/Src/mode1.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode1.d" -MT"Core/Src/mode1.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode1.o"
-../Core/Src/mode1.c: In function 'mode1_loop':
-../Core/Src/mode1.c:28:17: warning: implicit declaration of function 'turn_in_place' [-Wimplicit-function-declaration]
-   28 |                 turn_in_place(180.0);
-      |                 ^~~~~~~~~~~~~
-../Core/Src/mode1.c:48:9: warning: implicit declaration of function 'forward_with_length' [-Wimplicit-function-declaration]
-   48 |         forward_with_length(length);
-      |         ^~~~~~~~~~~~~~~~~~~
-../Core/Src/mode1.c:55:9: warning: implicit declaration of function 'init_motors' [-Wimplicit-function-declaration]
-   55 |         init_motors();
-      |         ^~~~~~~~~~~
-../Core/Src/mode1.c:57:30: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
-   57 |         HAL_Delay(turn_time);stop_motors();
-      |                              ^~~~~~~~~~~
+../Core/Src/mode1.c:57:34: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
+   57 |         HAL_Delay(turn_time*100);stop_motors();
+      |                                  ^~~~~~~~~~~
 ../Core/Src/mode1.c:58:9: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
    58 |         traj_update(0, 0);
       |         ^~~~~~~~~~~
@@ -139,28 +23,20 @@ Finished building target: car1_1.elf
 arm-none-eabi-size  car1_1.elf 
 arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
    text	   data	    bss	    dec	    hex	filename
-  22500	     92	   2060	  24652	   604c	car1_1.elf
+  22588	     92	   2060	  24740	   60a4	car1_1.elf
 arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
 Finished building: default.size.stdout
 arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
  
 Finished building: car1_1.hex
 Finished building: car1_1.list
- 
- 
 Finished building: car1_1.bin
  
-18:56:40 **** Incremental Build of configuration Debug for project car1_1 ****
+ 
+ 
+19:12:42 **** Incremental Build of configuration Debug for project car1_1 ****
 make -j32 all 
 arm-none-eabi-gcc "../Core/Src/control.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/control.d" -MT"Core/Src/control.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/control.o"
-arm-none-eabi-gcc "../Core/Src/mode1.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode1.d" -MT"Core/Src/mode1.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode1.o"
-../Core/Src/control.c:106:6: error: conflicting types for 'turn_in_place'; have 'void(int)'
-  106 | void turn_in_place(int angle) {
-      |      ^~~~~~~~~~~~~
-In file included from ../Core/Src/control.c:1:
-../Core/Inc/control.h:12:6: note: previous declaration of 'turn_in_place' with type 'void(float)'
-   12 | void turn_in_place(float angle);
-      |      ^~~~~~~~~~~~~
 ../Core/Src/control.c: In function 'turn_in_place':
 ../Core/Src/control.c:112:17: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
   112 |                 traj_update(-V_HALF, V_HALF);
@@ -172,284 +48,139 @@ In file included from ../Core/Src/control.c:1:
 ../Core/Src/control.c:122:24: warning: unused variable 'forward_time_per_centi_meter' [-Wunused-variable]
   122 |         const uint16_t forward_time_per_centi_meter = 10; //tbd
       |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../Core/Src/mode1.c: In function 'mode1_loop':
-../Core/Src/mode1.c:28:17: warning: implicit declaration of function 'turn_in_place' [-Wimplicit-function-declaration]
-   28 |                 turn_in_place(180.0);
-      |                 ^~~~~~~~~~~~~
-make: *** [Core/Src/subdir.mk:55: Core/Src/control.o] Error 1
-make: *** Waiting for unfinished jobs....
-../Core/Src/mode1.c:48:9: warning: implicit declaration of function 'forward_with_length' [-Wimplicit-function-declaration]
-   48 |         forward_with_length(length);
-      |         ^~~~~~~~~~~~~~~~~~~
-../Core/Src/mode1.c:55:9: warning: implicit declaration of function 'init_motors' [-Wimplicit-function-declaration]
-   55 |         init_motors();
-      |         ^~~~~~~~~~~
-../Core/Src/mode1.c:57:30: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
-   57 |         HAL_Delay(turn_time);stop_motors();
-      |                              ^~~~~~~~~~~
-../Core/Src/mode1.c:58:9: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
-   58 |         traj_update(0, 0);
-      |         ^~~~~~~~~~~
+arm-none-eabi-gcc -o "car1_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\car1_1\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car1_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: car1_1.elf
+ 
+arm-none-eabi-size  car1_1.elf 
+arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
+   text	   data	    bss	    dec	    hex	filename
+  22612	     92	   2060	  24764	   60bc	car1_1.elf
+arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
+Finished building: default.size.stdout
+arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
+ 
+Finished building: car1_1.hex
+Finished building: car1_1.list
+Finished building: car1_1.bin
+ 
+ 
+ 
+19:12:50 **** Incremental Build of configuration Debug for project car1_1 ****
+make -j32 all 
+arm-none-eabi-size  car1_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22612	     92	   2060	  24764	   60bc	car1_1.elf
+Finished building: default.size.stdout
+ 
+10:51:29 **** Incremental Build of configuration Debug for project screen ****
+make -j32 all 
+arm-none-eabi-gcc "../Core/Src/maze.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/maze.d" -MT"Core/Src/maze.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/maze.o"
+../Core/Src/maze.c: In function 'rtp':
+../Core/Src/maze.c:72:49: warning: implicit declaration of function 'move' [-Wimplicit-function-declaration]
+   72 |                                                 move(1);
+      |                                                 ^~~~
+../Core/Src/maze.c:105:25: warning: implicit declaration of function 'LCD_Clear'; did you mean 'lcd_clear'? [-Wimplicit-function-declaration]
+  105 |                         LCD_Clear(WHITE);       //清屏
+      |                         ^~~~~~~~~
+      |                         lcd_clear
+../Core/Src/maze.c:111:52: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  111 |                         HAL_UART_Transmit(&huart1, "01234", 5, 0xffff);
+      |                                                    ^~~~~~~
+      |                                                    |
+      |                                                    char *
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:338,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/gpio.h:29,
+                 from ../Core/Src/maze.c:1:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:749:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+  749 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "screen.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\screen\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="screen.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/maze.o: in function `rtp':
+C:/Users/xueye/Desktop/2025年秋季/微机/CS301-Project/screen/Debug/../Core/Src/maze.c:72:(.text.rtp+0x16a): undefined reference to `move'
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/xueye/Desktop/2025年秋季/微机/CS301-Project/screen/Debug/../Core/Src/maze.c:75:(.text.rtp+0x1ac): undefined reference to `move'
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/xueye/Desktop/2025年秋季/微机/CS301-Project/screen/Debug/../Core/Src/maze.c:78:(.text.rtp+0x1ee): undefined reference to `move'
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/xueye/Desktop/2025年秋季/微机/CS301-Project/screen/Debug/../Core/Src/maze.c:81:(.text.rtp+0x230): undefined reference to `move'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:70: screen.elf] Error 1
 "make -j32 all" terminated with exit code 2. Build might be incomplete.
-18:57:03 **** Incremental Build of configuration Debug for project car1_1 ****
+10:51:51 **** Incremental Build of configuration Debug for project screen ****
 make -j32 all 
-arm-none-eabi-gcc "../Core/Src/control.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/control.d" -MT"Core/Src/control.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/control.o"
-arm-none-eabi-gcc "../Core/Src/mode2.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode2.d" -MT"Core/Src/mode2.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode2.o"
-../Core/Src/control.c: In function 'turn_in_place':
-../Core/Src/control.c:112:17: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
-  112 |                 traj_update(-V_HALF, V_HALF);
-      |                 ^~~~~~~~~~~
-../Core/Src/control.c:107:24: warning: unused variable 'turn_time_per_degree' [-Wunused-variable]
-  107 |         const uint16_t turn_time_per_degree = 10; //tbd
-      |                        ^~~~~~~~~~~~~~~~~~~~
-../Core/Src/control.c: In function 'forward_with_length':
-../Core/Src/control.c:122:24: warning: unused variable 'forward_time_per_centi_meter' [-Wunused-variable]
-  122 |         const uint16_t forward_time_per_centi_meter = 10; //tbd
-      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "car1_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\car1_1\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car1_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: car1_1.elf
+arm-none-eabi-gcc "../Core/Src/maze.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/maze.d" -MT"Core/Src/maze.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/maze.o"
+../Core/Src/maze.c: In function 'rtp':
+../Core/Src/maze.c:71:25: warning: implicit declaration of function 'LCD_Clear'; did you mean 'lcd_clear'? [-Wimplicit-function-declaration]
+   71 |                         LCD_Clear(WHITE);       //清屏
+      |                         ^~~~~~~~~
+      |                         lcd_clear
+../Core/Src/maze.c:77:52: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+   77 |                         HAL_UART_Transmit(&huart1, "01234", 5, 0xffff);
+      |                                                    ^~~~~~~
+      |                                                    |
+      |                                                    char *
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:338,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/gpio.h:29,
+                 from ../Core/Src/maze.c:1:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:749:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+  749 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "screen.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\screen\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="screen.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: screen.elf
  
-arm-none-eabi-size  car1_1.elf 
-arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
+arm-none-eabi-size  screen.elf 
+arm-none-eabi-objdump -h -S screen.elf  > "screen.list"
    text	   data	    bss	    dec	    hex	filename
-  22380	     92	   2060	  24532	   5fd4	car1_1.elf
-arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
+  68976	    168	   2168	  71312	  11690	screen.elf
+arm-none-eabi-objcopy  -O ihex screen.elf  "screen.hex"
 Finished building: default.size.stdout
-arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
+arm-none-eabi-objcopy  -O binary screen.elf  "screen.bin"
  
-Finished building: car1_1.hex
-Finished building: car1_1.list
+Finished building: screen.hex
+Finished building: screen.bin
  
  
-Finished building: car1_1.bin
+Finished building: screen.list
  
-18:58:24 **** Incremental Build of configuration Debug for project car1_1 ****
+10:53:11 **** Incremental Build of configuration Debug for project screen ****
 make -j32 all 
-arm-none-eabi-gcc "../Core/Src/mode1.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode1.d" -MT"Core/Src/mode1.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode1.o"
-../Core/Src/mode1.c: In function 'mode1_loop':
-../Core/Src/mode1.c:28:17: warning: implicit declaration of function 'turn_in_place' [-Wimplicit-function-declaration]
-   28 |                 turn_in_place(180.0);
-      |                 ^~~~~~~~~~~~~
-../Core/Src/mode1.c:48:9: warning: implicit declaration of function 'forward_with_length' [-Wimplicit-function-declaration]
-   48 |         forward_with_length(length);
-      |         ^~~~~~~~~~~~~~~~~~~
-../Core/Src/mode1.c:55:9: warning: implicit declaration of function 'init_motors' [-Wimplicit-function-declaration]
-   55 |         init_motors();
-      |         ^~~~~~~~~~~
-../Core/Src/mode1.c:57:30: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
-   57 |         HAL_Delay(turn_time);stop_motors();
-      |                              ^~~~~~~~~~~
-../Core/Src/mode1.c:58:9: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
-   58 |         traj_update(0, 0);
-      |         ^~~~~~~~~~~
-arm-none-eabi-gcc -o "car1_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\car1_1\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car1_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: car1_1.elf
+arm-none-eabi-gcc "../Core/Src/maze.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/maze.d" -MT"Core/Src/maze.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/maze.o"
+../Core/Src/maze.c: In function 'rtp':
+../Core/Src/maze.c:79:25: warning: implicit declaration of function 'LCD_Clear'; did you mean 'lcd_clear'? [-Wimplicit-function-declaration]
+   79 |                         LCD_Clear(WHITE);       //清屏
+      |                         ^~~~~~~~~
+      |                         lcd_clear
+../Core/Src/maze.c:85:52: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+   85 |                         HAL_UART_Transmit(&huart1, "01234", 5, 0xffff);
+      |                                                    ^~~~~~~
+      |                                                    |
+      |                                                    char *
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:338,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/gpio.h:29,
+                 from ../Core/Src/maze.c:1:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:749:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+  749 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/maze.c:48:25: warning: label 'mode0' defined but not used [-Wunused-label]
+   48 |                         mode0:mode = 0;
+      |                         ^~~~~
+arm-none-eabi-gcc -o "screen.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\screen\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="screen.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: screen.elf
  
-arm-none-eabi-size  car1_1.elf 
-arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
+arm-none-eabi-size  screen.elf 
+arm-none-eabi-objdump -h -S screen.elf  > "screen.list"
    text	   data	    bss	    dec	    hex	filename
-  22380	     92	   2060	  24532	   5fd4	car1_1.elf
-arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
-Finished building: default.size.stdout
-arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
- 
-Finished building: car1_1.list
-Finished building: car1_1.hex
- 
- 
-Finished building: car1_1.bin
- 
-18:59:35 **** Incremental Build of configuration Debug for project car1_1 ****
-make -j32 all 
-arm-none-eabi-gcc "../Core/Src/mode1.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode1.d" -MT"Core/Src/mode1.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode1.o"
-../Core/Src/mode1.c: In function 'mode1_loop':
-../Core/Src/mode1.c:28:17: warning: implicit declaration of function 'turn_in_place' [-Wimplicit-function-declaration]
-   28 |                 turn_in_place(180.0);
-      |                 ^~~~~~~~~~~~~
-../Core/Src/mode1.c:48:9: warning: implicit declaration of function 'forward_with_length' [-Wimplicit-function-declaration]
-   48 |         forward_with_length(length);
-      |         ^~~~~~~~~~~~~~~~~~~
-../Core/Src/mode1.c:55:9: warning: implicit declaration of function 'init_motors' [-Wimplicit-function-declaration]
-   55 |         init_motors();
-      |         ^~~~~~~~~~~
-../Core/Src/mode1.c:57:30: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
-   57 |         HAL_Delay(turn_time);stop_motors();
-      |                              ^~~~~~~~~~~
-../Core/Src/mode1.c:58:9: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
-   58 |         traj_update(0, 0);
-      |         ^~~~~~~~~~~
-arm-none-eabi-gcc -o "car1_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\car1_1\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car1_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: car1_1.elf
- 
-arm-none-eabi-size  car1_1.elf 
-arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
-   text	   data	    bss	    dec	    hex	filename
-  22380	     92	   2060	  24532	   5fd4	car1_1.elf
-arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
-Finished building: default.size.stdout
-arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
- 
-Finished building: car1_1.hex
-Finished building: car1_1.list
-Finished building: car1_1.bin
- 
- 
- 
-19:01:30 **** Incremental Build of configuration Debug for project car1_1 ****
-make -j32 all 
-arm-none-eabi-gcc "../Core/Src/mode1.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode1.d" -MT"Core/Src/mode1.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode1.o"
-../Core/Src/mode1.c: In function 'mode1_loop':
-../Core/Src/mode1.c:28:17: warning: implicit declaration of function 'turn_in_place' [-Wimplicit-function-declaration]
-   28 |                 turn_in_place(180.0);
-      |                 ^~~~~~~~~~~~~
-../Core/Src/mode1.c:48:9: warning: implicit declaration of function 'forward_with_length' [-Wimplicit-function-declaration]
-   48 |         forward_with_length(length);
-      |         ^~~~~~~~~~~~~~~~~~~
-../Core/Src/mode1.c:55:9: warning: implicit declaration of function 'init_motors' [-Wimplicit-function-declaration]
-   55 |         init_motors();
-      |         ^~~~~~~~~~~
-../Core/Src/mode1.c:57:30: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
-   57 |         HAL_Delay(turn_time);stop_motors();
-      |                              ^~~~~~~~~~~
-../Core/Src/mode1.c:58:9: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
-   58 |         traj_update(0, 0);
-      |         ^~~~~~~~~~~
-arm-none-eabi-gcc -o "car1_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\car1_1\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car1_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: car1_1.elf
- 
-arm-none-eabi-size  car1_1.elf 
-arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
-   text	   data	    bss	    dec	    hex	filename
-  22452	     92	   2060	  24604	   601c	car1_1.elf
-arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
-Finished building: default.size.stdout
-arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
- 
-Finished building: car1_1.hex
-Finished building: car1_1.list
- 
-Finished building: car1_1.bin
- 
- 
-19:02:47 **** Incremental Build of configuration Debug for project car1_1 ****
-make -j32 all 
-arm-none-eabi-gcc "../Core/Src/mode1.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode1.d" -MT"Core/Src/mode1.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode1.o"
-../Core/Src/mode1.c: In function 'mode1_loop':
-../Core/Src/mode1.c:28:17: warning: implicit declaration of function 'turn_in_place' [-Wimplicit-function-declaration]
-   28 |                 turn_in_place(180.0);
-      |                 ^~~~~~~~~~~~~
-../Core/Src/mode1.c:48:9: warning: implicit declaration of function 'forward_with_length' [-Wimplicit-function-declaration]
-   48 |         forward_with_length(length);
-      |         ^~~~~~~~~~~~~~~~~~~
-../Core/Src/mode1.c:55:9: warning: implicit declaration of function 'init_motors' [-Wimplicit-function-declaration]
-   55 |         init_motors();
-      |         ^~~~~~~~~~~
-../Core/Src/mode1.c:57:30: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
-   57 |         HAL_Delay(turn_time);stop_motors();
-      |                              ^~~~~~~~~~~
-../Core/Src/mode1.c:58:9: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
-   58 |         traj_update(0, 0);
-      |         ^~~~~~~~~~~
-arm-none-eabi-gcc -o "car1_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\car1_1\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car1_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: car1_1.elf
- 
-arm-none-eabi-size  car1_1.elf 
-arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
-   text	   data	    bss	    dec	    hex	filename
-  22548	     92	   2060	  24700	   607c	car1_1.elf
-arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
-Finished building: default.size.stdout
-arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
- 
-Finished building: car1_1.hex
-Finished building: car1_1.list
- 
-Finished building: car1_1.bin
- 
- 
-19:03:50 **** Incremental Build of configuration Debug for project car1_1 ****
-make -j32 all 
-arm-none-eabi-gcc "../Core/Src/mode1.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode1.d" -MT"Core/Src/mode1.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode1.o"
-../Core/Src/mode1.c: In function 'mode1_loop':
-../Core/Src/mode1.c:28:17: warning: implicit declaration of function 'turn_in_place' [-Wimplicit-function-declaration]
-   28 |                 turn_in_place(180.0);
-      |                 ^~~~~~~~~~~~~
-../Core/Src/mode1.c:48:9: warning: implicit declaration of function 'forward_with_length' [-Wimplicit-function-declaration]
-   48 |         forward_with_length(length);
-      |         ^~~~~~~~~~~~~~~~~~~
-../Core/Src/mode1.c:55:9: warning: implicit declaration of function 'init_motors' [-Wimplicit-function-declaration]
-   55 |         init_motors();
-      |         ^~~~~~~~~~~
-../Core/Src/mode1.c:57:30: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
-   57 |         HAL_Delay(turn_time);stop_motors();
-      |                              ^~~~~~~~~~~
-../Core/Src/mode1.c:58:9: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
-   58 |         traj_update(0, 0);
-      |         ^~~~~~~~~~~
-arm-none-eabi-gcc -o "car1_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\car1_1\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car1_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: car1_1.elf
- 
-arm-none-eabi-size  car1_1.elf 
-arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
-   text	   data	    bss	    dec	    hex	filename
-  22580	     92	   2060	  24732	   609c	car1_1.elf
-arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
-Finished building: default.size.stdout
-arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
- 
-Finished building: car1_1.hex
-Finished building: car1_1.list
- 
-Finished building: car1_1.bin
- 
- 
-19:04:10 **** Incremental Build of configuration Debug for project car1_1 ****
-make -j32 all 
-arm-none-eabi-size  car1_1.elf 
-   text	   data	    bss	    dec	    hex	filename
-  22580	     92	   2060	  24732	   609c	car1_1.elf
+  69000	    168	   2168	  71336	  116a8	screen.elf
+arm-none-eabi-objcopy  -O ihex screen.elf  "screen.hex"
+arm-none-eabi-objcopy  -O binary screen.elf  "screen.bin"
 Finished building: default.size.stdout
  
-19:04:50 **** Incremental Build of configuration Debug for project car1_1 ****
-make -j32 all 
-arm-none-eabi-gcc "../Core/Src/mode1.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode1.d" -MT"Core/Src/mode1.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode1.o"
-../Core/Src/mode1.c: In function 'mode1_loop':
-../Core/Src/mode1.c:28:17: warning: implicit declaration of function 'turn_in_place' [-Wimplicit-function-declaration]
-   28 |                 turn_in_place(180.0);
-      |                 ^~~~~~~~~~~~~
-../Core/Src/mode1.c:48:9: warning: implicit declaration of function 'forward_with_length' [-Wimplicit-function-declaration]
-   48 |         forward_with_length(length);
-      |         ^~~~~~~~~~~~~~~~~~~
-../Core/Src/mode1.c:55:9: warning: implicit declaration of function 'init_motors' [-Wimplicit-function-declaration]
-   55 |         init_motors();
-      |         ^~~~~~~~~~~
-../Core/Src/mode1.c:57:30: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
-   57 |         HAL_Delay(turn_time);stop_motors();
-      |                              ^~~~~~~~~~~
-../Core/Src/mode1.c:58:9: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
-   58 |         traj_update(0, 0);
-      |         ^~~~~~~~~~~
-arm-none-eabi-gcc -o "car1_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\car1_1\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car1_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: car1_1.elf
+Finished building: screen.hex
  
-arm-none-eabi-size  car1_1.elf 
-arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
-   text	   data	    bss	    dec	    hex	filename
-  22580	     92	   2060	  24732	   609c	car1_1.elf
-arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
-Finished building: default.size.stdout
-arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
+Finished building: screen.bin
  
-Finished building: car1_1.hex
-Finished building: car1_1.list
- 
-Finished building: car1_1.bin
- 
- 
-19:05:01 **** Incremental Build of configuration Debug for project car1_1 ****
-make -j32 all 
-arm-none-eabi-size  car1_1.elf 
-   text	   data	    bss	    dec	    hex	filename
-  22580	     92	   2060	  24732	   609c	car1_1.elf
-Finished building: default.size.stdout
+Finished building: screen.list
  

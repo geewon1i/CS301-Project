@@ -1,10 +1,44 @@
-18:20:14 **** Incremental Build of configuration Debug for project screen ****
+10:53:11 **** Incremental Build of configuration Debug for project screen ****
 make -j32 all 
+arm-none-eabi-gcc "../Core/Src/maze.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/maze.d" -MT"Core/Src/maze.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/maze.o"
+../Core/Src/maze.c: In function 'rtp':
+../Core/Src/maze.c:79:25: warning: implicit declaration of function 'LCD_Clear'; did you mean 'lcd_clear'? [-Wimplicit-function-declaration]
+   79 |                         LCD_Clear(WHITE);       //清屏
+      |                         ^~~~~~~~~
+      |                         lcd_clear
+../Core/Src/maze.c:85:52: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+   85 |                         HAL_UART_Transmit(&huart1, "01234", 5, 0xffff);
+      |                                                    ^~~~~~~
+      |                                                    |
+      |                                                    char *
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:338,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/gpio.h:29,
+                 from ../Core/Src/maze.c:1:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:749:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+  749 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/maze.c:48:25: warning: label 'mode0' defined but not used [-Wunused-label]
+   48 |                         mode0:mode = 0;
+      |                         ^~~~~
+arm-none-eabi-gcc -o "screen.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\screen\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="screen.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: screen.elf
+ 
 arm-none-eabi-size  screen.elf 
+arm-none-eabi-objdump -h -S screen.elf  > "screen.list"
    text	   data	    bss	    dec	    hex	filename
-  69528	    176	   2168	  71872	  118c0	screen.elf
+  69000	    168	   2168	  71336	  116a8	screen.elf
+arm-none-eabi-objcopy  -O ihex screen.elf  "screen.hex"
+arm-none-eabi-objcopy  -O binary screen.elf  "screen.bin"
 Finished building: default.size.stdout
  
+Finished building: screen.hex
+ 
+Finished building: screen.bin
+ 
+Finished building: screen.list
+ 
 
-18:20:15 Build Finished. 0 errors, 0 warnings. (took 643ms)
+10:53:14 Build Finished. 0 errors, 3 warnings. (took 2s.725ms)
 

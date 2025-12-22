@@ -113,7 +113,7 @@ void turn_in_place(int angle) {
 //		HAL_Delay(turn_time);
 	} else {  // turn right(cw)
 		turn_right_half();
-		traj_update(V_HALF, -V_HALF);
+		traj_update(V_HALF*0.95, -V_HALF);
 //		HAL_Delay(turn_time);
 	}
 }

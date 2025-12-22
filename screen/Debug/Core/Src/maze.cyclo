@@ -1,9 +1,1 @@
-../Core/Src/maze.c:41:6:start_game_timer	1
-../Core/Src/maze.c:46:10:get_game_time_ms	1
-../Core/Src/maze.c:51:6:display_game_time	1
-../Core/Src/maze.c:61:6:drawplayer	1
-../Core/Src/maze.c:66:6:drawtrail	5
-../Core/Src/maze.c:93:6:drawmaze	1
-../Core/Src/maze.c:98:6:play	1
-../Core/Src/maze.c:103:6:move	1
-../Core/Src/maze.c:121:6:rtp	53
+../Core/Src/maze.c:41:6:rtp	20
