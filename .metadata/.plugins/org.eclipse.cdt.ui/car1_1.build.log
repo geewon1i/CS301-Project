@@ -2,3 +2,74 @@
 make -j32 all 
 arm-none-eabi-gcc "../Core/Src/mode1.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode1.d" -MT"Core/Src/mode1.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode1.o"
 arm-none-eabi-gcc "../Core/Src/mode2.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode2.d" -MT"Core/Src/mode2.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode2.o"
+../Core/Src/mode1.c: In function 'mode1_loop':
+../Core/Src/mode1.c:21:21: warning: pointer targets in initialization of 'const char *' from 'uint8_t *' {aka 'unsigned char *'} differ in signedness [-Wpointer-sign]
+   21 |     const char *p = rxBuffer;
+      |                     ^~~~~~~~
+../Core/Src/mode1.c:23:5: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+   23 |     strcpy(ch, p);              // 复制剩余内容
+      |     ^~~~~~
+../Core/Src/mode1.c:7:1: note: include '<string.h>' or provide a declaration of 'strcpy'
+    6 | #include "stm32f1xx_it.h"
+  +++ |+#include <string.h>
+    7 | 
+../Core/Src/mode1.c:23:5: warning: incompatible implicit declaration of built-in function 'strcpy' [-Wbuiltin-declaration-mismatch]
+   23 |     strcpy(ch, p);              // 复制剩余内容
+      |     ^~~~~~
+../Core/Src/mode1.c:23:5: note: include '<string.h>' or provide a declaration of 'strcpy'
+../Core/Src/mode1.c:24:5: warning: implicit declaration of function 'sscanf' [-Wimplicit-function-declaration]
+   24 |     sscanf(ch,"%d,%d",x0,y0);
+      |     ^~~~~~
+../Core/Src/mode1.c:7:1: note: include '<stdio.h>' or provide a declaration of 'sscanf'
+    6 | #include "stm32f1xx_it.h"
+  +++ |+#include <stdio.h>
+    7 | 
+../Core/Src/mode1.c:24:5: warning: incompatible implicit declaration of built-in function 'sscanf' [-Wbuiltin-declaration-mismatch]
+   24 |     sscanf(ch,"%d,%d",x0,y0);
+      |     ^~~~~~
+../Core/Src/mode1.c:24:5: note: include '<stdio.h>' or provide a declaration of 'sscanf'
+../Core/Src/mode1.c:24:17: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'int' [-Wformat=]
+   24 |     sscanf(ch,"%d,%d",x0,y0);
+      |                ~^     ~~
+      |                 |     |
+      |                 int * int
+../Core/Src/mode1.c:24:20: warning: format '%d' expects argument of type 'int *', but argument 4 has type 'int' [-Wformat=]
+   24 |     sscanf(ch,"%d,%d",x0,y0);
+      |                   ~^     ~~
+      |                    |     |
+      |                    int * int
+../Core/Src/mode1.c:35:17: warning: implicit declaration of function 'turn_in_place' [-Wimplicit-function-declaration]
+   35 |                 turn_in_place(180.0);
+      |                 ^~~~~~~~~~~~~
+../Core/Src/mode1.c:55:9: warning: implicit declaration of function 'forward_with_length' [-Wimplicit-function-declaration]
+   55 |         forward_with_length(length);
+      |         ^~~~~~~~~~~~~~~~~~~
+../Core/Src/mode1.c:62:9: warning: implicit declaration of function 'init_motors' [-Wimplicit-function-declaration]
+   62 |         init_motors();
+      |         ^~~~~~~~~~~
+../Core/Src/mode1.c:64:34: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
+   64 |         HAL_Delay(turn_time*100);stop_motors();
+      |                                  ^~~~~~~~~~~
+../Core/Src/mode1.c:65:9: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
+   65 |         traj_update(0, 0);
+      |         ^~~~~~~~~~~
+arm-none-eabi-gcc -o "car1_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\car1_1\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car1_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: car1_1.elf
+ 
+arm-none-eabi-size  car1_1.elf 
+arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
+arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
+arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  26284	     92	   2084	  28460	   6f2c	car1_1.elf
+Finished building: default.size.stdout
+ 
+Finished building: car1_1.list
+ 
+Finished building: car1_1.hex
+Finished building: car1_1.bin
+ 
+ 
+
+11:59:56 Build Finished. 0 errors, 12 warnings. (took 19s.510ms)
+
