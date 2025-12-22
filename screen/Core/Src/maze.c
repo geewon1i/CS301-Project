@@ -79,13 +79,13 @@ void rtp(int mode)
 				}
 				if(mode == 1){
 					points[0].x = 0;
-					points[0].y = 0;
+					points[0].y = lcddev.height;
 					u16 px = 0;
 					u16 py = lcddev.height;
 					if(tp_dev.x[0]>30&&tp_dev.y[0]>70&&tp_dev.x[0]<336&&tp_dev.y[0]<110){
 						goto mode0;
 					}
-					if(tp_dev.x[0]>30&&tp_dev.y[0]>110){
+					else if(tp_dev.x[0]>30&&tp_dev.y[0]>110){
 						uint8_t message[100];
 						uint16_t POINT_COLOR;
 						TP_Draw_Big_Point(tp_dev.x[0],tp_dev.y[0],RED);//画图
@@ -93,9 +93,9 @@ void rtp(int mode)
 						x = tp_dev.x[0];
 						y = tp_dev.y[0];
 						if(pulse == 5 /*sampling_para*/){
-							POINT_COLOR=BLUE;
 							u16 temp = POINT_COLOR;
-							LCD_DrawLine(px, py, x, y);
+							POINT_COLOR=BLUE;
+							LCD_DrawLine(points[count].x, points[count].y, x, y);
 							count += 1;
 							points[count].x = x;
 							points[count].y = y;
@@ -115,17 +115,25 @@ void rtp(int mode)
 					}
 				}
 				if(mode == 3){
+					while(SD_Init())		//检测不到SD卡
+						{
+							LCD_ShowString(60,150,200,16,16,"SD Card Error!");
+							delay_ms(500);
+							LCD_ShowString(60,150,200,16,16,"Please Check! ");
+							delay_ms(500);
+							LED0=!LED0;//DS0闪烁
+						}
 					u32 sd_size;
 					u8 t=0;
 					sd_size=SD_GetSectorCount();//得到扇区数
 					while(1)
 					{
-						key=KEY_Scan(0);
-						if(key==KEY0_PRES){
+						//key=KEY_Scan(0);
+						//if(key==KEY0_PRES){
 							SD_Read_Sectorx(0);//KEY0按,读取SD卡扇区0的内容
 							HAL_Delay(2000);
 							break;
-						}
+						//}
 						t++;
 						delay_ms(10);
 						if(t==20)

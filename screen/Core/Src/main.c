@@ -115,6 +115,7 @@ int main(void)
   MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
 	POINT_COLOR=RED;
+	SD_Read_Sectorx(0);
 	game();
   /* USER CODE END 2 */
 
@@ -169,20 +170,21 @@ void SystemClock_Config(void)
 /* USER CODE BEGIN 4 */
 //读取SD卡的指定扇区的内容，并通过串口1输出
 //sec：扇区物理地址编号
+u8 sector_buf[512];
 void SD_Read_Sectorx(u32 sec)
 {
-	u8 *buf;
+	uint8_t message[100];
+	sprintf(message, "%d", 666);
+	HAL_UART_Transmit(&huart1, message, 5, 0xffff);
 	u16 i;
-	buf=mymalloc(512);				//申请内存
-	if(SD_ReadDisk(buf,sec,1)==0)	//读取0扇区的内容
+	if(SD_ReadDisk(sector_buf,sec,1)==0)	//读取0扇区的内容
 	{
 		LCD_ShowString(60,190,200,16,16,"USART1 Sending Data...");
-		printf("SECTOR 0 DATA:\r\n");
-		for(i=0;i<512;i++)printf("%x ",buf[i]);//打印sec扇区数据
+		printf("SECTOR %lu DATA:\r\n",sec);
+		for(i=0;i<512;i++)printf("%x ",sector_buf[i]);//打印sec扇区数据
 		printf("\r\nDATA ENDED\r\n");
 		LCD_ShowString(60,190,200,16,16,"USART1 Send Data Over!");
 	}
-	myfree(buf);//释放内存
 }
 /* USER CODE END 4 */
 

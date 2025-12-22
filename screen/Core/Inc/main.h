@@ -67,7 +67,7 @@ void SD_Read_Sectorx(u32 sec);
 #define LED_GPIO_Port GPIOD
 
 /* USER CODE BEGIN Private defines */
-
+extern u8 sector_buf[512];
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

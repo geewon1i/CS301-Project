@@ -57,7 +57,7 @@ void SD_SPI_Init(void)
 	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_3,GPIO_PIN_SET);
 	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_4,GPIO_PIN_SET);
 
-	SPI1_Init();
+	//SPI1_Init();
 	SD_CS=1;
 }
 ///////////////////////////////////////////////////////////////////////////////////
