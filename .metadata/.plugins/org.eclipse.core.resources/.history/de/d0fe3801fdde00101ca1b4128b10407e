@@ -9,7 +9,6 @@
 #include "lcd.h"
 
 void game(){
-	lcd_init();
 	lcd_show_string(30, 30, 200, 24, 24, "Little car", RED);
 	lcd_show_string(30, 70, 200, 24, 24, "Route planning", RED);
 	lcd_show_string(30, 110, 200, 24, 24, "Following", RED);

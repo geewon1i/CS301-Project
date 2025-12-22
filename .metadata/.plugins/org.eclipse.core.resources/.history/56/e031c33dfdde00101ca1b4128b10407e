@@ -102,7 +102,7 @@ int main(void)
 	KEY_Init();							//初始化按�?
 	LCD_Init();							//初始化LCD
 	tp_dev.init();				   		//触摸屏初始化
-	lcd_init();
+	lcd_init()
 	/* USER CODE END Init */
 
 	/* Configure the system clock */

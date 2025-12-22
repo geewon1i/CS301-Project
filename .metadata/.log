@@ -545,3 +545,6 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY org.eclipse.core.net 1 0 2025-12-22 11:39:21.386
 !MESSAGE System property https.proxyPort is set to 7890 but should not be set.
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-12-22 14:18:26.614
+!MESSAGE Indexed 'lab4' (19 sources, 107 headers) in 2.26 sec: 7,750 declarations; 41,672 references; 7 unresolved inclusions; 618 syntax errors; 1,719 unresolved names (3.4%)

@@ -1,35 +1,28 @@
-14:03:59 **** Incremental Build of configuration Debug for project screen ****
+14:35:18 **** Incremental Build of configuration Debug for project screen ****
 make -j32 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc "../Core/Src/maze.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/maze.d" -MT"Core/Src/maze.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/maze.o"
-arm-none-eabi-gcc "../Core/Src/spi.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/spi.d" -MT"Core/Src/spi.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/spi.o"
-arm-none-eabi-gcc "../Core/Src/ui.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ui.d" -MT"Core/Src/ui.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/ui.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:122:9: warning: implicit declaration of function 'game' [-Wimplicit-function-declaration]
-  122 |         game();
-      |         ^~~~
 ../Core/Src/maze.c: In function 'rtp':
-../Core/Src/maze.c:99:57: warning: implicit declaration of function 'LCD_DrawLine'; did you mean 'lcd_draw_line'? [-Wimplicit-function-declaration]
-   99 |                                                         LCD_DrawLine(px, py, x, y);
+../Core/Src/maze.c:110:57: warning: implicit declaration of function 'LCD_DrawLine'; did you mean 'lcd_draw_line'? [-Wimplicit-function-declaration]
+  110 |                                                         LCD_DrawLine(px, py, x, y);
       |                                                         ^~~~~~~~~~~~
       |                                                         lcd_draw_line
-../Core/Src/maze.c:108:49: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-  108 |                                                 sprintf(message, "%d,%d", x, y);
+../Core/Src/maze.c:119:49: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  119 |                                                 sprintf(message, "%d,%d", x, y);
       |                                                 ^~~~~~~
 ../Core/Src/maze.c:19:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
    18 | #include "ui.h"
   +++ |+#include <stdio.h>
    19 | //#include "font.h"
-../Core/Src/maze.c:108:49: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
-  108 |                                                 sprintf(message, "%d,%d", x, y);
+../Core/Src/maze.c:119:49: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  119 |                                                 sprintf(message, "%d,%d", x, y);
       |                                                 ^~~~~~~
-../Core/Src/maze.c:108:49: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-../Core/Src/maze.c:108:57: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-  108 |                                                 sprintf(message, "%d,%d", x, y);
+../Core/Src/maze.c:119:49: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/maze.c:119:57: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  119 |                                                 sprintf(message, "%d,%d", x, y);
       |                                                         ^~~~~~~
       |                                                         |
       |                                                         uint8_t * {aka unsigned char *}
-../Core/Src/maze.c:108:57: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/maze.c:119:57: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
 ../Core/Src/maze.c:34:12: warning: variable 'key' set but not used [-Wunused-but-set-variable]
    34 |         u8 key;
       |            ^~~
@@ -39,17 +32,17 @@ Finished building target: screen.elf
 arm-none-eabi-size  screen.elf 
 arm-none-eabi-objdump -h -S screen.elf  > "screen.list"
    text	   data	    bss	    dec	    hex	filename
-  94232	    168	   3200	  97600	  17d40	screen.elf
+  94468	    168	   3200	  97836	  17e2c	screen.elf
 arm-none-eabi-objcopy  -O ihex screen.elf  "screen.hex"
 arm-none-eabi-objcopy  -O binary screen.elf  "screen.bin"
 Finished building: default.size.stdout
  
 Finished building: screen.hex
 Finished building: screen.bin
+ 
+ 
 Finished building: screen.list
  
- 
- 
 
-14:04:01 Build Finished. 0 errors, 6 warnings. (took 1s.695ms)
+14:35:20 Build Finished. 0 errors, 5 warnings. (took 1s.358ms)
 
