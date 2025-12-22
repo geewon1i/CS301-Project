@@ -27,8 +27,8 @@ Core/Src/touch.o: ../Core/Src/touch.c ../Core/Inc/touch.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
  ../Core/Inc/ott2001a.h ../Core/Inc/gt9147.h ../Core/Inc/ft5206.h \
- ../Core/Inc/lcd.h ../Core/Inc/main.h ../Core/Inc/delay.h \
- ../Core/Inc/24cxx.h ../Core/Inc/myiic.h
+ ../Core/Inc/lcd.h ../Core/Inc/main.h ../Core/Inc/mmc_sd.h \
+ ../Core/Inc/delay.h ../Core/Inc/24cxx.h ../Core/Inc/myiic.h
 ../Core/Inc/touch.h:
 ../Core/Inc/sys.h:
 ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:
@@ -62,6 +62,7 @@ Core/Src/touch.o: ../Core/Src/touch.c ../Core/Inc/touch.h \
 ../Core/Inc/ft5206.h:
 ../Core/Inc/lcd.h:
 ../Core/Inc/main.h:
+../Core/Inc/mmc_sd.h:
 ../Core/Inc/delay.h:
 ../Core/Inc/24cxx.h:
 ../Core/Inc/myiic.h:

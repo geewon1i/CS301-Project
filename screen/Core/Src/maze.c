@@ -115,6 +115,25 @@ void rtp(int mode)
 					}
 				}
 				if(mode == 3){
+					u32 sd_size;
+					u8 t=0;
+					sd_size=SD_GetSectorCount();//得到扇区数
+					while(1)
+					{
+						key=KEY_Scan(0);
+						if(key==KEY0_PRES){
+							SD_Read_Sectorx(0);//KEY0按,读取SD卡扇区0的内容
+							HAL_Delay(2000);
+							break;
+						}
+						t++;
+						delay_ms(10);
+						if(t==20)
+						{
+							LED0=!LED0;
+							t=0;
+						}
+					}
 					if(tp_dev.x[0]>30&&tp_dev.y[0]>70&&tp_dev.x[0]<336&&tp_dev.y[0]<110){
 						goto mode0;
 					}
@@ -125,4 +144,5 @@ void rtp(int mode)
 		if(i%20==0)LED0=!LED0;
 	}
 }
+
 

@@ -28,7 +28,7 @@ Core/Src/gt9147.o: ../Core/Src/gt9147.c ../Core/Inc/gt9147.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
  ../Core/Inc/touch.h ../Core/Inc/ott2001a.h ../Core/Inc/gt9147.h \
  ../Core/Inc/ft5206.h ../Core/Inc/ctiic.h ../Core/Inc/delay.h \
- ../Core/Inc/lcd.h ../Core/Inc/main.h
+ ../Core/Inc/lcd.h ../Core/Inc/main.h ../Core/Inc/mmc_sd.h
 ../Core/Inc/gt9147.h:
 ../Core/Inc/sys.h:
 ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:
@@ -65,3 +65,4 @@ Core/Src/gt9147.o: ../Core/Src/gt9147.c ../Core/Inc/gt9147.h \
 ../Core/Inc/delay.h:
 ../Core/Inc/lcd.h:
 ../Core/Inc/main.h:
+../Core/Inc/mmc_sd.h:
