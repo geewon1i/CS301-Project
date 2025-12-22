@@ -1,10 +1,23 @@
-11:08:34 **** Incremental Build of configuration Debug for project car1_1 ****
+11:16:55 **** Incremental Build of configuration Debug for project car1_1 ****
 make -j32 all 
+arm-none-eabi-gcc "../Core/Src/mode2.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode2.d" -MT"Core/Src/mode2.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode2.o"
+arm-none-eabi-gcc -o "car1_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\car1_1\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car1_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: car1_1.elf
+ 
 arm-none-eabi-size  car1_1.elf 
+arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
    text	   data	    bss	    dec	    hex	filename
-  26140	     92	   2084	  28316	   6e9c	car1_1.elf
+  26164	     92	   2084	  28340	   6eb4	car1_1.elf
+arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
 Finished building: default.size.stdout
+arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
+ 
+Finished building: car1_1.hex
+Finished building: car1_1.list
+Finished building: car1_1.bin
+ 
+ 
  
 
-11:08:35 Build Finished. 0 errors, 0 warnings. (took 975ms)
+11:16:56 Build Finished. 0 errors, 0 warnings. (took 969ms)
 

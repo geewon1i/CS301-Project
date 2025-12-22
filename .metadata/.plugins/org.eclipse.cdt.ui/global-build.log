@@ -417,3 +417,157 @@ arm-none-eabi-size  car1_1.elf
   26140	     92	   2084	  28316	   6e9c	car1_1.elf
 Finished building: default.size.stdout
  
+11:16:37 **** Incremental Build of configuration Debug for project car1_1 ****
+make -j32 all 
+arm-none-eabi-gcc "../Core/Src/mode2.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode2.d" -MT"Core/Src/mode2.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode2.o"
+../Core/Src/mode2.c: In function 'mode2_loop':
+../Core/Src/mode2.c:19:11: error: 'rxBuffer' undeclared (first use in this function); did you mean 'ITM_RxBuffer'?
+   19 |     while(rxBuffer[1]!='p'){
+      |           ^~~~~~~~
+      |           ITM_RxBuffer
+../Core/Src/mode2.c:19:11: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:55: Core/Src/mode2.o] Error 1
+"make -j32 all" terminated with exit code 2. Build might be incomplete.
+11:16:55 **** Incremental Build of configuration Debug for project car1_1 ****
+make -j32 all 
+arm-none-eabi-gcc "../Core/Src/mode2.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode2.d" -MT"Core/Src/mode2.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode2.o"
+arm-none-eabi-gcc -o "car1_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\car1_1\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car1_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: car1_1.elf
+ 
+arm-none-eabi-size  car1_1.elf 
+arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
+   text	   data	    bss	    dec	    hex	filename
+  26164	     92	   2084	  28340	   6eb4	car1_1.elf
+arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
+Finished building: default.size.stdout
+arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
+ 
+Finished building: car1_1.hex
+Finished building: car1_1.list
+Finished building: car1_1.bin
+ 
+ 
+ 
+11:16:59 **** Incremental Build of configuration Debug for project screen ****
+make -j32 all 
+arm-none-eabi-gcc "../Core/Src/maze.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/maze.d" -MT"Core/Src/maze.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/maze.o"
+../Core/Src/maze.c: In function 'rtp':
+../Core/Src/maze.c:87:49: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   87 |                                                 sprintf(message, "%d,%d", tp_dev.x[0], tp_dev.y[0]);
+      |                                                 ^~~~~~~
+../Core/Src/maze.c:19:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   18 | #include "ui.h"
+  +++ |+#include <stdio.h>
+   19 | 
+../Core/Src/maze.c:87:49: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   87 |                                                 sprintf(message, "%d,%d", tp_dev.x[0], tp_dev.y[0]);
+      |                                                 ^~~~~~~
+../Core/Src/maze.c:87:49: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/maze.c:87:57: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+   87 |                                                 sprintf(message, "%d,%d", tp_dev.x[0], tp_dev.y[0]);
+      |                                                         ^~~~~~~
+      |                                                         |
+      |                                                         uint8_t * {aka unsigned char *}
+../Core/Src/maze.c:87:57: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/maze.c:43:12: warning: variable 'key' set but not used [-Wunused-but-set-variable]
+   43 |         u8 key;
+      |            ^~~
+arm-none-eabi-gcc -o "screen.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\screen\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="screen.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: screen.elf
+ 
+arm-none-eabi-size  screen.elf 
+arm-none-eabi-objdump -h -S screen.elf  > "screen.list"
+   text	   data	    bss	    dec	    hex	filename
+  70216	    168	   2168	  72552	  11b68	screen.elf
+arm-none-eabi-objcopy  -O ihex screen.elf  "screen.hex"
+arm-none-eabi-objcopy  -O binary screen.elf  "screen.bin"
+Finished building: default.size.stdout
+ 
+Finished building: screen.list
+Finished building: screen.hex
+Finished building: screen.bin
+ 
+ 
+ 
+11:17:29 **** Incremental Build of configuration Debug for project screen ****
+make -j32 all 
+arm-none-eabi-gcc "../Core/Src/maze.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/maze.d" -MT"Core/Src/maze.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/maze.o"
+../Core/Src/maze.c: In function 'rtp':
+../Core/Src/maze.c:90:49: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   90 |                                                 sprintf(message, "%d,%d", tp_dev.x[0], tp_dev.y[0]);
+      |                                                 ^~~~~~~
+../Core/Src/maze.c:19:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   18 | #include "ui.h"
+  +++ |+#include <stdio.h>
+   19 | 
+../Core/Src/maze.c:90:49: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   90 |                                                 sprintf(message, "%d,%d", tp_dev.x[0], tp_dev.y[0]);
+      |                                                 ^~~~~~~
+../Core/Src/maze.c:90:49: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/maze.c:90:57: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+   90 |                                                 sprintf(message, "%d,%d", tp_dev.x[0], tp_dev.y[0]);
+      |                                                         ^~~~~~~
+      |                                                         |
+      |                                                         uint8_t * {aka unsigned char *}
+../Core/Src/maze.c:90:57: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/maze.c:43:12: warning: variable 'key' set but not used [-Wunused-but-set-variable]
+   43 |         u8 key;
+      |            ^~~
+arm-none-eabi-gcc -o "screen.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\screen\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="screen.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: screen.elf
+ 
+arm-none-eabi-size  screen.elf 
+arm-none-eabi-objdump -h -S screen.elf  > "screen.list"
+   text	   data	    bss	    dec	    hex	filename
+  70336	    168	   2168	  72672	  11be0	screen.elf
+arm-none-eabi-objcopy  -O ihex screen.elf  "screen.hex"
+Finished building: default.size.stdout
+arm-none-eabi-objcopy  -O binary screen.elf  "screen.bin"
+ 
+Finished building: screen.hex
+Finished building: screen.list
+Finished building: screen.bin
+ 
+ 
+ 
+11:26:13 **** Incremental Build of configuration Debug for project screen ****
+make -j32 all 
+arm-none-eabi-gcc "../Core/Src/maze.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/maze.d" -MT"Core/Src/maze.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/maze.o"
+../Core/Src/maze.c: In function 'rtp':
+../Core/Src/maze.c:95:49: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   95 |                                                 sprintf(message, "%d,%d", tp_dev.x[0], tp_dev.y[0]);
+      |                                                 ^~~~~~~
+../Core/Src/maze.c:19:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   18 | #include "ui.h"
+  +++ |+#include <stdio.h>
+   19 | 
+../Core/Src/maze.c:95:49: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   95 |                                                 sprintf(message, "%d,%d", tp_dev.x[0], tp_dev.y[0]);
+      |                                                 ^~~~~~~
+../Core/Src/maze.c:95:49: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/maze.c:95:57: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+   95 |                                                 sprintf(message, "%d,%d", tp_dev.x[0], tp_dev.y[0]);
+      |                                                         ^~~~~~~
+      |                                                         |
+      |                                                         uint8_t * {aka unsigned char *}
+../Core/Src/maze.c:95:57: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/maze.c:43:12: warning: variable 'key' set but not used [-Wunused-but-set-variable]
+   43 |         u8 key;
+      |            ^~~
+arm-none-eabi-gcc -o "screen.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\screen\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="screen.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: screen.elf
+ 
+arm-none-eabi-size  screen.elf 
+arm-none-eabi-objdump -h -S screen.elf  > "screen.list"
+   text	   data	    bss	    dec	    hex	filename
+  93704	    168	   2168	  96040	  17728	screen.elf
+arm-none-eabi-objcopy  -O ihex screen.elf  "screen.hex"
+arm-none-eabi-objcopy  -O binary screen.elf  "screen.bin"
+Finished building: default.size.stdout
+Finished building: screen.hex
+Finished building: screen.bin
+Finished building: screen.list
+ 
+ 
+ 
+ 

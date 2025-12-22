@@ -44,28 +44,17 @@ void rtp(int mode)
 	u8 i=0;
 	while(1)
 	{
-		if(false){
+		if(false)
 			mode0:mode = 0;
-			lcd_init();
-		}
 		if(false){
 			mode1:mode = 1;
-			lcd_init();
-			lcd_show_string(30, 30, 200, 24, 24, "Route planning", RED);
+			lcd_show_string(30, 30, 200, 24, 24, "ROUTE PLANNING", RED);
 			lcd_show_string(30, 70, 200, 24, 24, "BACK", RED);
 		}
-		if(false){
+		if(false)
 			mode2:mode = 2;
-			lcd_init();
-			lcd_show_string(30, 30, 200, 24, 24, "Following", RED);
-			lcd_show_string(30, 70, 200, 24, 24, "BACK", RED);
-		}
-		if(false){
+		if(false)
 			mode3:mode = 3;
-			lcd_init();
-			lcd_show_string(30, 30, 200, 24, 24, "SD Card storing", RED);
-			lcd_show_string(30, 70, 200, 24, 24, "BACK", RED);
-		}
 		key=KEY_Scan(0);
 		tp_dev.scan(0);
 		if(tp_dev.sta&TP_PRES_DOWN)			//触摸屏被按下
@@ -88,27 +77,23 @@ void rtp(int mode)
 				}
 				if(mode == 1){
 					if(tp_dev.x[0]>30&&tp_dev.y[0]>70&&tp_dev.x[0]<336&&tp_dev.y[0]<110){
-						goto mode0;
-					}
-					if(tp_dev.x[0]>30&&tp_dev.y[0]>110){
 						uint8_t message[100];
 						sprintf(message, "%d,%d", tp_dev.x[0], tp_dev.y[0]);
 						HAL_UART_Transmit(&huart1, message, 5, 0xffff);
 					}
 				}
-				if(mode == 2){
-					if(tp_dev.x[0]>30&&tp_dev.y[0]>70&&tp_dev.x[0]<336&&tp_dev.y[0]<110){
-						goto mode0;
-						HAL_UART_Transmit(&huart1, (uint8_t *)"stop", 5, 0xffff);
-					}
-				}
-				if(mode == 3){
-					if(tp_dev.x[0]>30&&tp_dev.y[0]>70&&tp_dev.x[0]<336&&tp_dev.y[0]<110){
-						goto mode0;
-					}
-				}
 			}
 		}
+//		if(key==KEY0_PRES)
+//		{
+//			LCD_Clear(WHITE);	//清屏
+//			TP_Adjust();  		//屏幕校准
+//			TP_Save_Adjdata();
+//		}
+//		if(key==WKUP_PRES)
+//		{
+//			HAL_UART_Transmit(&huart1, "01234", 5, 0xffff);
+//		}
 		i++;
 		if(i%20==0)LED0=!LED0;
 	}

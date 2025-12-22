@@ -1,27 +1,24 @@
-10:58:36 **** Incremental Build of configuration Debug for project screen ****
+11:26:13 **** Incremental Build of configuration Debug for project screen ****
 make -j32 all 
 arm-none-eabi-gcc "../Core/Src/maze.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/maze.d" -MT"Core/Src/maze.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/maze.o"
 ../Core/Src/maze.c: In function 'rtp':
-../Core/Src/maze.c:81:49: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-   81 |                                                 sprintf(message, "%d, %d", tp_dev.x[0], tp_dev.y[0]);
+../Core/Src/maze.c:95:49: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   95 |                                                 sprintf(message, "%d,%d", tp_dev.x[0], tp_dev.y[0]);
       |                                                 ^~~~~~~
 ../Core/Src/maze.c:19:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
    18 | #include "ui.h"
   +++ |+#include <stdio.h>
    19 | 
-../Core/Src/maze.c:81:49: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
-   81 |                                                 sprintf(message, "%d, %d", tp_dev.x[0], tp_dev.y[0]);
+../Core/Src/maze.c:95:49: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   95 |                                                 sprintf(message, "%d,%d", tp_dev.x[0], tp_dev.y[0]);
       |                                                 ^~~~~~~
-../Core/Src/maze.c:81:49: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-../Core/Src/maze.c:81:57: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-   81 |                                                 sprintf(message, "%d, %d", tp_dev.x[0], tp_dev.y[0]);
+../Core/Src/maze.c:95:49: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/maze.c:95:57: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+   95 |                                                 sprintf(message, "%d,%d", tp_dev.x[0], tp_dev.y[0]);
       |                                                         ^~~~~~~
       |                                                         |
       |                                                         uint8_t * {aka unsigned char *}
-../Core/Src/maze.c:81:57: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
-../Core/Src/maze.c:48:25: warning: label 'mode0' defined but not used [-Wunused-label]
-   48 |                         mode0:mode = 0;
-      |                         ^~~~~
+../Core/Src/maze.c:95:57: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
 ../Core/Src/maze.c:43:12: warning: variable 'key' set but not used [-Wunused-but-set-variable]
    43 |         u8 key;
       |            ^~~
@@ -31,17 +28,17 @@ Finished building target: screen.elf
 arm-none-eabi-size  screen.elf 
 arm-none-eabi-objdump -h -S screen.elf  > "screen.list"
    text	   data	    bss	    dec	    hex	filename
-  70056	    168	   2168	  72392	  11ac8	screen.elf
+  93704	    168	   2168	  96040	  17728	screen.elf
 arm-none-eabi-objcopy  -O ihex screen.elf  "screen.hex"
-Finished building: default.size.stdout
 arm-none-eabi-objcopy  -O binary screen.elf  "screen.bin"
- 
+Finished building: default.size.stdout
 Finished building: screen.hex
 Finished building: screen.bin
- 
 Finished building: screen.list
  
  
+ 
+ 
 
-10:58:38 Build Finished. 0 errors, 5 warnings. (took 1s.955ms)
+11:26:14 Build Finished. 0 errors, 4 warnings. (took 1s.325ms)
 

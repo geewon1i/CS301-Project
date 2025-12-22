@@ -44,25 +44,20 @@ void rtp(int mode)
 	u8 i=0;
 	while(1)
 	{
-		if(false){
+		if(false)
 			mode0:mode = 0;
-			lcd_init();
-		}
 		if(false){
 			mode1:mode = 1;
-			lcd_init();
 			lcd_show_string(30, 30, 200, 24, 24, "Route planning", RED);
 			lcd_show_string(30, 70, 200, 24, 24, "BACK", RED);
 		}
 		if(false){
 			mode2:mode = 2;
-			lcd_init();
 			lcd_show_string(30, 30, 200, 24, 24, "Following", RED);
 			lcd_show_string(30, 70, 200, 24, 24, "BACK", RED);
 		}
 		if(false){
 			mode3:mode = 3;
-			lcd_init();
 			lcd_show_string(30, 30, 200, 24, 24, "SD Card storing", RED);
 			lcd_show_string(30, 70, 200, 24, 24, "BACK", RED);
 		}

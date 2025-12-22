@@ -3,7 +3,6 @@
 #include "tim.h"
 #include "gpio.h"
 #include "trajectory.h"
-#include "stm32f1xx_it.h"
 
 #define BASE_SPEED 0.5f   // 基础前进速度（0~1）
 #define Kp 0.4f           // 转向比例系数

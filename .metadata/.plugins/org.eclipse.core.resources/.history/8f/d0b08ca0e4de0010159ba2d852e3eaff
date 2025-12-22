@@ -3,7 +3,6 @@
 #include "tim.h"
 #include "gpio.h"
 #include "trajectory.h"
-#include "stm32f1xx_it.h"
 
 #define BASE_SPEED 0.5f   // 基础前进速度（0~1）
 #define Kp 0.4f           // 转向比例系数
@@ -17,7 +16,7 @@ extern uint16_t pwm_map(float duty);
 void mode2_loop(void){
     init_motors();
 
-    while(rxBuffer[1]!='p'){
+    while(1){
         // 读取左右避障传感器数字信号
     	uint8_t left_detect  = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_4); // 0 = 左边有物体
     	uint8_t right_detect = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_5); // 0 = 右边有物体
