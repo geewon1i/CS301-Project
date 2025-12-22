@@ -42,7 +42,6 @@ void rtp(int mode)
 		if(false){
 			mode1:mode = 1;
 			lcd_init();
-			HAL_UART_Transmit(&huart1, (uint8_t *)"route", 5, 0xffff);
 			lcd_show_string(30, 30, 200, 24, 24, "Route planning", RED);
 			lcd_show_string(30, 70, 200, 24, 24, "BACK", RED);
 		}

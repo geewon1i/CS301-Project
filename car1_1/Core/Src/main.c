@@ -120,8 +120,8 @@ int main(void)
 
 		/* USER CODE BEGIN 3 */
 		int key = detect_keys();
-		if(rxBuffer[0] == '0'){
-			HAL_GPIO_WritePin(L1_GPIO_Port, L1_Pin, GPIO_PIN_RESET);
+		if(rxBuffer[1] == 'r'){
+			key = 1;
 		}
 		if (key == 1) {
 			mode1_loop(); // 路径规划模式
