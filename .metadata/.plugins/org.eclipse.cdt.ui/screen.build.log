@@ -1,6 +1,13 @@
-12:40:12 **** Incremental Build of configuration Debug for project screen ****
+14:03:59 **** Incremental Build of configuration Debug for project screen ****
 make -j32 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc "../Core/Src/maze.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/maze.d" -MT"Core/Src/maze.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/maze.o"
+arm-none-eabi-gcc "../Core/Src/spi.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/spi.d" -MT"Core/Src/spi.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/spi.o"
+arm-none-eabi-gcc "../Core/Src/ui.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ui.d" -MT"Core/Src/ui.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/ui.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:122:9: warning: implicit declaration of function 'game' [-Wimplicit-function-declaration]
+  122 |         game();
+      |         ^~~~
 ../Core/Src/maze.c: In function 'rtp':
 ../Core/Src/maze.c:99:57: warning: implicit declaration of function 'LCD_DrawLine'; did you mean 'lcd_draw_line'? [-Wimplicit-function-declaration]
    99 |                                                         LCD_DrawLine(px, py, x, y);
@@ -32,17 +39,17 @@ Finished building target: screen.elf
 arm-none-eabi-size  screen.elf 
 arm-none-eabi-objdump -h -S screen.elf  > "screen.list"
    text	   data	    bss	    dec	    hex	filename
-  94056	    168	   3192	  97416	  17c88	screen.elf
+  94232	    168	   3200	  97600	  17d40	screen.elf
 arm-none-eabi-objcopy  -O ihex screen.elf  "screen.hex"
-Finished building: default.size.stdout
 arm-none-eabi-objcopy  -O binary screen.elf  "screen.bin"
+Finished building: default.size.stdout
  
 Finished building: screen.hex
 Finished building: screen.bin
- 
- 
 Finished building: screen.list
  
+ 
+ 
 
-12:40:13 Build Finished. 0 errors, 5 warnings. (took 1s.480ms)
+14:04:01 Build Finished. 0 errors, 6 warnings. (took 1s.695ms)
 
