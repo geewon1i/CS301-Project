@@ -3,6 +3,7 @@
 #include "tim.h"
 #include "gpio.h"
 #include "math.h"
+#include "control.h"
 #include "stm32f1xx_it.h"
 
 #define PI 3.14159265
