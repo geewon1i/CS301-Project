@@ -17,7 +17,7 @@ SPI_HandleTypeDef SPI1_Handler;  //SPI1���
 //������SPIģ��ĳ�ʼ�����룬���ó�����ģʽ 						  
 //SPI�ڳ�ʼ��
 //�������Ƕ�SPI1�ĳ�ʼ��
-void SPI1_Init(void)
+/*void SPI1_Init(void)
 {
     SPI1_Handler.Instance=SPI1;                         //SPI1
     SPI1_Handler.Init.Mode=SPI_MODE_MASTER;             //����SPI����ģʽ������Ϊ��ģʽ
@@ -36,7 +36,7 @@ void SPI1_Init(void)
     __HAL_SPI_ENABLE(&SPI1_Handler);                    //ʹ��SPI1
 	
     SPI1_ReadWriteByte(0Xff);                           //��������
-}
+}*/
 
 //SPI5�ײ�������ʱ��ʹ�ܣ���������
 //�˺����ᱻHAL_SPI_Init()����

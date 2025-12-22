@@ -110,7 +110,26 @@ void rtp(int mode)
 					}
 				}
 				if(mode == 2){
+					u16 pre_x = 0;
+					u16 pre_y = 300;
+					u16 x = 30;//bluetooth
+					u16 y = 50;
+					static int pulse = 0;
+				    TP_Draw_Big_Point(x,y,BLUE);
+					pulse++;
+					uint16_t POINT_COLOR;
+					if(pulse == 5){
+						//lcd_draw_bline(pre_x, pre_y, x, y, 3, RED);
+						u16 temp = POINT_COLOR;
+						POINT_COLOR=BLUE;
+						LCD_DrawLine(pre_x, pre_y, x, y);
+						POINT_COLOR = temp;
+						pre_x = x;
+						pre_y = y;
+						pulse = 0;
+					}
 					if(tp_dev.x[0]>30&&tp_dev.y[0]>70&&tp_dev.x[0]<336&&tp_dev.y[0]<110){
+						
 						goto mode0;
 						HAL_UART_Transmit(&huart1, (uint8_t *)"stop", 5, 0xffff);
 					}
