@@ -5,7 +5,7 @@
 #define L_WHEEL  14.0f   // cm
 
 static Pose2D pose;
-
+//extern UART_HandleTypeDef huart1;
 void traj_init(void)
 {
     pose.x = 0;
@@ -21,6 +21,8 @@ void traj_update(float v_l, float v_r)
     pose.theta += omega * DT;
     pose.x += v * cosf(pose.theta) * DT;
     pose.y += v * sinf(pose.theta) * DT;
+
+//    HAL_UART_Transmit(&huart1,c,20,0xffff);
 }
 
 Pose2D traj_get_pose(void)
