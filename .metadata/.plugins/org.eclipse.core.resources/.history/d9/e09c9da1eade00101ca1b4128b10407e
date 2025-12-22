@@ -16,12 +16,7 @@ void mode1_loop(void) {
     float current_angle = 90.0; // init(0,1), -180~180
     uint16_t x0 = 0;
     uint16_t y0 = 0;
-    char ch[100];
-    // 假设 rxBuffer 是以 '\0' 结尾的字符串，ch 有足够空间
-    const char *p = rxBuffer;
-    if (*p == '\n') p++;        // 跳过单个 '\n'
-    strcpy(ch, p);              // 复制剩余内容
-    sscanf(ch,"%d,%d",x0,y0);
+    sscanf(rxBuffer,"%d,%d",x0,y0);
     //bt_transmit
     uint8_t order = 1; // 1: getting points 0: over
     while(order == 1){
