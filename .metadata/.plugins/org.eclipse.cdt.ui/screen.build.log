@@ -1,23 +1,48 @@
-11:44:39 **** Incremental Build of configuration Debug for project screen ****
+11:52:11 **** Incremental Build of configuration Debug for project screen ****
 make -j32 all 
-arm-none-eabi-gcc "../Core/Src/ui.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ui.d" -MT"Core/Src/ui.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/ui.o"
+arm-none-eabi-gcc "../Core/Src/maze.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/maze.d" -MT"Core/Src/maze.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/maze.o"
+../Core/Src/maze.c: In function 'rtp':
+../Core/Src/maze.c:98:57: warning: implicit declaration of function 'LCD_DrawLine'; did you mean 'lcd_draw_line'? [-Wimplicit-function-declaration]
+   98 |                                                         LCD_DrawLine(px, py, x, y);
+      |                                                         ^~~~~~~~~~~~
+      |                                                         lcd_draw_line
+../Core/Src/maze.c:107:49: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  107 |                                                 sprintf(message, "%d,%d", x, y);
+      |                                                 ^~~~~~~
+../Core/Src/maze.c:19:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   18 | #include "ui.h"
+  +++ |+#include <stdio.h>
+   19 | //#include "font.h"
+../Core/Src/maze.c:107:49: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  107 |                                                 sprintf(message, "%d,%d", x, y);
+      |                                                 ^~~~~~~
+../Core/Src/maze.c:107:49: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/maze.c:107:57: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  107 |                                                 sprintf(message, "%d,%d", x, y);
+      |                                                         ^~~~~~~
+      |                                                         |
+      |                                                         uint8_t * {aka unsigned char *}
+../Core/Src/maze.c:107:57: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/maze.c:34:12: warning: variable 'key' set but not used [-Wunused-but-set-variable]
+   34 |         u8 key;
+      |            ^~~
 arm-none-eabi-gcc -o "screen.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\screen\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="screen.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: screen.elf
  
 arm-none-eabi-size  screen.elf 
 arm-none-eabi-objdump -h -S screen.elf  > "screen.list"
    text	   data	    bss	    dec	    hex	filename
-  93704	    168	   2168	  96040	  17728	screen.elf
+  94024	    168	   3192	  97384	  17c68	screen.elf
 arm-none-eabi-objcopy  -O ihex screen.elf  "screen.hex"
-Finished building: default.size.stdout
 arm-none-eabi-objcopy  -O binary screen.elf  "screen.bin"
+Finished building: default.size.stdout
  
 Finished building: screen.hex
- 
 Finished building: screen.bin
  
 Finished building: screen.list
  
+ 
 
-11:44:40 Build Finished. 0 errors, 0 warnings. (took 1s.224ms)
+11:52:12 Build Finished. 0 errors, 5 warnings. (took 1s.420ms)
 

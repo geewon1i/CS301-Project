@@ -26,7 +26,7 @@ Core/Src/ui.o: ../Core/Src/ui.c ../Core/Inc/gpio.h ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
  ../Core/Inc/main.h ../Core/Inc/lcd_v4.h ../Core/Inc/lcd.h \
- ../Core/Inc/image.h ../Core/Inc/maze.h
+ ../Core/Inc/maze.h
 ../Core/Inc/gpio.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
@@ -58,5 +58,4 @@ Core/Src/ui.o: ../Core/Src/ui.c ../Core/Inc/gpio.h ../Core/Inc/main.h \
 ../Core/Inc/main.h:
 ../Core/Inc/lcd_v4.h:
 ../Core/Inc/lcd.h:
-../Core/Inc/image.h:
 ../Core/Inc/maze.h:

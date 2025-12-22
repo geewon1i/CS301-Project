@@ -16,7 +16,6 @@
 #include "24cxx.h"
 #include "24l01.h" //通信驱动 基于spi进行通信
 #include "ui.h"
-//#include "font.h"
 
 extern UART_HandleTypeDef huart1;
 struct Point{
@@ -26,6 +25,8 @@ struct Point{
 
 u16 x;
 u16 y;
+u16 px = 0;
+u16 py = lcddev.height;
 u8 pulse = 0;
 u16 count = 0;
 
@@ -80,21 +81,18 @@ void rtp(int mode)
 				if(mode == 1){
 					points[0].x = 0;
 					points[0].y = 0;
-					u16 px = 0;
-					u16 py = lcddev.height;
 					if(tp_dev.x[0]>30&&tp_dev.y[0]>70&&tp_dev.x[0]<336&&tp_dev.y[0]<110){
 						goto mode0;
 					}
 					if(tp_dev.x[0]>30&&tp_dev.y[0]>110){
 						uint8_t message[100];
-						uint16_t POINT_COLOR;
 						TP_Draw_Big_Point(tp_dev.x[0],tp_dev.y[0],RED);//画图
 						pulse += 1;
 						x = tp_dev.x[0];
 						y = tp_dev.y[0];
 						if(pulse == 5 /*sampling_para*/){
-							POINT_COLOR=BLUE;
 							u16 temp = POINT_COLOR;
+							POINT_COLOR=BLUE;
 							LCD_DrawLine(px, py, x, y);
 							count += 1;
 							points[count].x = x;
