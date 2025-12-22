@@ -1,4 +1,5 @@
 #include "trajectory.h"
+#include "usart.h"
 #include <math.h>
 
 #define DT       0.01f   // 10ms
@@ -23,7 +24,7 @@ void traj_update(float v_l, float v_r, int a)
     pose.y += v * sinf(pose.theta) * DT;
     if(a==1){
     	char buf[32];
-    	int len = sprintf(buf, "%.2f,%.2f\r\n", p.x, p.y);
+    	int len = sprintf(buf, "%.2f,%.2f\r\n", pose.x, pose.y);
     	HAL_UART_Transmit(&huart1,(uint8_t *)buf,len,0xffff);}
 }
 
