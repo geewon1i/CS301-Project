@@ -317,3 +317,9 @@
 2025-12-22 10:48:28,947 [INFO] WebApp:225 - Starting web application
 2025-12-22 10:48:28,947 [INFO] WebApp:593 - Web application path used C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\db\plugins\mcufinder\reactClient1\index.html
 2025-12-22 10:48:29,055 [INFO] UserAuth:487 - Internet connection configuration mode: 1
+2025-12-22 11:17:03,428 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2025-12-22 11:39:00,778 [INFO] Activator:176 - 
+
+
+2025-12-22 11:39:00,781 [INFO] Activator:177 - !SESSION log4j initialized
+2025-12-22 11:39:11,264 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
