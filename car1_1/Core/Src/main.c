@@ -67,6 +67,8 @@ uint8_t rx_char;
 // UART初始化（在主函数初始化中调用）
 void uart_init(void) {
     HAL_UART_Receive_IT(&huart1, &rx_char, 1);  // 启动接收中断
+    turn_in_place(1);
+    HAL_Delay(500);
 }
 
 // 接收完成回调函数
@@ -97,7 +99,6 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
 // 解析接收到的命令
 void parse_command(const char* cmd) {
     // 调试输出（可选）
-    printf("收到命令: %s\n", cmd);
 
     // 检查命令类型
     if(strncmp(cmd, "START", 5) == 0) {
@@ -105,7 +106,6 @@ void parse_command(const char* cmd) {
         point_count = 0;
         receiving_path = 1;
         path_received = 0;
-        printf("开始接收路径\n");
     }
     else if(strncmp(cmd, "END", 3) == 0) {
         // 路径接收完成
@@ -191,7 +191,10 @@ int main(void)
 	MX_TIM3_Init();
 	MX_USART1_UART_Init();
 	/* USER CODE BEGIN 2 */
+	turn_in_place(1);
+	HAL_Delay(500);
 	uart_init();
+
 	/* USER CODE END 2 */
 
 	/* Infinite loop */
@@ -260,15 +263,6 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-void receive_number(uint16_t* target, uint8_t* counter){
-	while(1){
-		if(*counter < num_count){
-			break;
-		}
-	}
-	*target = num[*counter];
-	*counter += 1;
-}
 /* USER CODE END 4 */
 
 /**

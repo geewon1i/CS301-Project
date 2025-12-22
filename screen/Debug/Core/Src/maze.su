@@ -1,5 +1,5 @@
-../Core/Src/maze.c:48:6:rtp	88	static
-../Core/Src/maze.c:197:6:bt_send_string	40	static
-../Core/Src/maze.c:205:6:bt_send_point	24	static
-../Core/Src/maze.c:211:6:bt_send_start	8	static
-../Core/Src/maze.c:216:6:bt_send_end	8	static
+../Core/Src/maze.c:40:6:rtp	88	static
+../Core/Src/maze.c:188:6:bt_send_string	40	static
+../Core/Src/maze.c:196:6:bt_send_point	24	static
+../Core/Src/maze.c:202:6:bt_send_start	8	static
+../Core/Src/maze.c:207:6:bt_send_end	8	static

@@ -26,14 +26,6 @@ struct Point{
 	u16 x;
 	u16 y;
 }points[255];
-// 定义联合体方便转换
-typedef union {
-    struct {
-        uint16_t value1;
-        uint16_t value2;
-    } data;
-    uint8_t bytes[4];
-} u16_packet_t;
 
 #define MAX_CMD_LEN 20
 
@@ -51,7 +43,6 @@ void rtp(int mode)
 
 	points[0].x = 0;
 	points[0].y = lcddev.height;
-    uint8_t buffer[2];
 	while(1)
 	{
 		if(false){

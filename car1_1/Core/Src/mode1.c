@@ -23,6 +23,8 @@ void mode1_loop(void) {
 
     // 等待开始信号
     while(1) {
+    	turn_in_place(1);
+    	HAL_Delay(500);
         if(rx_ready) {
             parse_command(rx_buffer);
             rx_ready = 0;
