@@ -25,11 +25,18 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
- ../Core/Inc/sys.h ../Core/Inc/delay.h ../Core/Inc/sys.h \
- ../Core/Inc/led.h ../Core/Inc/key.h ../Core/Inc/lcd.h ../Core/Inc/main.h \
- ../Core/Inc/touch.h ../Core/Inc/ott2001a.h ../Core/Inc/gt9147.h \
- ../Core/Inc/ft5206.h ../Core/Inc/24cxx.h ../Core/Inc/myiic.h \
- ../Core/Inc/24l01.h ../Core/Inc/image.h
+ ../FATFS/App/fatfs.h ../Middlewares/Third_Party/FatFs/src/ff.h \
+ ../Middlewares/Third_Party/FatFs/src/integer.h ../FATFS/Target/ffconf.h \
+ ../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h \
+ ../Middlewares/Third_Party/FatFs/src/diskio.h \
+ ../Middlewares/Third_Party/FatFs/src/ff.h ../FATFS/Target/user_diskio.h \
+ ../Core/Inc/spi.h ../Core/Inc/main.h ../Core/Inc/tim.h \
+ ../Core/Inc/usart.h ../Core/Inc/gpio.h ../Core/Inc/sys.h \
+ ../Core/Inc/delay.h ../Core/Inc/sys.h ../Core/Inc/led.h \
+ ../Core/Inc/key.h ../Core/Inc/lcd.h ../Core/Inc/touch.h \
+ ../Core/Inc/ott2001a.h ../Core/Inc/gt9147.h ../Core/Inc/ft5206.h \
+ ../Core/Inc/24cxx.h ../Core/Inc/myiic.h ../Core/Inc/24l01.h \
+ ../Core/Inc/image.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:
@@ -57,13 +64,25 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:
+../FATFS/App/fatfs.h:
+../Middlewares/Third_Party/FatFs/src/ff.h:
+../Middlewares/Third_Party/FatFs/src/integer.h:
+../FATFS/Target/ffconf.h:
+../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h:
+../Middlewares/Third_Party/FatFs/src/diskio.h:
+../Middlewares/Third_Party/FatFs/src/ff.h:
+../FATFS/Target/user_diskio.h:
+../Core/Inc/spi.h:
+../Core/Inc/main.h:
+../Core/Inc/tim.h:
+../Core/Inc/usart.h:
+../Core/Inc/gpio.h:
 ../Core/Inc/sys.h:
 ../Core/Inc/delay.h:
 ../Core/Inc/sys.h:
 ../Core/Inc/led.h:
 ../Core/Inc/key.h:
 ../Core/Inc/lcd.h:
-../Core/Inc/main.h:
 ../Core/Inc/touch.h:
 ../Core/Inc/ott2001a.h:
 ../Core/Inc/gt9147.h:

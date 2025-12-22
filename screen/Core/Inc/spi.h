@@ -1,22 +1,52 @@
-#ifndef __SPI_H
-#define __SPI_H
-#include "sys.h"
-//////////////////////////////////////////////////////////////////////////////////	 
-//本程序只供学习使用，未经作者许可，不得用于其它任何用途
-//ALIENTEK STM32F103开发板
-//SPI驱动代码	   
-//正点原子@ALIENTEK
-//技术论坛:www.openedv.com
-//创建日期:2017/5/30
-//版本：V1.0
-//版权所有，盗版必究。
-//Copyright(C) 广州市星翼电子科技有限公司 2014-2024
-//All rights reserved									  
-////////////////////////////////////////////////////////////////////////////////// 	
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file    spi.h
+  * @brief   This file contains all the function prototypes for
+  *          the spi.c file
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2025 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+/* Define to prevent recursive inclusion -------------------------------------*/
+#ifndef __SPI_H__
+#define __SPI_H__
 
-extern SPI_HandleTypeDef SPI1_Handler;  //SPI句柄
-
-void SPI1_Init(void);
-void SPI1_SetSpeed(u8 SPI_BaudRatePrescaler);
-u8 SPI1_ReadWriteByte(u8 TxData);
+#ifdef __cplusplus
+extern "C" {
 #endif
+
+/* Includes ------------------------------------------------------------------*/
+#include "main.h"
+
+/* USER CODE BEGIN Includes */
+
+/* USER CODE END Includes */
+
+extern SPI_HandleTypeDef hspi1;
+
+/* USER CODE BEGIN Private defines */
+
+/* USER CODE END Private defines */
+
+void MX_SPI1_Init(void);
+
+/* USER CODE BEGIN Prototypes */
+
+/* USER CODE END Prototypes */
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* __SPI_H__ */
+

@@ -26,7 +26,7 @@ Core/Src/24l01.o: ../Core/Src/24l01.c ../Core/Inc/24l01.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
- ../Core/Inc/spi.h ../Core/Inc/delay.h
+ ../Core/Inc/spi.h ../Core/Inc/main.h ../Core/Inc/delay.h
 ../Core/Inc/24l01.h:
 ../Core/Inc/sys.h:
 ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:
@@ -56,4 +56,5 @@ Core/Src/24l01.o: ../Core/Src/24l01.c ../Core/Inc/24l01.h \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:
 ../Core/Inc/spi.h:
+../Core/Inc/main.h:
 ../Core/Inc/delay.h:

@@ -15,16 +15,16 @@
 ////////////////////////////////////////////////////////////////////////////////// 	
 
 const u8 TX_ADDRESS[TX_ADR_WIDTH]={0x34,0x43,0x10,0x10,0x01}; //���͵�ַ
-const u8 RX_ADDRESS[RX_ADR_WIDTH]={0x34,0x43,0x10,0x10,0x01}; //���͵�ַ
+const u8 RX_ADDRESS[RX_ADR_WIDTH]={0x34,0x43,0x10,0x10,0x01}; //���͵�
 
 //���NRF24L01�޸�SPI1����
 void NRF24L01_SPI_Init(void)
 {
-    __HAL_SPI_DISABLE(&SPI1_Handler);               //�ȹر�SPI1
-    SPI1_Handler.Init.CLKPolarity=SPI_POLARITY_LOW; //����ͬ��ʱ�ӵĿ���״̬Ϊ�͵�ƽ
-    SPI1_Handler.Init.CLKPhase=SPI_PHASE_1EDGE;     //����ͬ��ʱ�ӵĵ�1�������أ��������½������ݱ�����
-    HAL_SPI_Init(&SPI1_Handler);
-    __HAL_SPI_ENABLE(&SPI1_Handler);                //ʹ��SPI1
+    __HAL_SPI_DISABLE(&hspi1);               //�ȹر�SPI1
+    hspi1.Init.CLKPolarity=SPI_POLARITY_LOW; //����ͬ��ʱ�ӵĿ���״̬Ϊ�͵�ƽ
+    hspi1.Init.CLKPhase=SPI_PHASE_1EDGE;     //����ͬ��ʱ�ӵĵ�1�������أ��������½������ݱ�����
+    HAL_SPI_Init(&hspi1);
+    __HAL_SPI_ENABLE(&hspi1);                //ʹ��SPI1
 }
 
 //��ʼ��24L01��IO��
