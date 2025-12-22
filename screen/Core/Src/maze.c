@@ -16,7 +16,10 @@
 #include "24cxx.h"
 #include "24l01.h" //通信驱动 基于spi进行通信
 #include "ui.h"
+#include "maze.h"
 //#include "font.h"
+
+
 
 extern UART_HandleTypeDef huart1;
 struct Point{
@@ -31,6 +34,12 @@ typedef union {
     } data;
     uint8_t bytes[4];
 } u16_packet_t;
+
+#define MAX_CMD_LEN 20
+
+char tx_buffer[MAX_CMD_LEN];
+
+
 u16 x;
 u16 y;
 u8 pulse = 0;
@@ -78,7 +87,6 @@ void rtp(int mode)
 			lcd_show_string(30, 30, 200, 24, 24, "SD Card storing", RED);
 			lcd_show_string(30, 70, 200, 24, 24, "BACK", RED);
 		}
-		key=KEY_Scan(0);
 		tp_dev.scan(0);
 		if(tp_dev.sta&TP_PRES_DOWN)			//触摸屏被按下
 		{
@@ -101,38 +109,52 @@ void rtp(int mode)
 				if(mode == 1){
 					u16 order = 1;
 					if(tp_dev.x[0]>30&&tp_dev.y[0]>70&&tp_dev.x[0]<336&&tp_dev.y[0]<110){
-						order = 0;
-						memcpy(buffer, &order, 2);
-						HAL_UART_Transmit(&huart1, buffer, 2, HAL_MAX_DELAY);
-						count = 0;
-						points[0].x = 0;
-						points[0].y = lcddev.height;
-						goto mode0;
+				        // 发送结束信号
+				        bt_send_end();
+
+				        // 可选：发送提示信息
+				        lcd_show_string(30,150,200,16,16,"WOW！", BLUE);
+				        HAL_Delay(1000);
+
+				        count = 0;
+				        points[0].x = 0;
+				        points[0].y = lcddev.height;
+				        goto mode0;
 					}
 					else if(tp_dev.x[0]>30&&tp_dev.y[0]>110){
-						order = 1;
-						uint16_t POINT_COLOR;
-						memcpy(buffer, &order, 2);
-						HAL_UART_Transmit(&huart1, buffer, 2, HAL_MAX_DELAY);
-						TP_Draw_Big_Point(tp_dev.x[0],tp_dev.y[0],RED);//画图
-						pulse += 1;
-						x = tp_dev.x[0];
-						y = tp_dev.y[0];
-						if(pulse == 5 /*sampling_para*/){
-							u16 temp = POINT_COLOR;
-							POINT_COLOR=BLUE;
-							LCD_DrawLine(points[count].x, points[count].y, x, y);
-							memcpy(buffer, &x, 2);
-							HAL_UART_Transmit(&huart1, buffer, 2, HAL_MAX_DELAY);
-							memcpy(buffer, &y, 2);
-							HAL_UART_Transmit(&huart1, buffer, 2, HAL_MAX_DELAY);
+				        // 如果是第一个点，发送开始信号
+				        if(count == 0) {
+				            bt_send_start();
+				            HAL_Delay(10);  // 等待接收端准备
+				        }
 
-							count += 1;
-							points[count].x = x;
-							points[count].y = y;
-							POINT_COLOR = temp;
-							pulse = 0;
-						}
+				        // 绘制点
+				        uint16_t POINT_COLOR;
+				        TP_Draw_Big_Point(tp_dev.x[0], tp_dev.y[0], RED);
+
+				        pulse += 1;
+				        x = tp_dev.x[0];
+				        y = tp_dev.y[0];
+
+				        if(pulse == 5) {  // 每5个点采样一次
+				            u16 temp = POINT_COLOR;
+				            POINT_COLOR = BLUE;
+				            LCD_DrawLine(points[count].x, points[count].y, x, y);
+
+				            // 发送坐标点
+				            bt_send_point(x, y);
+
+				            count += 1;
+				            points[count].x = x;
+				            points[count].y = y;
+				            POINT_COLOR = temp;
+				            pulse = 0;
+
+				            // 可选：显示发送的坐标
+				            char info[30];
+				            snprintf(info, 30, "send: %d,%d", x, y);
+				            lcd_show_string(30, 130, 200, 16, 16, info, BLUE);
+				        }
 					}
 				}
 				if(mode == 2){
@@ -171,4 +193,26 @@ void rtp(int mode)
 		if(i%20==0)LED0=!LED0;
 	}
 }
+// 发送字符串（自动添加换行）
+void bt_send_string(const char* str) {
+    char buffer[MAX_CMD_LEN];
+    snprintf(buffer, MAX_CMD_LEN, "%s\n", str);
+    HAL_UART_Transmit(&huart1, (uint8_t*)buffer, strlen(buffer), 100);
+    HAL_Delay(5);  // 小延迟确保数据发送完成
+}
 
+// 发送坐标点
+void bt_send_point(uint16_t x, uint16_t y) {
+    snprintf(tx_buffer, MAX_CMD_LEN, "P:%d,%d", x, y);
+    bt_send_string(tx_buffer);
+}
+
+// 发送开始信号
+void bt_send_start() {
+    bt_send_string("START");
+}
+
+// 发送结束信号
+void bt_send_end(void) {
+    bt_send_string("END");
+}

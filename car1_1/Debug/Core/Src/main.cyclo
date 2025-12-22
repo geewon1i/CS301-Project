@@ -1,5 +1,8 @@
-../Core/Src/main.c:49:5:detect_keys	10
-../Core/Src/main.c:84:5:main	4
-../Core/Src/main.c:145:6:SystemClock_Config	3
-../Core/Src/main.c:181:6:receive_number	2
-../Core/Src/main.c:196:6:Error_Handler	1
+../Core/Src/main.c:68:6:uart_init	1
+../Core/Src/main.c:73:6:HAL_UART_RxCpltCallback	6
+../Core/Src/main.c:98:6:parse_command	7
+../Core/Src/main.c:131:5:detect_keys	10
+../Core/Src/main.c:166:5:main	3
+../Core/Src/main.c:227:6:SystemClock_Config	3
+../Core/Src/main.c:263:6:receive_number	2
+../Core/Src/main.c:278:6:Error_Handler	1

@@ -76,7 +76,6 @@ static void MX_TIM3_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-TIM_HandleTypeDef htim3;
 /* USER CODE END 0 */
 
 /**

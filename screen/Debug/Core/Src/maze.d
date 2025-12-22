@@ -30,7 +30,7 @@ Core/Src/maze.o: ../Core/Src/maze.c ../Core/Inc/gpio.h ../Core/Inc/main.h \
  ../Core/Inc/ft5206.h ../Core/Inc/led.h ../Core/Inc/sys.h \
  ../Core/Inc/delay.h ../Core/Inc/key.h ../Core/Inc/lcd.h \
  ../Core/Inc/24cxx.h ../Core/Inc/myiic.h ../Core/Inc/24l01.h \
- ../Core/Inc/ui.h
+ ../Core/Inc/ui.h ../Core/Inc/maze.h
 ../Core/Inc/gpio.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
@@ -75,3 +75,4 @@ Core/Src/maze.o: ../Core/Src/maze.c ../Core/Inc/gpio.h ../Core/Inc/main.h \
 ../Core/Inc/myiic.h:
 ../Core/Inc/24l01.h:
 ../Core/Inc/ui.h:
+../Core/Inc/maze.h:

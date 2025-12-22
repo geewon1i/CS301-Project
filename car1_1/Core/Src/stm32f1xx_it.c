@@ -228,14 +228,6 @@ void USART1_IRQHandler(void)
   /* USER CODE END USART1_IRQn 0 */
   HAL_UART_IRQHandler(&huart1);
   /* USER CODE BEGIN USART1_IRQn 1 */
-  HAL_UART_Receive_IT(&huart1, (uint8_t *)rxBuffer, 2);
-  memcpy(&num[num_count], rxBuffer, sizeof(uint16_t));
-/*  if(num_count %3 == 0 && receivedValue == 0){
-	  mode1_flag = 1;
-  }else{
-	  num_count += 1;
-  }*/
-  num_count ++;
   /* USER CODE END USART1_IRQn 1 */
 }
 

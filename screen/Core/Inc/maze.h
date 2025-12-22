@@ -61,5 +61,18 @@ void drawtile(int, int, int);
 //void play(void);
 void rtp(int);
 void move(int);
+void maze_init(void);
+void maze_init_draw(void);
+uint8_t maze_result(uint16_t x, uint16_t y, uint16_t* last_x, uint16_t* last_y);
+void maze_result_draw(void);
+void bt_send_string(const char* str);
+// 发送坐标点
+void bt_send_point(uint16_t x, uint16_t y);
+
+// 发送开始信号
+void bt_send_start(void);
+
+// 发送结束信号
+void bt_send_end(void);
 
 #endif /*__ MAZE_H__ */
