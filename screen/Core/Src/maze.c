@@ -23,7 +23,14 @@ struct Point{
 	u16 x;
 	u16 y;
 }points[255];
-
+// 定义联合体方便转换
+typedef union {
+    struct {
+        uint16_t value1;
+        uint16_t value2;
+    } data;
+    uint8_t bytes[4];
+} u16_packet_t;
 u16 x;
 u16 y;
 u8 pulse = 0;
@@ -31,11 +38,11 @@ u16 count = 0;
 
 void rtp(int mode)
 {
-	u8 key;
 	u8 i=0;
 
 	points[0].x = 0;
-	points[0].y = 0;
+	points[0].y = lcddev.height;
+    uint8_t buffer[2];
 	while(1)
 	{
 		if(false){
@@ -55,7 +62,7 @@ void rtp(int mode)
 		if(false){
 			mode1:mode = 1;
 			lcd_init();
-			HAL_UART_Transmit(&huart1, (uint8_t *)"route", 5, 0xffff);
+			//HAL_UART_Transmit(&huart1, (uint8_t *)"route", 5, 0xffff);
 			lcd_show_string(30, 30, 200, 24, 24, "Route planning", RED);
 			lcd_show_string(30, 70, 200, 24, 24, "BACK", RED);
 		}
@@ -92,32 +99,40 @@ void rtp(int mode)
 					}
 				}
 				if(mode == 1){
-					u16 px = 0;
-					u16 py = lcddev.height;
+					u16 order = 1;
 					if(tp_dev.x[0]>30&&tp_dev.y[0]>70&&tp_dev.x[0]<336&&tp_dev.y[0]<110){
+						order = 0;
+						memcpy(buffer, &order, 2);
+						HAL_UART_Transmit(&huart1, buffer, 2, HAL_MAX_DELAY);
+						count = 0;
+						points[0].x = 0;
+						points[0].y = lcddev.height;
 						goto mode0;
 					}
-					if(tp_dev.x[0]>30&&tp_dev.y[0]>110){
-						uint8_t message[100];
+					else if(tp_dev.x[0]>30&&tp_dev.y[0]>110){
+						order = 1;
 						uint16_t POINT_COLOR;
+						memcpy(buffer, &order, 2);
+						HAL_UART_Transmit(&huart1, buffer, 2, HAL_MAX_DELAY);
 						TP_Draw_Big_Point(tp_dev.x[0],tp_dev.y[0],RED);//画图
 						pulse += 1;
 						x = tp_dev.x[0];
 						y = tp_dev.y[0];
 						if(pulse == 5 /*sampling_para*/){
-							POINT_COLOR=BLUE;
 							u16 temp = POINT_COLOR;
-							LCD_DrawLine(px, py, x, y);
+							POINT_COLOR=BLUE;
+							LCD_DrawLine(points[count].x, points[count].y, x, y);
+							memcpy(buffer, &x, 2);
+							HAL_UART_Transmit(&huart1, buffer, 2, HAL_MAX_DELAY);
+							memcpy(buffer, &y, 2);
+							HAL_UART_Transmit(&huart1, buffer, 2, HAL_MAX_DELAY);
+
 							count += 1;
 							points[count].x = x;
 							points[count].y = y;
-							px = x;
-							py = y;
 							POINT_COLOR = temp;
 							pulse = 0;
 						}
-						sprintf(message, "%d,%d", x, y);
-						HAL_UART_Transmit(&huart1, message, 5, 0xffff);
 					}
 				}
 				if(mode == 2){
@@ -142,7 +157,7 @@ void rtp(int mode)
 					if(tp_dev.x[0]>30&&tp_dev.y[0]>70&&tp_dev.x[0]<336&&tp_dev.y[0]<110){
 
 						goto mode0;
-						HAL_UART_Transmit(&huart1, (uint8_t *)"stop", 5, 0xffff);
+						//HAL_UART_Transmit(&huart1, (uint8_t *)"stop", 5, 0xffff);
 					}
 				}
 				if(mode == 3){

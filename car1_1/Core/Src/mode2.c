@@ -18,6 +18,8 @@ extern uint16_t pwm_map(float duty);
 void mode2_loop(void){
     init_motors();
 
+
+    num_count = 0;
     while(rxBuffer[1]!='s'){
         // 读取左右避障传感器数字信号
     	uint8_t left_detect  = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_4); // 0 = 左边有物体

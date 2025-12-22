@@ -41,7 +41,11 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-uint8_t rxBuffer[20];
+uint8_t rxBuffer[2];
+
+uint16_t num[255];//received_numbers
+
+uint8_t num_count = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -216,7 +220,7 @@ void TIM3_IRQHandler(void)
 /**
   * @brief This function handles USART1 global interrupt.
   */
-//int x00, y00;
+
 void USART1_IRQHandler(void)
 {
   /* USER CODE BEGIN USART1_IRQn 0 */
@@ -224,7 +228,14 @@ void USART1_IRQHandler(void)
   /* USER CODE END USART1_IRQn 0 */
   HAL_UART_IRQHandler(&huart1);
   /* USER CODE BEGIN USART1_IRQn 1 */
-  HAL_UART_Receive_IT(&huart1, (uint8_t *)rxBuffer, 1);
+  HAL_UART_Receive_IT(&huart1, (uint8_t *)rxBuffer, 2);
+  memcpy(&num[num_count], rxBuffer, sizeof(uint16_t));
+/*  if(num_count %3 == 0 && receivedValue == 0){
+	  mode1_flag = 1;
+  }else{
+	  num_count += 1;
+  }*/
+  num_count ++;
   /* USER CODE END USART1_IRQn 1 */
 }
 

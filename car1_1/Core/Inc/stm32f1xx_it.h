@@ -20,19 +20,22 @@
 /* Define to prevent recursive inclusion -------------------------------------*/
 #ifndef __STM32F1xx_IT_H
 #define __STM32F1xx_IT_H
-extern uint8_t rxBuffer[20];
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "gpio.h"
+#include "math.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
-
+extern uint8_t rxBuffer[2];
+extern uint8_t num_count;
+extern uint16_t num[255];
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/

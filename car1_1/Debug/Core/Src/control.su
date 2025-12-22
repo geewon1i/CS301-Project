@@ -4,4 +4,4 @@
 ../Core/Src/control.c:75:6:turn_right_half	8	static
 ../Core/Src/control.c:90:6:stop_motors	8	static
 ../Core/Src/control.c:106:6:turn_in_place	32	static
-../Core/Src/control.c:120:6:forward_with_length	32	static
+../Core/Src/control.c:116:6:forward_with_length	24	static

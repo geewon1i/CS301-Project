@@ -178,7 +178,15 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+void receive_number(uint16_t* target, uint8_t* counter){
+	while(1){
+		if(*counter < num_count){
+			break;
+		}
+	}
+	*target = num[*counter];
+	*counter += 1;
+}
 /* USER CODE END 4 */
 
 /**

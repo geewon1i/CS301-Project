@@ -104,27 +104,20 @@ void stop_motors(void)
 }
 
 void turn_in_place(int angle) {
-	const uint16_t turn_time_per_degree = 10; //tbd
 	float V_HALF = 20.0;
-//	uint32_t turn_time = fabs(angle) * turn_time_per_degree;
 	if(angle < 0) {  // turn left(ccw)
 		turn_left_half();
 		traj_update(-V_HALF, V_HALF);
-//		HAL_Delay(turn_time);
 	} else {  // turn right(cw)
 		turn_right_half();
 		traj_update(V_HALF*0.95, -V_HALF);
-//		HAL_Delay(turn_time);
 	}
 }
-void forward_with_length(float length) {
+void forward_with_length(void) {
 	//2m * 2m, 200 units * 200 units
-	const uint16_t forward_time_per_centi_meter = 10; //tbd
-//	uint32_t forward_time = fabs(length) * forward_time_per_centi_meter;
 	forward_half();
 	float V_HALF = 20.0;
 	traj_update(V_HALF, V_HALF);
-//	HAL_Delay(forward_time);
 
 //	stop_motors();
 }

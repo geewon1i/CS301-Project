@@ -1,6 +1,7 @@
 #include "trajectory.h"
 #include <math.h>
-
+#include "stm32f1xx_it.h"
+#include "usart.h"
 #define DT       0.01f   // 10ms
 #define L_WHEEL  14.0f   // cm
 
@@ -23,8 +24,9 @@ void traj_update(float v_l, float v_r, int a)
     pose.y += v * sinf(pose.theta) * DT;
     if(a==1){
     	char buf[32];
-    	int len = sprintf(buf, "%.2f,%.2f\r\n", p.x, p.y);
-    	HAL_UART_Transmit(&huart1,(uint8_t *)buf,len,0xffff);}
+    	int len = sprintf(buf, "%.2f,%.2f\r\n", pose.x, pose.y);
+    	HAL_UART_Transmit(&huart1,(uint8_t *)buf,len,0xffff);
+    }
 }
 
 Pose2D traj_get_pose(void)

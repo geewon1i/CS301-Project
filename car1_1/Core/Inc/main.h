@@ -53,7 +53,7 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-
+void receive_number(uint16_t* target, uint8_t* counter);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
