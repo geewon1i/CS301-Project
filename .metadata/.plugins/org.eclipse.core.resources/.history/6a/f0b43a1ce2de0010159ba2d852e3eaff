@@ -78,8 +78,8 @@ void rtp(int mode)
 				if(mode == 1){
 					if(tp_dev.x[0]>30&&tp_dev.y[0]>70&&tp_dev.x[0]<336&&tp_dev.y[0]<110){
 						uint8_t message[100];
-						sprintf(message, "%d,%d", tp_dev.x[0], tp_dev.y[0]);
-						HAL_UART_Transmit(&huart1, message, 5, 0xffff);
+						sprintf(message, "%d, %d", tp_dev.x[0], tp_dev.y[0]);
+						HAL_UART_Transmit(&huart1, "01234", 5, 0xffff);
 					}
 				}
 			}

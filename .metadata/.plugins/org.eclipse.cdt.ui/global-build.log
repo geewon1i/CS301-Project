@@ -184,3 +184,236 @@ Finished building: screen.bin
  
 Finished building: screen.list
  
+10:58:25 **** Incremental Build of configuration Debug for project screen ****
+make -j32 all 
+arm-none-eabi-gcc "../Core/Src/maze.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/maze.d" -MT"Core/Src/maze.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/maze.o"
+../Core/Src/maze.c: In function 'rtp':
+../Core/Src/maze.c:81:49: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   81 |                                                 sprintf(message, "%d, %d", tp_dev.x[0], tp_dev.y[0]);
+      |                                                 ^~~~~~~
+../Core/Src/maze.c:19:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   18 | #include "ui.h"
+  +++ |+#include <stdio.h>
+   19 | 
+../Core/Src/maze.c:81:49: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   81 |                                                 sprintf(message, "%d, %d", tp_dev.x[0], tp_dev.y[0]);
+      |                                                 ^~~~~~~
+../Core/Src/maze.c:81:49: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/maze.c:81:57: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+   81 |                                                 sprintf(message, "%d, %d", tp_dev.x[0], tp_dev.y[0]);
+      |                                                         ^~~~~~~
+      |                                                         |
+      |                                                         uint8_t * {aka unsigned char *}
+../Core/Src/maze.c:81:57: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/maze.c:82:76: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+   82 |                                                 HAL_UART_Transmit(&huart1, "01234", 5, 0xffff);
+      |                                                                            ^~~~~~~
+      |                                                                            |
+      |                                                                            char *
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:338,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/gpio.h:29,
+                 from ../Core/Src/maze.c:1:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:749:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+  749 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/maze.c:48:25: warning: label 'mode0' defined but not used [-Wunused-label]
+   48 |                         mode0:mode = 0;
+      |                         ^~~~~
+../Core/Src/maze.c:43:12: warning: variable 'key' set but not used [-Wunused-but-set-variable]
+   43 |         u8 key;
+      |            ^~~
+arm-none-eabi-gcc -o "screen.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\screen\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="screen.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: screen.elf
+ 
+arm-none-eabi-size  screen.elf 
+arm-none-eabi-objdump -h -S screen.elf  > "screen.list"
+   text	   data	    bss	    dec	    hex	filename
+  70064	    168	   2168	  72400	  11ad0	screen.elf
+arm-none-eabi-objcopy  -O ihex screen.elf  "screen.hex"
+arm-none-eabi-objcopy  -O binary screen.elf  "screen.bin"
+Finished building: default.size.stdout
+ 
+Finished building: screen.hex
+Finished building: screen.list
+ 
+Finished building: screen.bin
+ 
+ 
+10:58:36 **** Incremental Build of configuration Debug for project screen ****
+make -j32 all 
+arm-none-eabi-gcc "../Core/Src/maze.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/maze.d" -MT"Core/Src/maze.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/maze.o"
+../Core/Src/maze.c: In function 'rtp':
+../Core/Src/maze.c:81:49: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   81 |                                                 sprintf(message, "%d, %d", tp_dev.x[0], tp_dev.y[0]);
+      |                                                 ^~~~~~~
+../Core/Src/maze.c:19:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   18 | #include "ui.h"
+  +++ |+#include <stdio.h>
+   19 | 
+../Core/Src/maze.c:81:49: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   81 |                                                 sprintf(message, "%d, %d", tp_dev.x[0], tp_dev.y[0]);
+      |                                                 ^~~~~~~
+../Core/Src/maze.c:81:49: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/maze.c:81:57: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+   81 |                                                 sprintf(message, "%d, %d", tp_dev.x[0], tp_dev.y[0]);
+      |                                                         ^~~~~~~
+      |                                                         |
+      |                                                         uint8_t * {aka unsigned char *}
+../Core/Src/maze.c:81:57: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/maze.c:48:25: warning: label 'mode0' defined but not used [-Wunused-label]
+   48 |                         mode0:mode = 0;
+      |                         ^~~~~
+../Core/Src/maze.c:43:12: warning: variable 'key' set but not used [-Wunused-but-set-variable]
+   43 |         u8 key;
+      |            ^~~
+arm-none-eabi-gcc -o "screen.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\screen\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="screen.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: screen.elf
+ 
+arm-none-eabi-size  screen.elf 
+arm-none-eabi-objdump -h -S screen.elf  > "screen.list"
+   text	   data	    bss	    dec	    hex	filename
+  70056	    168	   2168	  72392	  11ac8	screen.elf
+arm-none-eabi-objcopy  -O ihex screen.elf  "screen.hex"
+Finished building: default.size.stdout
+arm-none-eabi-objcopy  -O binary screen.elf  "screen.bin"
+ 
+Finished building: screen.hex
+Finished building: screen.bin
+ 
+Finished building: screen.list
+ 
+ 
+11:07:42 **** Incremental Build of configuration Debug for project car1_1 ****
+make -j32 all 
+arm-none-eabi-gcc "../Core/Src/control.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/control.d" -MT"Core/Src/control.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/control.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/mode1.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode1.d" -MT"Core/Src/mode1.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode1.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:127:25: warning: implicit declaration of function 'mode1_loop' [-Wimplicit-function-declaration]
+  127 |                         mode1_loop(); // 路径规划模式
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:130:25: warning: implicit declaration of function 'mode2_loop' [-Wimplicit-function-declaration]
+  130 |                         mode2_loop(); // 红外跟踪模式
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:133:25: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
+  133 |                         stop_motors();
+      |                         ^~~~~~~~~~~
+../Core/Src/mode1.c: In function 'mode1_loop':
+../Core/Src/mode1.c:18:5: warning: implicit declaration of function 'sscanf' [-Wimplicit-function-declaration]
+   18 |     sscanf(rxBuffer,"%d,%d",x0,y0);
+      |     ^~~~~~
+../Core/Src/mode1.c:6:1: note: include '<stdio.h>' or provide a declaration of 'sscanf'
+    5 | #include "math.h"
+  +++ |+#include <stdio.h>
+    6 | 
+../Core/Src/mode1.c:18:5: warning: incompatible implicit declaration of built-in function 'sscanf' [-Wbuiltin-declaration-mismatch]
+   18 |     sscanf(rxBuffer,"%d,%d",x0,y0);
+      |     ^~~~~~
+../Core/Src/mode1.c:18:5: note: include '<stdio.h>' or provide a declaration of 'sscanf'
+../Core/Src/mode1.c:18:12: error: 'rxBuffer' undeclared (first use in this function); did you mean 'ITM_RxBuffer'?
+   18 |     sscanf(rxBuffer,"%d,%d",x0,y0);
+      |            ^~~~~~~~
+      |            ITM_RxBuffer
+../Core/Src/mode1.c:18:12: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/control.c: In function 'turn_in_place':
+../Core/Src/control.c:112:17: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
+  112 |                 traj_update(-V_HALF, V_HALF);
+      |                 ^~~~~~~~~~~
+../Core/Src/control.c:107:24: warning: unused variable 'turn_time_per_degree' [-Wunused-variable]
+  107 |         const uint16_t turn_time_per_degree = 10; //tbd
+      |                        ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/control.c: In function 'forward_with_length':
+../Core/Src/control.c:122:24: warning: unused variable 'forward_time_per_centi_meter' [-Wunused-variable]
+  122 |         const uint16_t forward_time_per_centi_meter = 10; //tbd
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/mode1.c:29:17: warning: implicit declaration of function 'turn_in_place' [-Wimplicit-function-declaration]
+   29 |                 turn_in_place(180.0);
+      |                 ^~~~~~~~~~~~~
+../Core/Src/mode1.c:49:9: warning: implicit declaration of function 'forward_with_length' [-Wimplicit-function-declaration]
+   49 |         forward_with_length(length);
+      |         ^~~~~~~~~~~~~~~~~~~
+../Core/Src/mode1.c:56:9: warning: implicit declaration of function 'init_motors' [-Wimplicit-function-declaration]
+   56 |         init_motors();
+      |         ^~~~~~~~~~~
+../Core/Src/mode1.c:58:34: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
+   58 |         HAL_Delay(turn_time*100);stop_motors();
+      |                                  ^~~~~~~~~~~
+../Core/Src/mode1.c:59:9: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
+   59 |         traj_update(0, 0);
+      |         ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:55: Core/Src/mode1.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j32 all" terminated with exit code 2. Build might be incomplete.
+11:08:25 **** Incremental Build of configuration Debug for project car1_1 ****
+make -j32 all 
+arm-none-eabi-gcc "../Core/Src/mode1.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mode1.d" -MT"Core/Src/mode1.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mode1.o"
+../Core/Src/mode1.c: In function 'mode1_loop':
+../Core/Src/mode1.c:19:5: warning: implicit declaration of function 'sscanf' [-Wimplicit-function-declaration]
+   19 |     sscanf(rxBuffer,"%d,%d",x0,y0);
+      |     ^~~~~~
+../Core/Src/mode1.c:7:1: note: include '<stdio.h>' or provide a declaration of 'sscanf'
+    6 | #include "stm32f1xx_it.h"
+  +++ |+#include <stdio.h>
+    7 | 
+../Core/Src/mode1.c:19:5: warning: incompatible implicit declaration of built-in function 'sscanf' [-Wbuiltin-declaration-mismatch]
+   19 |     sscanf(rxBuffer,"%d,%d",x0,y0);
+      |     ^~~~~~
+../Core/Src/mode1.c:19:5: note: include '<stdio.h>' or provide a declaration of 'sscanf'
+../Core/Src/mode1.c:19:12: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+   19 |     sscanf(rxBuffer,"%d,%d",x0,y0);
+      |            ^~~~~~~~
+      |            |
+      |            uint8_t * {aka unsigned char *}
+../Core/Src/mode1.c:19:12: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/mode1.c:19:23: warning: format '%d' expects argument of type 'int *', but argument 3 has type 'int' [-Wformat=]
+   19 |     sscanf(rxBuffer,"%d,%d",x0,y0);
+      |                      ~^     ~~
+      |                       |     |
+      |                       int * int
+../Core/Src/mode1.c:19:26: warning: format '%d' expects argument of type 'int *', but argument 4 has type 'int' [-Wformat=]
+   19 |     sscanf(rxBuffer,"%d,%d",x0,y0);
+      |                         ~^     ~~
+      |                          |     |
+      |                          int * int
+../Core/Src/mode1.c:30:17: warning: implicit declaration of function 'turn_in_place' [-Wimplicit-function-declaration]
+   30 |                 turn_in_place(180.0);
+      |                 ^~~~~~~~~~~~~
+../Core/Src/mode1.c:50:9: warning: implicit declaration of function 'forward_with_length' [-Wimplicit-function-declaration]
+   50 |         forward_with_length(length);
+      |         ^~~~~~~~~~~~~~~~~~~
+../Core/Src/mode1.c:57:9: warning: implicit declaration of function 'init_motors' [-Wimplicit-function-declaration]
+   57 |         init_motors();
+      |         ^~~~~~~~~~~
+../Core/Src/mode1.c:59:34: warning: implicit declaration of function 'stop_motors' [-Wimplicit-function-declaration]
+   59 |         HAL_Delay(turn_time*100);stop_motors();
+      |                                  ^~~~~~~~~~~
+../Core/Src/mode1.c:60:9: warning: implicit declaration of function 'traj_update' [-Wimplicit-function-declaration]
+   60 |         traj_update(0, 0);
+      |         ^~~~~~~~~~~
+arm-none-eabi-gcc -o "car1_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\xueye\Desktop\2025年秋季\微机\CS301-Project\car1_1\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car1_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: car1_1.elf
+ 
+arm-none-eabi-size  car1_1.elf 
+arm-none-eabi-objdump -h -S car1_1.elf  > "car1_1.list"
+   text	   data	    bss	    dec	    hex	filename
+  26140	     92	   2084	  28316	   6e9c	car1_1.elf
+arm-none-eabi-objcopy  -O ihex car1_1.elf  "car1_1.hex"
+arm-none-eabi-objcopy  -O binary car1_1.elf  "car1_1.bin"
+Finished building: default.size.stdout
+ 
+Finished building: car1_1.hex
+Finished building: car1_1.bin
+ 
+Finished building: car1_1.list
+ 
+ 
+11:08:34 **** Incremental Build of configuration Debug for project car1_1 ****
+make -j32 all 
+arm-none-eabi-size  car1_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26140	     92	   2084	  28316	   6e9c	car1_1.elf
+Finished building: default.size.stdout
+ 

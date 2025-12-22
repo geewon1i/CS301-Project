@@ -46,11 +46,8 @@ void rtp(int mode)
 	{
 		if(false)
 			mode0:mode = 0;
-		if(false){
+		if(false)
 			mode1:mode = 1;
-			lcd_show_string(30, 30, 200, 24, 24, "ROUTE PLANNING", RED);
-			lcd_show_string(30, 70, 200, 24, 24, "BACK", RED);
-		}
 		if(false)
 			mode2:mode = 2;
 		if(false)
@@ -59,9 +56,9 @@ void rtp(int mode)
 		tp_dev.scan(0);
 		if(tp_dev.sta&TP_PRES_DOWN)			//触摸屏被按下
 		{
-			if(tp_dev.x[0]<lcddev.width&&tp_dev.y[0]<lcddev.height)
-			{
-				if(mode == 0){//在菜单界面
+			if(mode == 0){//在菜单界面
+				if(tp_dev.x[0]<lcddev.width&&tp_dev.y[0]<lcddev.height)
+				{
 					if(tp_dev.x[0]>30&&tp_dev.y[0]>70&&tp_dev.x[0]<336&&tp_dev.y[0]<110){
 						lcd_show_string(30, 70, 200, 24, 24, "ROUTE PLANNING", RED);
 						goto mode1;
@@ -75,25 +72,18 @@ void rtp(int mode)
 						goto mode3;
 					}
 				}
-				if(mode == 1){
-					if(tp_dev.x[0]>30&&tp_dev.y[0]>70&&tp_dev.x[0]<336&&tp_dev.y[0]<110){
-						uint8_t message[100];
-						sprintf(message, "%d,%d", tp_dev.x[0], tp_dev.y[0]);
-						HAL_UART_Transmit(&huart1, message, 5, 0xffff);
-					}
-				}
 			}
 		}
-//		if(key==KEY0_PRES)
-//		{
-//			LCD_Clear(WHITE);	//清屏
-//			TP_Adjust();  		//屏幕校准
-//			TP_Save_Adjdata();
-//		}
-//		if(key==WKUP_PRES)
-//		{
-//			HAL_UART_Transmit(&huart1, "01234", 5, 0xffff);
-//		}
+		if(key==KEY0_PRES)
+		{
+			LCD_Clear(WHITE);	//清屏
+			TP_Adjust();  		//屏幕校准
+			TP_Save_Adjdata();
+		}
+		if(key==WKUP_PRES)
+		{
+			HAL_UART_Transmit(&huart1, "01234", 5, 0xffff);
+		}
 		i++;
 		if(i%20==0)LED0=!LED0;
 	}
