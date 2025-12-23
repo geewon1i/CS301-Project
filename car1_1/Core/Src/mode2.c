@@ -21,6 +21,8 @@ void mode2_loop(void){
 
     num_count = 0;
     while(rxBuffer[1]!='s'){
+
+    	HAL_UART_Transmit(&huart1, &tx_char, 1, HAL_MAX_DELAY);
         // 读取左右避障传感器数字信号
     	uint8_t left_detect  = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_4); // 0 = 左边有物体
     	uint8_t right_detect = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_5); // 0 = 右边有物体
