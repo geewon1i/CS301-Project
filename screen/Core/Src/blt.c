@@ -49,7 +49,15 @@ void Send_Move_Command(uint16_t x, uint16_t y)
     tx_buffer[6] = CMD_END;       // 结束标志
 
     // 发送命令
-    HAL_UART_Transmit(&huart1, tx_buffer, 7, 10);
+    //HAL_UART_Transmit(&huart1, tx_buffer, 7, 10);
+    HAL_UART_Transmit(&huart1, tx_buffer, 2, 50);
+    HAL_Delay(100);
+    HAL_UART_Transmit(&huart1, tx_buffer+2, 2, 50);
+    HAL_Delay(100);
+    HAL_UART_Transmit(&huart1, tx_buffer+4, 2, 50);
+    HAL_Delay(100);
+    HAL_UART_Transmit(&huart1, tx_buffer+6, 1, 50);
+    HAL_Delay(100);
 }
 
 /* 主开发板也可以使用中断接收回传信息 */

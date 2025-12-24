@@ -51,6 +51,7 @@ void traj_update(float v_l, float v_r, int a)
         tx_buffer[4] = 0x01;*/
         tx_buffer[6] = CMD_END;       // 结束标志
         //tx_buffer[7] = CMD_END;       // 结束标志
+        //eg:53020043010145->x:0x0043,y:0x0101
 
         // 发送命令
         //HAL_UART_Transmit(&huart1, tx_buffer, 7, HAL_MAX_DELAY);
