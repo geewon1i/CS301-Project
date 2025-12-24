@@ -62,7 +62,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
     if (huart->Instance == USART1)
     {
         // 将接收到的数据存入缓冲区
-        if (rx_index < RX_BUFFER_SIZE)
+        if (rx_index < 7)
         {
             rx_buffer[rx_index++] = rx_data;
 
@@ -73,10 +73,6 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
                 Parse_Command();
                 rx_index = 0;  // 清空缓冲区
             }
-        }
-        else
-        {
-            rx_index = 0;  // 缓冲区溢出，清空重新开始
         }
         //uint8_t len = strlen(rx_buffer);
         //HAL_UART_Transmit(&huart1,rx_buffer,len,0xffff);
@@ -165,9 +161,9 @@ int main(void)
 			key = 1;
 		}*/
 		if (key == 1) {
-			char buf[32];
-			int len = sprintf(buf, "MODE1\r\n");
-			HAL_UART_Transmit(&huart1,(uint8_t *)buf,len,0xffff);
+			//char buf[32];
+			//int len = sprintf(buf, "MODE1\r\n");
+			//HAL_UART_Transmit(&huart1,(uint8_t *)buf,len,0xffff);
 			mode1_loop(); // 路径规划模式
 		}
 		else if (key == 2) {

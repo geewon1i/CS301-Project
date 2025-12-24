@@ -17,14 +17,13 @@ struct Point{
 
 
 
-int turn_time = 70;
+int turn_time = 7;
 int move_time = 25;
 void mode1_loop(void) {
+	mode1_init();
 
     // 等待开始信号
     while(1) {
-    	turn_in_place(1);
-    	HAL_Delay(500);
         if (command_received)
         {
             command_received = 0;
@@ -34,7 +33,7 @@ void mode1_loop(void) {
 }
 
 // 执行路径运动
-void execute_path(void) {
+/*void execute_path(void) {
 
     float current_angle = 90.0;  // 初始角度，指向正上方
     uint16_t x0 = 0;
@@ -51,7 +50,7 @@ void execute_path(void) {
 
         // 角度计算（保持你的原有逻辑）
         if(diff_x == 0) {
-            if(diff_y > 0) {
+            if(diff_y < 0) {
                 turn_in_place(180.0);
                 HAL_Delay(turn_time * 2);
                 stop_motors();
@@ -61,17 +60,25 @@ void execute_path(void) {
         }
         else if(diff_y == 0) {
             if(diff_x > 0) {
-                turn_in_place(current_angle - 90.0);
-                uint8_t turning_time = turn_time * fabs(current_angle - 90.0);
+                turn_in_place(current_angle);
+                uint8_t turning_time = turn_time * fabs(current_angle);
                 HAL_Delay(turning_time);
                 stop_motors();
-                current_angle = 90.0;
+                current_angle = 0;
             } else {
-                turn_in_place(current_angle + 90.0);
-                uint8_t turning_time = turn_time * fabs(current_angle + 90.0);
-                HAL_Delay(turning_time);
-                stop_motors();
-                current_angle = -90.0;
+            	if(current_angle > 0){
+					turn_in_place(current_angle - 180.0);
+					uint8_t turning_time = turn_time * fabs(current_angle - 180.0);
+					HAL_Delay(turning_time);
+					stop_motors();
+
+            	}else{
+            		turn_in_place(current_angle + 180.0);
+            		uint8_t turning_time = turn_time * fabs(current_angle + 180.0);
+            		HAL_Delay(turning_time);
+            		stop_motors();
+            	}
+            	current_angle = -180.0;
             }
         }
         else {
@@ -79,7 +86,7 @@ void execute_path(void) {
             float ang = rad * 180.0 / PI;
             float rot_angle = current_angle - ang;
 
-            // 角度归一化到[-180, 180]
+            // [-180, 180]
             if(rot_angle > 180) rot_angle -= 360.0;
             else if(rot_angle < -180) rot_angle += 360.0;
 
@@ -108,4 +115,4 @@ void execute_path(void) {
         HAL_Delay(100);  // 点之间的小延迟
     }
 
-}
+}*/

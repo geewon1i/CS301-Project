@@ -15,8 +15,8 @@ uint8_t rx_data;
 uint8_t rx_index = 0;
 uint8_t command_received = 0;
 
-uint16_t px = 0;
-uint16_t py = 320;
+int px = 0;
+int py = 320;
 extern int move_time;
 extern int turn_time;
 
@@ -35,12 +35,19 @@ void Bluetooth_Init(void)
 }
 
 /* UART接收完成回调函数 */
-
+void mode1_init(void){
+	px = 0;
+	py = 320;
+	current_angle=90.0;
+	rx_index = 0;
+	current_cmd.start_flag = rx_buffer[0];
+}
 /* 解析命令 */
 void Parse_Command(void)
 {
     if (rx_buffer[0] == CMD_START && rx_buffer[rx_index-1] == CMD_END)
     {
+    	//HAL_UART_Transmit(&huart1, rx_buffer, 7, 50);
         current_cmd.start_flag = rx_buffer[0];
         current_cmd.command = rx_buffer[1];
 
@@ -62,8 +69,13 @@ void Execute_Command(void)
     {
         case CMD_MOVE_TO:
             // 移动到指定坐标
-            uint16_t x = current_cmd.x;
-            uint16_t y = current_cmd.y;
+            int x = current_cmd.x;
+            int y = current_cmd.y;
+            /*char info[30];
+            sprintf(info, "OK: %d,%d", px,py);
+            HAL_UART_Transmit(&huart1, (uint8_t*)info, strlen(info), 50);
+            sprintf(info, "OK: %d,%d", x,y);
+            HAL_UART_Transmit(&huart1, (uint8_t*)info, strlen(info), 50);*/
 
             // 计算移动角度和距离
             int diff_y = py - y;
@@ -71,27 +83,41 @@ void Execute_Command(void)
 
             // 角度计算
             if(diff_x == 0) {
-                if(diff_y > 0) {
-                    turn_in_place(180.0);
-                    HAL_Delay(turn_time * 2);
+                if(diff_y < 0) {
+                	uint16_t turning_time = turn_time * fabs(current_angle+90.0);
+                    turn_in_place(current_angle + 90.0);
+                    HAL_Delay(turning_time);
                     stop_motors();
-                    current_angle -= 180.0;
-                    if(current_angle < -180) current_angle += 360.0;
+                    current_angle = -90.0;
+                }else{
+                	uint16_t turning_time = turn_time * fabs(90.0 - current_angle);
+                	turn_in_place(90.0 - current_angle);
+                	HAL_Delay(turning_time);
+                	stop_motors();
+                	current_angle = 90.0;
                 }
             }
             else if(diff_y == 0) {
                 if(diff_x > 0) {
-                    turn_in_place(current_angle - 90.0);
-                    uint8_t turning_time = turn_time * fabs(current_angle - 90.0);
+                	uint16_t turning_time = turn_time * fabs(current_angle);
+                    turn_in_place(current_angle);
                     HAL_Delay(turning_time);
                     stop_motors();
-                    current_angle = 90.0;
+                    current_angle = 0;
                 } else {
-                    turn_in_place(current_angle + 90.0);
-                    uint8_t turning_time = turn_time * fabs(current_angle + 90.0);
-                    HAL_Delay(turning_time);
-                    stop_motors();
-                    current_angle = -90.0;
+                	if(current_angle > 0){
+                		uint16_t turning_time = turn_time * fabs(current_angle - 180.0);
+    					turn_in_place(current_angle - 180.0);
+    					HAL_Delay(turning_time);
+    					stop_motors();
+
+                	}else{
+                		uint16_t turning_time = turn_time * fabs(current_angle + 180.0);
+                		turn_in_place(current_angle + 180.0);
+                		HAL_Delay(turning_time);
+                		stop_motors();
+                	}
+                	current_angle = -180.0;
                 }
             }
             else {
@@ -104,17 +130,20 @@ void Execute_Command(void)
                 else if(rot_angle < -180) rot_angle += 360.0;
 
                 turn_in_place(rot_angle);
-                uint8_t turning_time = turn_time * fabs(rot_angle);
+                uint16_t turning_time = turn_time * fabs(rot_angle);
                 HAL_Delay(turning_time);
                 stop_motors();
                 current_angle = ang;
             }
+
 
             // 计算移动距离
             float distance = sqrtf(diff_x * diff_x + diff_y * diff_y);
             forward_with_length();
             HAL_Delay(move_time * distance / 100);
             stop_motors();
+            /*sprintf(info, "OK2: %.2f,%.2f", current_angle,distance);
+            HAL_UART_Transmit(&huart1, (uint8_t*)info, strlen(info), 50);*/
 
             // 更新当前位置
             px = x;
@@ -126,6 +155,7 @@ void Execute_Command(void)
 
         default:
             //Send_Response("UNKNOWN_CMD");
+
             break;
     }
 }

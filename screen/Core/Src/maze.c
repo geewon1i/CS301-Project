@@ -114,7 +114,6 @@ void rtp(int mode0)
 				        goto mode0;
 					}
 					else if(tp_dev.x[0]>30&&tp_dev.y[0]>110){
-				        // 如果是第一个点，发送开始信号
 
 				        // 绘制点
 				        uint16_t POINT_COLOR;
@@ -124,7 +123,7 @@ void rtp(int mode0)
 				        x = tp_dev.x[0];
 				        y = tp_dev.y[0];
 
-				        if(pulse == 5) {  // 每5个点采样一次
+				        if(pulse == 10) {
 				            u16 temp = POINT_COLOR;
 				            POINT_COLOR = BLUE;
 				            LCD_DrawLine(points[count].x, points[count].y, x, y);
@@ -141,6 +140,7 @@ void rtp(int mode0)
 				            char info[30];
 				            snprintf(info, 30, "send: %d,%d", x, y);
 				            lcd_show_string(30, 130, 200, 16, 16, info, BLUE);
+				            HAL_Delay(500);
 				        }
 					}
 				}

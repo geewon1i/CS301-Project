@@ -94,7 +94,7 @@ void Process_Response(uint8_t data)
 			snprintf(info, 30, "Get: %u,%u", x,y);
 			lcd_show_string(30, 100, 200, 16, 16, info, BLUE);
 			//Send_Move_Command(x,y);
-			if(p == 5){
+			if(p == 2){
 				uint16_t temp = POINT_COLOR;
 				POINT_COLOR=BLUE;
 				LCD_DrawLine(pre_x, pre_y, x, y);

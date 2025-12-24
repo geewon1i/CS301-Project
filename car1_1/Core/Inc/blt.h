@@ -24,5 +24,6 @@ typedef struct {
 void Parse_Command(void);
 void Execute_Command(void);
 void Send_Response(char *response);
+void mode1_init(void);
 
 #endif /* INC_BLT_H_ */
