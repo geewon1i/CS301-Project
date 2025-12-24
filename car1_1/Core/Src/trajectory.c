@@ -16,7 +16,7 @@ void traj_init(void)
 
 void traj_update(float v_l, float v_r, int a)
 {
-    float v = (v_l + v_r) * 0.5f;
+    float v = (v_l + v_r) * 5.0f;
     float omega = (v_r - v_l) / L_WHEEL;
     static int pulse = 0;
 
@@ -55,13 +55,13 @@ void traj_update(float v_l, float v_r, int a)
         // 发送命令
         //HAL_UART_Transmit(&huart1, tx_buffer, 7, HAL_MAX_DELAY);
         HAL_UART_Transmit(&huart1, tx_buffer, 2, 50);
-        HAL_Delay(200);
+        HAL_Delay(100);
         HAL_UART_Transmit(&huart1, tx_buffer+2, 2, 50);
-        HAL_Delay(200);
+        HAL_Delay(100);
         HAL_UART_Transmit(&huart1, tx_buffer+4, 2, 50);
-        HAL_Delay(200);
+        HAL_Delay(100);
         HAL_UART_Transmit(&huart1, tx_buffer+6, 1, 50);
-        HAL_Delay(200);
+        HAL_Delay(100);
         /*for(int i=0;i<7;i++){
         	HAL_UART_Transmit(&huart1, tx_buffer+i, 1, HAL_MAX_DELAY);
         }*/

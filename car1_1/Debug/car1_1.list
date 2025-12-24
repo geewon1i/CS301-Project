@@ -4237,256 +4237,256 @@ void traj_update(float v_l, float v_r, int a)
  80022fa:	60f8      	str	r0, [r7, #12]
  80022fc:	60b9      	str	r1, [r7, #8]
  80022fe:	607a      	str	r2, [r7, #4]
-    float v = (v_l + v_r) * 0.5f;
+    float v = (v_l + v_r) * 5.0f;
  8002300:	68b9      	ldr	r1, [r7, #8]
  8002302:	68f8      	ldr	r0, [r7, #12]
  8002304:	f7fe fca2 	bl	8000c4c <__addsf3>
  8002308:	4603      	mov	r3, r0
- 800230a:	f04f 517c 	mov.w	r1, #1056964608	@ 0x3f000000
- 800230e:	4618      	mov	r0, r3
- 8002310:	f7fe fda4 	bl	8000e5c <__aeabi_fmul>
- 8002314:	4603      	mov	r3, r0
- 8002316:	627b      	str	r3, [r7, #36]	@ 0x24
+ 800230a:	4971      	ldr	r1, [pc, #452]	@ (80024d0 <traj_update+0x1dc>)
+ 800230c:	4618      	mov	r0, r3
+ 800230e:	f7fe fda5 	bl	8000e5c <__aeabi_fmul>
+ 8002312:	4603      	mov	r3, r0
+ 8002314:	627b      	str	r3, [r7, #36]	@ 0x24
     float omega = (v_r - v_l) / L_WHEEL;
- 8002318:	68f9      	ldr	r1, [r7, #12]
- 800231a:	68b8      	ldr	r0, [r7, #8]
- 800231c:	f7fe fc94 	bl	8000c48 <__aeabi_fsub>
- 8002320:	4603      	mov	r3, r0
- 8002322:	496c      	ldr	r1, [pc, #432]	@ (80024d4 <traj_update+0x1e0>)
- 8002324:	4618      	mov	r0, r3
- 8002326:	f7fe fe4d 	bl	8000fc4 <__aeabi_fdiv>
- 800232a:	4603      	mov	r3, r0
- 800232c:	623b      	str	r3, [r7, #32]
+ 8002316:	68f9      	ldr	r1, [r7, #12]
+ 8002318:	68b8      	ldr	r0, [r7, #8]
+ 800231a:	f7fe fc95 	bl	8000c48 <__aeabi_fsub>
+ 800231e:	4603      	mov	r3, r0
+ 8002320:	496c      	ldr	r1, [pc, #432]	@ (80024d4 <traj_update+0x1e0>)
+ 8002322:	4618      	mov	r0, r3
+ 8002324:	f7fe fe4e 	bl	8000fc4 <__aeabi_fdiv>
+ 8002328:	4603      	mov	r3, r0
+ 800232a:	623b      	str	r3, [r7, #32]
     static int pulse = 0;
 
     pose.theta += omega * DT;
- 800232e:	4b6a      	ldr	r3, [pc, #424]	@ (80024d8 <traj_update+0x1e4>)
- 8002330:	689c      	ldr	r4, [r3, #8]
- 8002332:	496a      	ldr	r1, [pc, #424]	@ (80024dc <traj_update+0x1e8>)
- 8002334:	6a38      	ldr	r0, [r7, #32]
- 8002336:	f7fe fd91 	bl	8000e5c <__aeabi_fmul>
- 800233a:	4603      	mov	r3, r0
- 800233c:	4619      	mov	r1, r3
- 800233e:	4620      	mov	r0, r4
- 8002340:	f7fe fc84 	bl	8000c4c <__addsf3>
- 8002344:	4603      	mov	r3, r0
- 8002346:	461a      	mov	r2, r3
- 8002348:	4b63      	ldr	r3, [pc, #396]	@ (80024d8 <traj_update+0x1e4>)
- 800234a:	609a      	str	r2, [r3, #8]
+ 800232c:	4b6a      	ldr	r3, [pc, #424]	@ (80024d8 <traj_update+0x1e4>)
+ 800232e:	689c      	ldr	r4, [r3, #8]
+ 8002330:	496a      	ldr	r1, [pc, #424]	@ (80024dc <traj_update+0x1e8>)
+ 8002332:	6a38      	ldr	r0, [r7, #32]
+ 8002334:	f7fe fd92 	bl	8000e5c <__aeabi_fmul>
+ 8002338:	4603      	mov	r3, r0
+ 800233a:	4619      	mov	r1, r3
+ 800233c:	4620      	mov	r0, r4
+ 800233e:	f7fe fc85 	bl	8000c4c <__addsf3>
+ 8002342:	4603      	mov	r3, r0
+ 8002344:	461a      	mov	r2, r3
+ 8002346:	4b64      	ldr	r3, [pc, #400]	@ (80024d8 <traj_update+0x1e4>)
+ 8002348:	609a      	str	r2, [r3, #8]
     pose.x += v * cosf(pose.theta) * DT;
- 800234c:	4b62      	ldr	r3, [pc, #392]	@ (80024d8 <traj_update+0x1e4>)
- 800234e:	681c      	ldr	r4, [r3, #0]
- 8002350:	4b61      	ldr	r3, [pc, #388]	@ (80024d8 <traj_update+0x1e4>)
- 8002352:	689b      	ldr	r3, [r3, #8]
- 8002354:	4618      	mov	r0, r3
- 8002356:	f007 f821 	bl	800939c <cosf>
- 800235a:	4603      	mov	r3, r0
- 800235c:	6a79      	ldr	r1, [r7, #36]	@ 0x24
- 800235e:	4618      	mov	r0, r3
- 8002360:	f7fe fd7c 	bl	8000e5c <__aeabi_fmul>
- 8002364:	4603      	mov	r3, r0
- 8002366:	495d      	ldr	r1, [pc, #372]	@ (80024dc <traj_update+0x1e8>)
- 8002368:	4618      	mov	r0, r3
- 800236a:	f7fe fd77 	bl	8000e5c <__aeabi_fmul>
- 800236e:	4603      	mov	r3, r0
- 8002370:	4619      	mov	r1, r3
- 8002372:	4620      	mov	r0, r4
- 8002374:	f7fe fc6a 	bl	8000c4c <__addsf3>
- 8002378:	4603      	mov	r3, r0
- 800237a:	461a      	mov	r2, r3
- 800237c:	4b56      	ldr	r3, [pc, #344]	@ (80024d8 <traj_update+0x1e4>)
- 800237e:	601a      	str	r2, [r3, #0]
+ 800234a:	4b63      	ldr	r3, [pc, #396]	@ (80024d8 <traj_update+0x1e4>)
+ 800234c:	681c      	ldr	r4, [r3, #0]
+ 800234e:	4b62      	ldr	r3, [pc, #392]	@ (80024d8 <traj_update+0x1e4>)
+ 8002350:	689b      	ldr	r3, [r3, #8]
+ 8002352:	4618      	mov	r0, r3
+ 8002354:	f007 f822 	bl	800939c <cosf>
+ 8002358:	4603      	mov	r3, r0
+ 800235a:	6a79      	ldr	r1, [r7, #36]	@ 0x24
+ 800235c:	4618      	mov	r0, r3
+ 800235e:	f7fe fd7d 	bl	8000e5c <__aeabi_fmul>
+ 8002362:	4603      	mov	r3, r0
+ 8002364:	495d      	ldr	r1, [pc, #372]	@ (80024dc <traj_update+0x1e8>)
+ 8002366:	4618      	mov	r0, r3
+ 8002368:	f7fe fd78 	bl	8000e5c <__aeabi_fmul>
+ 800236c:	4603      	mov	r3, r0
+ 800236e:	4619      	mov	r1, r3
+ 8002370:	4620      	mov	r0, r4
+ 8002372:	f7fe fc6b 	bl	8000c4c <__addsf3>
+ 8002376:	4603      	mov	r3, r0
+ 8002378:	461a      	mov	r2, r3
+ 800237a:	4b57      	ldr	r3, [pc, #348]	@ (80024d8 <traj_update+0x1e4>)
+ 800237c:	601a      	str	r2, [r3, #0]
     pose.y -= v * sinf(pose.theta) * DT;
- 8002380:	4b55      	ldr	r3, [pc, #340]	@ (80024d8 <traj_update+0x1e4>)
- 8002382:	685c      	ldr	r4, [r3, #4]
- 8002384:	4b54      	ldr	r3, [pc, #336]	@ (80024d8 <traj_update+0x1e4>)
- 8002386:	689b      	ldr	r3, [r3, #8]
- 8002388:	4618      	mov	r0, r3
- 800238a:	f007 f83f 	bl	800940c <sinf>
- 800238e:	4603      	mov	r3, r0
- 8002390:	6a79      	ldr	r1, [r7, #36]	@ 0x24
- 8002392:	4618      	mov	r0, r3
- 8002394:	f7fe fd62 	bl	8000e5c <__aeabi_fmul>
- 8002398:	4603      	mov	r3, r0
- 800239a:	4950      	ldr	r1, [pc, #320]	@ (80024dc <traj_update+0x1e8>)
- 800239c:	4618      	mov	r0, r3
- 800239e:	f7fe fd5d 	bl	8000e5c <__aeabi_fmul>
- 80023a2:	4603      	mov	r3, r0
- 80023a4:	4619      	mov	r1, r3
- 80023a6:	4620      	mov	r0, r4
- 80023a8:	f7fe fc4e 	bl	8000c48 <__aeabi_fsub>
- 80023ac:	4603      	mov	r3, r0
- 80023ae:	461a      	mov	r2, r3
- 80023b0:	4b49      	ldr	r3, [pc, #292]	@ (80024d8 <traj_update+0x1e4>)
- 80023b2:	605a      	str	r2, [r3, #4]
+ 800237e:	4b56      	ldr	r3, [pc, #344]	@ (80024d8 <traj_update+0x1e4>)
+ 8002380:	685c      	ldr	r4, [r3, #4]
+ 8002382:	4b55      	ldr	r3, [pc, #340]	@ (80024d8 <traj_update+0x1e4>)
+ 8002384:	689b      	ldr	r3, [r3, #8]
+ 8002386:	4618      	mov	r0, r3
+ 8002388:	f007 f840 	bl	800940c <sinf>
+ 800238c:	4603      	mov	r3, r0
+ 800238e:	6a79      	ldr	r1, [r7, #36]	@ 0x24
+ 8002390:	4618      	mov	r0, r3
+ 8002392:	f7fe fd63 	bl	8000e5c <__aeabi_fmul>
+ 8002396:	4603      	mov	r3, r0
+ 8002398:	4950      	ldr	r1, [pc, #320]	@ (80024dc <traj_update+0x1e8>)
+ 800239a:	4618      	mov	r0, r3
+ 800239c:	f7fe fd5e 	bl	8000e5c <__aeabi_fmul>
+ 80023a0:	4603      	mov	r3, r0
+ 80023a2:	4619      	mov	r1, r3
+ 80023a4:	4620      	mov	r0, r4
+ 80023a6:	f7fe fc4f 	bl	8000c48 <__aeabi_fsub>
+ 80023aa:	4603      	mov	r3, r0
+ 80023ac:	461a      	mov	r2, r3
+ 80023ae:	4b4a      	ldr	r3, [pc, #296]	@ (80024d8 <traj_update+0x1e4>)
+ 80023b0:	605a      	str	r2, [r3, #4]
     if(a==1 && pose.x >0 && pose.y > 0){
- 80023b4:	687b      	ldr	r3, [r7, #4]
- 80023b6:	2b01      	cmp	r3, #1
- 80023b8:	f040 8088 	bne.w	80024cc <traj_update+0x1d8>
- 80023bc:	4b46      	ldr	r3, [pc, #280]	@ (80024d8 <traj_update+0x1e4>)
- 80023be:	681b      	ldr	r3, [r3, #0]
- 80023c0:	f04f 0100 	mov.w	r1, #0
- 80023c4:	4618      	mov	r0, r3
- 80023c6:	f7fe ff05 	bl	80011d4 <__aeabi_fcmpgt>
- 80023ca:	4603      	mov	r3, r0
- 80023cc:	2b00      	cmp	r3, #0
- 80023ce:	d07d      	beq.n	80024cc <traj_update+0x1d8>
- 80023d0:	4b41      	ldr	r3, [pc, #260]	@ (80024d8 <traj_update+0x1e4>)
- 80023d2:	685b      	ldr	r3, [r3, #4]
- 80023d4:	f04f 0100 	mov.w	r1, #0
- 80023d8:	4618      	mov	r0, r3
- 80023da:	f7fe fefb 	bl	80011d4 <__aeabi_fcmpgt>
- 80023de:	4603      	mov	r3, r0
- 80023e0:	2b00      	cmp	r3, #0
- 80023e2:	d073      	beq.n	80024cc <traj_update+0x1d8>
+ 80023b2:	687b      	ldr	r3, [r7, #4]
+ 80023b4:	2b01      	cmp	r3, #1
+ 80023b6:	f040 8088 	bne.w	80024ca <traj_update+0x1d6>
+ 80023ba:	4b47      	ldr	r3, [pc, #284]	@ (80024d8 <traj_update+0x1e4>)
+ 80023bc:	681b      	ldr	r3, [r3, #0]
+ 80023be:	f04f 0100 	mov.w	r1, #0
+ 80023c2:	4618      	mov	r0, r3
+ 80023c4:	f7fe ff06 	bl	80011d4 <__aeabi_fcmpgt>
+ 80023c8:	4603      	mov	r3, r0
+ 80023ca:	2b00      	cmp	r3, #0
+ 80023cc:	d07d      	beq.n	80024ca <traj_update+0x1d6>
+ 80023ce:	4b42      	ldr	r3, [pc, #264]	@ (80024d8 <traj_update+0x1e4>)
+ 80023d0:	685b      	ldr	r3, [r3, #4]
+ 80023d2:	f04f 0100 	mov.w	r1, #0
+ 80023d6:	4618      	mov	r0, r3
+ 80023d8:	f7fe fefc 	bl	80011d4 <__aeabi_fcmpgt>
+ 80023dc:	4603      	mov	r3, r0
+ 80023de:	2b00      	cmp	r3, #0
+ 80023e0:	d073      	beq.n	80024ca <traj_update+0x1d6>
     	if (pulse < 50){
- 80023e4:	4b3e      	ldr	r3, [pc, #248]	@ (80024e0 <traj_update+0x1ec>)
- 80023e6:	681b      	ldr	r3, [r3, #0]
- 80023e8:	2b31      	cmp	r3, #49	@ 0x31
- 80023ea:	dc05      	bgt.n	80023f8 <traj_update+0x104>
+ 80023e2:	4b3f      	ldr	r3, [pc, #252]	@ (80024e0 <traj_update+0x1ec>)
+ 80023e4:	681b      	ldr	r3, [r3, #0]
+ 80023e6:	2b31      	cmp	r3, #49	@ 0x31
+ 80023e8:	dc05      	bgt.n	80023f6 <traj_update+0x102>
     		pulse ++;
- 80023ec:	4b3c      	ldr	r3, [pc, #240]	@ (80024e0 <traj_update+0x1ec>)
- 80023ee:	681b      	ldr	r3, [r3, #0]
- 80023f0:	3301      	adds	r3, #1
- 80023f2:	4a3b      	ldr	r2, [pc, #236]	@ (80024e0 <traj_update+0x1ec>)
- 80023f4:	6013      	str	r3, [r2, #0]
- 80023f6:	e069      	b.n	80024cc <traj_update+0x1d8>
+ 80023ea:	4b3d      	ldr	r3, [pc, #244]	@ (80024e0 <traj_update+0x1ec>)
+ 80023ec:	681b      	ldr	r3, [r3, #0]
+ 80023ee:	3301      	adds	r3, #1
+ 80023f0:	4a3b      	ldr	r2, [pc, #236]	@ (80024e0 <traj_update+0x1ec>)
+ 80023f2:	6013      	str	r3, [r2, #0]
+ 80023f4:	e069      	b.n	80024ca <traj_update+0x1d6>
     		return;
     	}
     	if(pose.x > 240){
- 80023f8:	4b37      	ldr	r3, [pc, #220]	@ (80024d8 <traj_update+0x1e4>)
- 80023fa:	681b      	ldr	r3, [r3, #0]
- 80023fc:	4939      	ldr	r1, [pc, #228]	@ (80024e4 <traj_update+0x1f0>)
- 80023fe:	4618      	mov	r0, r3
- 8002400:	f7fe fee8 	bl	80011d4 <__aeabi_fcmpgt>
- 8002404:	4603      	mov	r3, r0
- 8002406:	2b00      	cmp	r3, #0
- 8002408:	d002      	beq.n	8002410 <traj_update+0x11c>
+ 80023f6:	4b38      	ldr	r3, [pc, #224]	@ (80024d8 <traj_update+0x1e4>)
+ 80023f8:	681b      	ldr	r3, [r3, #0]
+ 80023fa:	493a      	ldr	r1, [pc, #232]	@ (80024e4 <traj_update+0x1f0>)
+ 80023fc:	4618      	mov	r0, r3
+ 80023fe:	f7fe fee9 	bl	80011d4 <__aeabi_fcmpgt>
+ 8002402:	4603      	mov	r3, r0
+ 8002404:	2b00      	cmp	r3, #0
+ 8002406:	d002      	beq.n	800240e <traj_update+0x11a>
     		pose.x = 60;
- 800240a:	4b33      	ldr	r3, [pc, #204]	@ (80024d8 <traj_update+0x1e4>)
- 800240c:	4a36      	ldr	r2, [pc, #216]	@ (80024e8 <traj_update+0x1f4>)
- 800240e:	601a      	str	r2, [r3, #0]
+ 8002408:	4b33      	ldr	r3, [pc, #204]	@ (80024d8 <traj_update+0x1e4>)
+ 800240a:	4a37      	ldr	r2, [pc, #220]	@ (80024e8 <traj_update+0x1f4>)
+ 800240c:	601a      	str	r2, [r3, #0]
     	}
     	if(pose.y>320){
- 8002410:	4b31      	ldr	r3, [pc, #196]	@ (80024d8 <traj_update+0x1e4>)
- 8002412:	685b      	ldr	r3, [r3, #4]
- 8002414:	4935      	ldr	r1, [pc, #212]	@ (80024ec <traj_update+0x1f8>)
- 8002416:	4618      	mov	r0, r3
- 8002418:	f7fe fedc 	bl	80011d4 <__aeabi_fcmpgt>
- 800241c:	4603      	mov	r3, r0
- 800241e:	2b00      	cmp	r3, #0
- 8002420:	d002      	beq.n	8002428 <traj_update+0x134>
+ 800240e:	4b32      	ldr	r3, [pc, #200]	@ (80024d8 <traj_update+0x1e4>)
+ 8002410:	685b      	ldr	r3, [r3, #4]
+ 8002412:	4936      	ldr	r1, [pc, #216]	@ (80024ec <traj_update+0x1f8>)
+ 8002414:	4618      	mov	r0, r3
+ 8002416:	f7fe fedd 	bl	80011d4 <__aeabi_fcmpgt>
+ 800241a:	4603      	mov	r3, r0
+ 800241c:	2b00      	cmp	r3, #0
+ 800241e:	d002      	beq.n	8002426 <traj_update+0x132>
     		pose.y=200;
- 8002422:	4b2d      	ldr	r3, [pc, #180]	@ (80024d8 <traj_update+0x1e4>)
- 8002424:	4a32      	ldr	r2, [pc, #200]	@ (80024f0 <traj_update+0x1fc>)
- 8002426:	605a      	str	r2, [r3, #4]
+ 8002420:	4b2d      	ldr	r3, [pc, #180]	@ (80024d8 <traj_update+0x1e4>)
+ 8002422:	4a33      	ldr	r2, [pc, #204]	@ (80024f0 <traj_update+0x1fc>)
+ 8002424:	605a      	str	r2, [r3, #4]
     	}
     	uint16_t x =pose.x;
- 8002428:	4b2b      	ldr	r3, [pc, #172]	@ (80024d8 <traj_update+0x1e4>)
- 800242a:	681b      	ldr	r3, [r3, #0]
- 800242c:	4618      	mov	r0, r3
- 800242e:	f7fe ff17 	bl	8001260 <__aeabi_f2uiz>
- 8002432:	4603      	mov	r3, r0
- 8002434:	83fb      	strh	r3, [r7, #30]
+ 8002426:	4b2c      	ldr	r3, [pc, #176]	@ (80024d8 <traj_update+0x1e4>)
+ 8002428:	681b      	ldr	r3, [r3, #0]
+ 800242a:	4618      	mov	r0, r3
+ 800242c:	f7fe ff18 	bl	8001260 <__aeabi_f2uiz>
+ 8002430:	4603      	mov	r3, r0
+ 8002432:	83fb      	strh	r3, [r7, #30]
     	uint16_t y =pose.y;
- 8002436:	4b28      	ldr	r3, [pc, #160]	@ (80024d8 <traj_update+0x1e4>)
- 8002438:	685b      	ldr	r3, [r3, #4]
- 800243a:	4618      	mov	r0, r3
- 800243c:	f7fe ff10 	bl	8001260 <__aeabi_f2uiz>
- 8002440:	4603      	mov	r3, r0
- 8002442:	83bb      	strh	r3, [r7, #28]
+ 8002434:	4b28      	ldr	r3, [pc, #160]	@ (80024d8 <traj_update+0x1e4>)
+ 8002436:	685b      	ldr	r3, [r3, #4]
+ 8002438:	4618      	mov	r0, r3
+ 800243a:	f7fe ff11 	bl	8001260 <__aeabi_f2uiz>
+ 800243e:	4603      	mov	r3, r0
+ 8002440:	83bb      	strh	r3, [r7, #28]
 
         uint8_t tx_buffer[7];
         // 构建简单命令帧
         tx_buffer[0] = CMD_START;     // 开始标志
- 8002444:	2353      	movs	r3, #83	@ 0x53
- 8002446:	753b      	strb	r3, [r7, #20]
+ 8002442:	2353      	movs	r3, #83	@ 0x53
+ 8002444:	753b      	strb	r3, [r7, #20]
         tx_buffer[1] = 0x02;//CMD_MOVE_TO;   // 命令类型
- 8002448:	2302      	movs	r3, #2
- 800244a:	757b      	strb	r3, [r7, #21]
+ 8002446:	2302      	movs	r3, #2
+ 8002448:	757b      	strb	r3, [r7, #21]
         tx_buffer[3] = x & 0xFF;      // X坐标低字节
- 800244c:	8bfb      	ldrh	r3, [r7, #30]
- 800244e:	b2db      	uxtb	r3, r3
- 8002450:	75fb      	strb	r3, [r7, #23]
+ 800244a:	8bfb      	ldrh	r3, [r7, #30]
+ 800244c:	b2db      	uxtb	r3, r3
+ 800244e:	75fb      	strb	r3, [r7, #23]
         tx_buffer[2] = (x >> 8) & 0xFF; // X坐标高字节
- 8002452:	8bfb      	ldrh	r3, [r7, #30]
- 8002454:	0a1b      	lsrs	r3, r3, #8
- 8002456:	b29b      	uxth	r3, r3
- 8002458:	b2db      	uxtb	r3, r3
- 800245a:	75bb      	strb	r3, [r7, #22]
+ 8002450:	8bfb      	ldrh	r3, [r7, #30]
+ 8002452:	0a1b      	lsrs	r3, r3, #8
+ 8002454:	b29b      	uxth	r3, r3
+ 8002456:	b2db      	uxtb	r3, r3
+ 8002458:	75bb      	strb	r3, [r7, #22]
         tx_buffer[5] = y & 0xFF;      // Y坐标低字节
- 800245c:	8bbb      	ldrh	r3, [r7, #28]
- 800245e:	b2db      	uxtb	r3, r3
- 8002460:	767b      	strb	r3, [r7, #25]
+ 800245a:	8bbb      	ldrh	r3, [r7, #28]
+ 800245c:	b2db      	uxtb	r3, r3
+ 800245e:	767b      	strb	r3, [r7, #25]
         tx_buffer[4] = (y >> 8) & 0xFF; // Y坐标高字节
- 8002462:	8bbb      	ldrh	r3, [r7, #28]
- 8002464:	0a1b      	lsrs	r3, r3, #8
- 8002466:	b29b      	uxth	r3, r3
- 8002468:	b2db      	uxtb	r3, r3
- 800246a:	763b      	strb	r3, [r7, #24]
+ 8002460:	8bbb      	ldrh	r3, [r7, #28]
+ 8002462:	0a1b      	lsrs	r3, r3, #8
+ 8002464:	b29b      	uxth	r3, r3
+ 8002466:	b2db      	uxtb	r3, r3
+ 8002468:	763b      	strb	r3, [r7, #24]
         /*tx_buffer[3] = 0x80;
         tx_buffer[2] = 0x00;
         tx_buffer[5] = 0x01;
         tx_buffer[4] = 0x01;*/
         tx_buffer[6] = CMD_END;       // 结束标志
- 800246c:	2345      	movs	r3, #69	@ 0x45
- 800246e:	76bb      	strb	r3, [r7, #26]
+ 800246a:	2345      	movs	r3, #69	@ 0x45
+ 800246c:	76bb      	strb	r3, [r7, #26]
         //tx_buffer[7] = CMD_END;       // 结束标志
 
         // 发送命令
         //HAL_UART_Transmit(&huart1, tx_buffer, 7, HAL_MAX_DELAY);
         HAL_UART_Transmit(&huart1, tx_buffer, 2, 50);
- 8002470:	f107 0114 	add.w	r1, r7, #20
- 8002474:	2332      	movs	r3, #50	@ 0x32
- 8002476:	2202      	movs	r2, #2
- 8002478:	481e      	ldr	r0, [pc, #120]	@ (80024f4 <traj_update+0x200>)
- 800247a:	f001 fe01 	bl	8004080 <HAL_UART_Transmit>
-        HAL_Delay(200);
- 800247e:	20c8      	movs	r0, #200	@ 0xc8
- 8002480:	f000 f940 	bl	8002704 <HAL_Delay>
+ 800246e:	f107 0114 	add.w	r1, r7, #20
+ 8002472:	2332      	movs	r3, #50	@ 0x32
+ 8002474:	2202      	movs	r2, #2
+ 8002476:	481f      	ldr	r0, [pc, #124]	@ (80024f4 <traj_update+0x200>)
+ 8002478:	f001 fe02 	bl	8004080 <HAL_UART_Transmit>
+        HAL_Delay(100);
+ 800247c:	2064      	movs	r0, #100	@ 0x64
+ 800247e:	f000 f941 	bl	8002704 <HAL_Delay>
         HAL_UART_Transmit(&huart1, tx_buffer+2, 2, 50);
- 8002484:	f107 0114 	add.w	r1, r7, #20
- 8002488:	3102      	adds	r1, #2
- 800248a:	2332      	movs	r3, #50	@ 0x32
- 800248c:	2202      	movs	r2, #2
- 800248e:	4819      	ldr	r0, [pc, #100]	@ (80024f4 <traj_update+0x200>)
- 8002490:	f001 fdf6 	bl	8004080 <HAL_UART_Transmit>
-        HAL_Delay(200);
- 8002494:	20c8      	movs	r0, #200	@ 0xc8
- 8002496:	f000 f935 	bl	8002704 <HAL_Delay>
+ 8002482:	f107 0114 	add.w	r1, r7, #20
+ 8002486:	3102      	adds	r1, #2
+ 8002488:	2332      	movs	r3, #50	@ 0x32
+ 800248a:	2202      	movs	r2, #2
+ 800248c:	4819      	ldr	r0, [pc, #100]	@ (80024f4 <traj_update+0x200>)
+ 800248e:	f001 fdf7 	bl	8004080 <HAL_UART_Transmit>
+        HAL_Delay(100);
+ 8002492:	2064      	movs	r0, #100	@ 0x64
+ 8002494:	f000 f936 	bl	8002704 <HAL_Delay>
         HAL_UART_Transmit(&huart1, tx_buffer+4, 2, 50);
- 800249a:	f107 0114 	add.w	r1, r7, #20
- 800249e:	3104      	adds	r1, #4
- 80024a0:	2332      	movs	r3, #50	@ 0x32
- 80024a2:	2202      	movs	r2, #2
- 80024a4:	4813      	ldr	r0, [pc, #76]	@ (80024f4 <traj_update+0x200>)
- 80024a6:	f001 fdeb 	bl	8004080 <HAL_UART_Transmit>
-        HAL_Delay(200);
- 80024aa:	20c8      	movs	r0, #200	@ 0xc8
- 80024ac:	f000 f92a 	bl	8002704 <HAL_Delay>
+ 8002498:	f107 0114 	add.w	r1, r7, #20
+ 800249c:	3104      	adds	r1, #4
+ 800249e:	2332      	movs	r3, #50	@ 0x32
+ 80024a0:	2202      	movs	r2, #2
+ 80024a2:	4814      	ldr	r0, [pc, #80]	@ (80024f4 <traj_update+0x200>)
+ 80024a4:	f001 fdec 	bl	8004080 <HAL_UART_Transmit>
+        HAL_Delay(100);
+ 80024a8:	2064      	movs	r0, #100	@ 0x64
+ 80024aa:	f000 f92b 	bl	8002704 <HAL_Delay>
         HAL_UART_Transmit(&huart1, tx_buffer+6, 1, 50);
- 80024b0:	f107 0114 	add.w	r1, r7, #20
- 80024b4:	3106      	adds	r1, #6
- 80024b6:	2332      	movs	r3, #50	@ 0x32
- 80024b8:	2201      	movs	r2, #1
- 80024ba:	480e      	ldr	r0, [pc, #56]	@ (80024f4 <traj_update+0x200>)
- 80024bc:	f001 fde0 	bl	8004080 <HAL_UART_Transmit>
-        HAL_Delay(200);
- 80024c0:	20c8      	movs	r0, #200	@ 0xc8
- 80024c2:	f000 f91f 	bl	8002704 <HAL_Delay>
+ 80024ae:	f107 0114 	add.w	r1, r7, #20
+ 80024b2:	3106      	adds	r1, #6
+ 80024b4:	2332      	movs	r3, #50	@ 0x32
+ 80024b6:	2201      	movs	r2, #1
+ 80024b8:	480e      	ldr	r0, [pc, #56]	@ (80024f4 <traj_update+0x200>)
+ 80024ba:	f001 fde1 	bl	8004080 <HAL_UART_Transmit>
+        HAL_Delay(100);
+ 80024be:	2064      	movs	r0, #100	@ 0x64
+ 80024c0:	f000 f920 	bl	8002704 <HAL_Delay>
         /*for(int i=0;i<7;i++){
         	HAL_UART_Transmit(&huart1, tx_buffer+i, 1, HAL_MAX_DELAY);
         }*/
         pulse = 0;
- 80024c6:	4b06      	ldr	r3, [pc, #24]	@ (80024e0 <traj_update+0x1ec>)
- 80024c8:	2200      	movs	r2, #0
- 80024ca:	601a      	str	r2, [r3, #0]
+ 80024c4:	4b06      	ldr	r3, [pc, #24]	@ (80024e0 <traj_update+0x1ec>)
+ 80024c6:	2200      	movs	r2, #0
+ 80024c8:	601a      	str	r2, [r3, #0]
     }
 }
- 80024cc:	372c      	adds	r7, #44	@ 0x2c
- 80024ce:	46bd      	mov	sp, r7
- 80024d0:	bd90      	pop	{r4, r7, pc}
- 80024d2:	bf00      	nop
+ 80024ca:	372c      	adds	r7, #44	@ 0x2c
+ 80024cc:	46bd      	mov	sp, r7
+ 80024ce:	bd90      	pop	{r4, r7, pc}
+ 80024d0:	40a00000 	.word	0x40a00000
  80024d4:	41600000 	.word	0x41600000
  80024d8:	200002a4 	.word	0x200002a4
  80024dc:	3c23d70a 	.word	0x3c23d70a
