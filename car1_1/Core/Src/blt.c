@@ -68,6 +68,7 @@ void Execute_Command(void)
     switch (current_cmd.command)
     {
         case CMD_MOVE_TO:
+        	init_motors();
             // 移动到指定坐标
             int x = current_cmd.x;
             int y = current_cmd.y;
