@@ -5,6 +5,7 @@
  *      Author: iris1
  */
 #include "blt.h"
+#include <stdlib.h>
 #define RX_BUFFER_SIZE 64
 #define CMD_START 0x53
 #define CMD_END 0x45
@@ -17,10 +18,10 @@ uint8_t command_received = 0;
 
 int px = 0;
 int py = 320;
-extern int move_time;
-extern int turn_time;
+//extern int move_time;
+//extern int turn_time;
 
-float current_angle=90.0;
+int current_angle=90;
 
 /* 命令结构体 */
 
@@ -38,7 +39,7 @@ void Bluetooth_Init(void)
 void mode1_init(void){
 	px = 0;
 	py = 320;
-	current_angle=90.0;
+	current_angle=90;
 	rx_index = 0;
 	current_cmd.start_flag = rx_buffer[0];
 }
@@ -68,7 +69,6 @@ void Execute_Command(void)
     switch (current_cmd.command)
     {
         case CMD_MOVE_TO:
-        	init_motors();
             // 移动到指定坐标
             int x = current_cmd.x;
             int y = current_cmd.y;
@@ -81,74 +81,108 @@ void Execute_Command(void)
             // 计算移动角度和距离
             int diff_y = py - y;
             int diff_x = x - px;
+            int turning_time = 0;
+            int rot_angle = 0;
 
             // 角度计算
             if(diff_x == 0) {
                 if(diff_y < 0) {
-                	uint16_t turning_time = turn_time * fabs(current_angle+90.0);
-                    turn_in_place(current_angle + 90.0);
-                    HAL_Delay(turning_time);
-                    stop_motors();
-                    current_angle = -90.0;
+                    rot_angle = current_angle + 90;
+                    current_angle = -90;
                 }else{
-                	uint16_t turning_time = turn_time * fabs(90.0 - current_angle);
-                	turn_in_place(90.0 - current_angle);
-                	HAL_Delay(turning_time);
-                	stop_motors();
+                	rot_angle = 90 - current_angle;
                 	current_angle = 90.0;
                 }
             }
             else if(diff_y == 0) {
                 if(diff_x > 0) {
-                	uint16_t turning_time = turn_time * fabs(current_angle);
-                    turn_in_place(current_angle);
-                    HAL_Delay(turning_time);
-                    stop_motors();
+                	rot_angle = current_angle;
                     current_angle = 0;
                 } else {
                 	if(current_angle > 0){
-                		uint16_t turning_time = turn_time * fabs(current_angle - 180.0);
-    					turn_in_place(current_angle - 180.0);
-    					HAL_Delay(turning_time);
-    					stop_motors();
-
+                		rot_angle = current_angle - 180;
                 	}else{
-                		uint16_t turning_time = turn_time * fabs(current_angle + 180.0);
-                		turn_in_place(current_angle + 180.0);
-                		HAL_Delay(turning_time);
-                		stop_motors();
+                		rot_angle = current_angle + 180;
                 	}
-                	current_angle = -180.0;
+                	current_angle = -180;
                 }
             }
             else {
                 float rad = atan2f(diff_y, diff_x);
-                float ang = rad * 180.0 / 3.1416;
-                float rot_angle = current_angle - ang;
+                int ang = rad * 60;
+                rot_angle = current_angle - ang;
 
                 // 角度归一化到[-180, 180]
-                if(rot_angle > 180) rot_angle -= 360.0;
-                else if(rot_angle < -180) rot_angle += 360.0;
+                if(rot_angle > 180) rot_angle -= 360;
+                else if(rot_angle < -180) rot_angle += 360;
 
-                turn_in_place(rot_angle);
-                uint16_t turning_time = turn_time * fabs(rot_angle);
-                HAL_Delay(turning_time);
-                stop_motors();
+
                 current_angle = ang;
             }
 
+            //man!
+            /*if(-10 < diff_x && diff_x < 10) {
+                if(diff_y < 0) {
+                    rot_angle = current_angle + 90;
+                    current_angle = -90;
+                }else{
+                	rot_angle = 90 - current_angle;
+                	current_angle = 90.0;
+                }
+            }
+            else if(-10 < diff_y && diff_y < 10) {
+                if(diff_x > 0) {
+                	rot_angle = current_angle;
+                    current_angle = 0;
+                } else {
+                	if(current_angle > 0){
+                		rot_angle = current_angle - 180;
+                	}else{
+                		rot_angle = current_angle + 180;
+                	}
+                	current_angle = -180;
+                }
+            }
+            else {
+            	int ang=0;
+                if(diff_y > 0 && diff_x > 0){
+                	ang = 45;
+                }else if(diff_y > 0 && diff_x < 0){
+                	ang = 135;
+                }else if (diff_y < 0 && diff_x >0){
+                	ang = -45;
+                }else{
+                	ang = -135;
+                }
+                rot_angle = current_angle - ang;
 
-            // 计算移动距离
-            float distance = sqrtf(diff_x * diff_x + diff_y * diff_y);
-            forward_with_length();
-            HAL_Delay(move_time * distance / 100);
+                // 角度归一化到[-180, 180]
+                if(rot_angle > 180) rot_angle -= 360;
+                else if(rot_angle < -180) rot_angle += 360;
+
+
+                current_angle = ang;
+            }*/
+
+
+            int distance = (int) sqrt(diff_x * diff_x + diff_y * diff_y);
+            turning_time = 7 * abs(rot_angle);
+            int moving_time = distance *10;
+            px = x;
+            py = y;
+
+            turn_in_place(rot_angle);
+            HAL_Delay(turning_time);
             stop_motors();
-            /*sprintf(info, "OK2: %.2f,%.2f", current_angle,distance);
+
+            forward_with_length();
+            HAL_Delay(moving_time);
+            stop_motors();
+            /*sprintf(info, "OK2: %d,%d", turning_time,distance);
             HAL_UART_Transmit(&huart1, (uint8_t*)info, strlen(info), 50);*/
 
             // 更新当前位置
-            px = x;
-            py = y;
+
             // 发送回传信息
             //Send_Response("MOVED");
             break;
@@ -156,7 +190,45 @@ void Execute_Command(void)
 
         default:
             //Send_Response("UNKNOWN_CMD");
+        	turn_in_place(90);
+        	HAL_Delay(7*90);stop_motors();
+            //traj_update(0, 0);
 
+        	forward_with_length();
+        	HAL_Delay(25*100);stop_motors();
+            //traj_update(0, 0);
+
+        	turn_in_place(-90);
+        	HAL_Delay(7*90*0.9);stop_motors();
+            //traj_update(0, 0);
+
+        	forward_with_length();
+        	HAL_Delay(25 * 50);stop_motors();
+            //traj_update(0, 0);
+
+        	turn_in_place(-90);
+        	HAL_Delay(7 * 90 *0.9);stop_motors();
+            //traj_update(0, 0);
+
+        	forward_with_length();
+        	HAL_Delay(25*100);stop_motors();
+            //traj_update(0, 0);
+
+        	turn_in_place(90);
+        	HAL_Delay(7 *90);stop_motors();
+            //traj_update(0, 0);
+
+        	forward_with_length();
+        	HAL_Delay(25 * 50);stop_motors();
+            //traj_update(0, 0);
+
+        	turn_in_place(90);
+        	HAL_Delay(7 * 90);stop_motors();
+            //traj_update(0, 0);
+
+        	forward_with_length();
+        	HAL_Delay(25 * 100);stop_motors();
+            //traj_update(0, 0);
             break;
     }
 }

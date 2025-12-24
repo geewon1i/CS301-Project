@@ -140,7 +140,6 @@ void rtp(int mode0)
 				            char info[30];
 				            snprintf(info, 30, "send: %d,%d", x, y);
 				            lcd_show_string(30, 130, 200, 16, 16, info, BLUE);
-				            HAL_Delay(500);
 				        }
 					}
 				}

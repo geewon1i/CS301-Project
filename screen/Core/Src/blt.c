@@ -41,7 +41,7 @@ void Send_Move_Command(uint16_t x, uint16_t y)
 
     // 构建简单命令帧
     tx_buffer[0] = CMD_START;     // 开始标志
-    tx_buffer[1] = CMD_MOVE_TO;   // 命令类型
+    tx_buffer[1] = 0x01;   // 命令类型
     tx_buffer[3] = x & 0xFF;      // X坐标低字节
     tx_buffer[2] = (x >> 8) & 0xFF; // X坐标高字节
     tx_buffer[5] = y & 0xFF;      // Y坐标低字节

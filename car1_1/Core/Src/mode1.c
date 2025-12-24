@@ -5,7 +5,8 @@
 #include "math.h"
 #include "control.h"
 #include "stm32f1xx_it.h"
-
+#include "blt.h"
+#include "trajectory.h"
 #define PI 3.14159265
 
 struct Point{
@@ -21,6 +22,8 @@ int turn_time = 7;
 int move_time = 25;
 void mode1_loop(void) {
 	mode1_init();
+	init_motors();
+	traj_init();
 
     // 等待开始信号
     while(1) {
