@@ -1,3 +1,4 @@
+"./Core/Src/blt.o"
 "./Core/Src/control.o"
 "./Core/Src/gpio.o"
 "./Core/Src/main.o"

@@ -1,2 +1,2 @@
 ../Core/Src/mode1.c:22:6:mode1_loop	8	static
-../Core/Src/mode1.c:59:6:execute_path	88	static
+../Core/Src/mode1.c:37:6:execute_path	88	static

@@ -46,7 +46,7 @@ extern "C" {
 #ifdef __cplusplus
 }
 #endif
-
+extern uint8_t mode;
 extern int maze[10][10];
 extern int timer;
 //extern int direction;

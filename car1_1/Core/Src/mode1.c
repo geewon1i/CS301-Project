@@ -25,34 +25,12 @@ void mode1_loop(void) {
     while(1) {
     	turn_in_place(1);
     	HAL_Delay(500);
-        if(rx_ready) {
-            parse_command(rx_buffer);
-            rx_ready = 0;
-
-            if(receiving_path) {
-                break;
-            }
+        if (command_received)
+        {
+            command_received = 0;
         }
         HAL_Delay(10);
     }
-
-    // 接收路径点直到结束
-    while(receiving_path) {
-        if(rx_ready) {
-            parse_command(rx_buffer);
-            rx_ready = 0;
-        }
-        HAL_Delay(10);
-    }
-
-    // 路径接收完成，开始运动
-    if(path_received && point_count > 0) {
-        execute_path();
-    }
-
-    // 重置状态
-    path_received = 0;
-    point_count = 0;
 }
 
 // 执行路径运动

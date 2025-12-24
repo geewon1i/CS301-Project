@@ -1,5 +1,6 @@
 "./Core/Src/24cxx.o"
 "./Core/Src/24l01.o"
+"./Core/Src/blt.o"
 "./Core/Src/ctiic.o"
 "./Core/Src/delay.o"
 "./Core/Src/ft5206.o"

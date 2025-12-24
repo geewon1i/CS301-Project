@@ -35,6 +35,8 @@
 #include "24cxx.h"
 #include "24l01.h" //通信驱动 基于spi进行通信
 #include "image.h"
+#include "blt.h"
+#include "lcd_v4.h"
 //#include "remote.h" 红外遥控驱动
 /* USER CODE END Includes */
 
@@ -61,7 +63,8 @@ TIM_HandleTypeDef htim3;
 UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
-
+extern uint8_t rx_data;
+extern u8 mode;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -117,6 +120,7 @@ int main(void)
   MX_USART1_UART_Init();
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
+  Master_UART_Init();
 	POINT_COLOR=RED;
 	game();
   /* USER CODE END 2 */
@@ -262,6 +266,10 @@ static void MX_USART1_UART_Init(void)
 
   /* USER CODE BEGIN USART1_Init 0 */
 
+
+	   HAL_GPIO_TogglePin(LED_GPIO_Port, LED_GPIO_Port);
+	   HAL_Delay(500);
+	   HAL_GPIO_TogglePin(LED_GPIO_Port, LED_GPIO_Port);
   /* USER CODE END USART1_Init 0 */
 
   /* USER CODE BEGIN USART1_Init 1 */
@@ -336,7 +344,22 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+    if (huart->Instance == USART1)
+    {
+    	char info[30];
+    	snprintf(info, 30, "Receiving: %u", rx_data);
+    	lcd_show_string(30, 170, 200, 16, 16, info, BLUE);
+        // 处理小车回传的信息
+    	if(mode == 2){
+    		Process_Response(rx_data);
+    	}
 
+        // 重新启动接收
+        HAL_UART_Receive_IT(&huart1, &rx_data, 1);
+    }
+}
 /* USER CODE END 4 */
 
 /**

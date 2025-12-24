@@ -31,16 +31,17 @@ struct Point{
 
 char tx_buffer[MAX_CMD_LEN];
 
-
 u16 x;
 u16 y;
 u8 pulse = 0;
 u16 count = 0;
+u8 mode = 0;
 
-void rtp(int mode)
+void rtp(int mode0)
 {
 	u8 i=0;
 
+	mode = mode0;
 	points[0].x = 0;
 	points[0].y = lcddev.height;
 	while(1)
@@ -101,7 +102,7 @@ void rtp(int mode)
 					u16 order = 1;
 					if(tp_dev.x[0]>30&&tp_dev.y[0]>70&&tp_dev.x[0]<336&&tp_dev.y[0]<110){
 				        // 发送结束信号
-				        bt_send_end();
+				        //bt_send_end();
 
 				        // 可选：发送提示信息
 				        lcd_show_string(30,150,200,16,16,"WOW！", BLUE);
@@ -114,10 +115,6 @@ void rtp(int mode)
 					}
 					else if(tp_dev.x[0]>30&&tp_dev.y[0]>110){
 				        // 如果是第一个点，发送开始信号
-				        if(count == 0) {
-				            bt_send_start();
-				            HAL_Delay(10);  // 等待接收端准备
-				        }
 
 				        // 绘制点
 				        uint16_t POINT_COLOR;
@@ -133,8 +130,7 @@ void rtp(int mode)
 				            LCD_DrawLine(points[count].x, points[count].y, x, y);
 
 				            // 发送坐标点
-				            bt_send_point(x, y);
-
+				            Send_Move_Command(x, y);
 				            count += 1;
 				            points[count].x = x;
 				            points[count].y = y;
@@ -149,11 +145,16 @@ void rtp(int mode)
 					}
 				}
 				if(mode == 2){
-					u16 pre_x = 0;
-					u16 pre_y = 300;
+					/*u16 pre_x = 0;
+					u16 pre_y = 320;
+					int pulse = 0;
+					while(current_cmd.end_flag == 0){
+						HAL_Delay(10);
+					}
+					current_cmd.end_flag = 0;
 					u16 x = 30;//bluetooth
 					u16 y = 50;
-					static int pulse = 0;
+
 					TP_Draw_Big_Point(x,y,BLUE);
 					pulse++;
 					uint16_t POINT_COLOR;
@@ -166,7 +167,7 @@ void rtp(int mode)
 						pre_x = x;
 						pre_y = y;
 						pulse = 0;
-					}
+					}*/
 					if(tp_dev.x[0]>30&&tp_dev.y[0]>70&&tp_dev.x[0]<336&&tp_dev.y[0]<110){
 
 						goto mode0;
@@ -183,27 +184,4 @@ void rtp(int mode)
 		i++;
 		if(i%20==0)LED0=!LED0;
 	}
-}
-// 发送字符串（自动添加换行）
-void bt_send_string(const char* str) {
-    char buffer[MAX_CMD_LEN];
-    snprintf(buffer, MAX_CMD_LEN, "%s\n", str);
-    HAL_UART_Transmit(&huart1, (uint8_t*)buffer, strlen(buffer), 100);
-    HAL_Delay(5);  // 小延迟确保数据发送完成
-}
-
-// 发送坐标点
-void bt_send_point(uint16_t x, uint16_t y) {
-    snprintf(tx_buffer, MAX_CMD_LEN, "P:%d,%d", x, y);
-    bt_send_string(tx_buffer);
-}
-
-// 发送开始信号
-void bt_send_start() {
-    bt_send_string("START");
-}
-
-// 发送结束信号
-void bt_send_end(void) {
-    bt_send_string("END");
 }

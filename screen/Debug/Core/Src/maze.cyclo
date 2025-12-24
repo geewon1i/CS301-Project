@@ -1,5 +1,1 @@
-../Core/Src/maze.c:40:6:rtp	38
-../Core/Src/maze.c:188:6:bt_send_string	1
-../Core/Src/maze.c:196:6:bt_send_point	1
-../Core/Src/maze.c:202:6:bt_send_start	1
-../Core/Src/maze.c:207:6:bt_send_end	1
+../Core/Src/maze.c:40:6:rtp	36

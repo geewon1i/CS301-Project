@@ -4,5 +4,7 @@
 void mode1_loop(void);
 
 void execute_path(void);
+int turn_time;
+int move_time;
 
 #endif

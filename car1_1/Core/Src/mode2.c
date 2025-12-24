@@ -17,12 +17,12 @@ extern uint16_t pwm_map(float duty);
 
 void mode2_loop(void){
     init_motors();
+    traj_init();
 
 
     num_count = 0;
     while(rxBuffer[1]!='s'){
 
-    	HAL_UART_Transmit(&huart1, &tx_char, 1, HAL_MAX_DELAY);
         // 读取左右避障传感器数字信号
     	uint8_t left_detect  = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_4); // 0 = 左边有物体
     	uint8_t right_detect = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_5); // 0 = 右边有物体
@@ -37,12 +37,12 @@ void mode2_loop(void){
         // --- 2️⃣ 左无右有 → 原地右转 ---
         else if(!left_detect && right_detect){
             turn_right_half();
-            traj_update(V_HALF, -V_HALF,0);
+            traj_update(V_HALF, -V_HALF,1);
         }
         // --- 3️⃣ 右无左有 → 原地左转 ---
         else if(left_detect && !right_detect){
             turn_left_half();
-            traj_update(-V_HALF, V_HALF,0);
+            traj_update(-V_HALF, V_HALF,1);
         }
         // --- 4️⃣ 左右都检测到 → 前进 / 平滑跟随 ---
         else if(!left_detect && !right_detect){

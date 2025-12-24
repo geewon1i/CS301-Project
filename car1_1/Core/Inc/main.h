@@ -45,12 +45,15 @@ extern "C" {
 
 /* Exported macro ------------------------------------------------------------*/
 /* USER CODE BEGIN EM */
-#define RX_BUFFER_SIZE 50
+#define RX_BUFFER_SIZE 64
+#define CMD_START 0x53
+#define CMD_END 0x45
+#define CMD_MOVE_TO 0x01
 
-// 接收相关变量
-extern char rx_buffer[RX_BUFFER_SIZE];  // 接收缓冲区
-extern uint8_t rx_index;            // 缓冲区索引
-extern volatile uint8_t rx_ready;   // 数据就绪标志
+extern uint8_t rx_buffer[RX_BUFFER_SIZE];
+extern uint8_t rx_data;
+extern uint8_t rx_index;
+extern uint8_t command_received;
 
 // 路径规划相关变量
 typedef struct {
