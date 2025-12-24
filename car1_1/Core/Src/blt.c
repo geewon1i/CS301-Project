@@ -44,9 +44,9 @@ void Parse_Command(void)
         current_cmd.start_flag = rx_buffer[0];
         current_cmd.command = rx_buffer[1];
 
-        // 提取坐标（小端模式）
-        current_cmd.x = (rx_buffer[3] << 8) | rx_buffer[2];
-        current_cmd.y = (rx_buffer[5] << 8) | rx_buffer[4];
+        // 提取坐标
+        current_cmd.x = (rx_buffer[2] << 8) | rx_buffer[3];
+        current_cmd.y = (rx_buffer[4] << 8) | rx_buffer[5];
 
         current_cmd.end_flag = rx_buffer[rx_index-1];
 
@@ -69,7 +69,7 @@ void Execute_Command(void)
             int diff_y = py - y;
             int diff_x = x - px;
 
-            // 角度计算（保持你的原有逻辑）
+            // 角度计算
             if(diff_x == 0) {
                 if(diff_y > 0) {
                     turn_in_place(180.0);
@@ -120,13 +120,12 @@ void Execute_Command(void)
             px = x;
             py = y;
             // 发送回传信息
-            Send_Response("MOVED");
+            //Send_Response("MOVED");
             break;
 
-        // 可以添加更多命令...
 
         default:
-            Send_Response("UNKNOWN_CMD");
+            //Send_Response("UNKNOWN_CMD");
             break;
     }
 }

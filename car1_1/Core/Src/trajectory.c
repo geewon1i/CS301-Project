@@ -24,7 +24,7 @@ void traj_update(float v_l, float v_r, int a)
     pose.x += v * cosf(pose.theta) * DT;
     pose.y -= v * sinf(pose.theta) * DT;
     if(a==1 && pose.x >0 && pose.y > 0){
-    	if (pulse < 50){
+    	if (pulse < 20){
     		pulse ++;
     		return;
     	}
