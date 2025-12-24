@@ -23,7 +23,7 @@ void mode1_loop(void) {
     strcpy(ch, p);              // 复制剩余内容
     sscanf(ch,"%d,%d",x0,y0);
     //bt_transmit
-    uint8_t order = 1; // 1: getting points 0: over
+    uint8_t order = 2; // 1: getting points 0: over
     while(order == 1){
     	uint16_t x = 20;
     	uint16_t y = 30;
@@ -61,44 +61,44 @@ void mode1_loop(void) {
     	int move_time = 2500;
     	init_motors();
     	turn_in_place(90);
-    	HAL_Delay(turn_time*100);stop_motors();
-        traj_update(0, 0);
+    	HAL_Delay(turn_time);stop_motors();
+        //traj_update(0, 0);
 
     	forward_with_length(100);
     	HAL_Delay(move_time);stop_motors();
-        traj_update(0, 0);
+        //traj_update(0, 0);
 
     	turn_in_place(-90);
     	HAL_Delay(turn_time*0.9);stop_motors();
-        traj_update(0, 0);
+        //traj_update(0, 0);
 
     	forward_with_length(50);
     	HAL_Delay(move_time / 2);stop_motors();
-        traj_update(0, 0);
+        //traj_update(0, 0);
 
     	turn_in_place(-90);
     	HAL_Delay(turn_time*0.9);stop_motors();
-        traj_update(0, 0);
+        //traj_update(0, 0);
 
     	forward_with_length(100);
     	HAL_Delay(move_time);stop_motors();
-        traj_update(0, 0);
+        //traj_update(0, 0);
 
     	turn_in_place(90);
     	HAL_Delay(turn_time);stop_motors();
-        traj_update(0, 0);
+        //traj_update(0, 0);
 
     	forward_with_length(50);
     	HAL_Delay(move_time / 2);stop_motors();
-        traj_update(0, 0);
+        //traj_update(0, 0);
 
     	turn_in_place(90);
     	HAL_Delay(turn_time);stop_motors();
-        traj_update(0, 0);
+        //traj_update(0, 0);
 
     	forward_with_length(100);
     	HAL_Delay(move_time);stop_motors();
-        traj_update(0, 0);
+        //traj_update(0, 0);
     	break;
     }
 }
