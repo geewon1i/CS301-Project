@@ -9,8 +9,8 @@ static Pose2D pose;
 //extern UART_HandleTypeDef huart1;
 void traj_init(void)
 {
-    pose.x = 0;
-    pose.y = 320;
+    pose.x = 100;//0;
+    pose.y = 200;//320;
     pose.theta = 1.57f;//pi/2
 }
 
